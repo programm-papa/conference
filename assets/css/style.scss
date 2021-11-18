@@ -1,1397 +1,1746 @@
-                    //Fonts PN - Proxima Nova
-                    @font-face {
-                        font-family: "PN";
-                        src: url("../fonts/ProximaNova-Regular.woff");
-                        font-weight: 400;
-                        font-style: normal;
-                    }
-                    
-                    @font-face {
-                        font-family: "PN";
-                        src: url("../fonts/ProximaNova-Semibold.woff");
-                        font-weight: 600;
-                        font-style: normal;
-                    }
-                    
-                    @font-face {
-                        font-family: "PN";
-                        src: url("../fonts/ProximaNova-Bold.woff");
-                        font-weight: bold;
-                        font-style: normal;
-                    }
-                    
-                    * {
-                        margin: 0;
-                        padding: 0;
-                        font-family: 'PN';
-                    }
-                    
-                    body {
-                        overflow-x: hidden;
-                    }
-                    
-                    //Отключение адаптивных блоков
-                    .adaptive {
-                        display: none !important;
-                    }
-                    
-                    //Стили для текстов
-                    .regular-text {
-                        font-style: normal;
-                        font-weight: 400;
-                    }
-                    
-                    //Стили для кнопок
-                    //Легкая зеленая кнопка
-                    .light-green-btn {
-                        background: #FFFFFF;
-                        border-radius: 6px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        cursor: pointer;
-                        & .light-green-btn__text {
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 16px;
-                            line-height: 19px;
-                            color: #5F5D61;
-                        }
-                        &:hover {
-                            box-shadow: 0px 12px 24px -4px #0000001F;
-                            & .light-green-btn__text {
-                                color: #6EAA1D;
+                            //Fonts PN - Proxima Nova
+                            @font-face {
+                                font-family: "PN";
+                                src: url("../fonts/ProximaNova-Regular.woff");
+                                font-weight: 400;
+                                font-style: normal;
                             }
-                        }
-                        &.active {
-                            pointer-events: none;
-                            background: #8CC63E;
-                            & .light-green-btn__text {
-                                color: #fff;
+                            
+                            @font-face {
+                                font-family: "SFUIT";
+                                src: url("../fonts/SFUIText-Medium.woff");
+                                font-weight: 500;
+                                font-style: normal;
                             }
-                        }
-                    }
-                    
-                    //Кнопка регистрации
-                    .registration-btn {
-                        position: relative;
-                        z-index: 1;
-                        cursor: pointer;
-                        width: 295px;
-                        height: 45px;
-                        border-radius: 6px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background: #8CC63E;
-                        color: #fff;
-                        font-size: 16px;
-                        &:hover {
-                            background: #6EAA1D;
-                        }
-                        &:active {
-                            background: rgba(110, 170, 29, .8);
-                        }
-                    }
-                    
-                    //Обертка для контента
-                    .wrapper {
-                        box-sizing: border-box;
-                        width: 1140px;
-                        padding: 0 15px 0 15px;
-                        margin: auto;
-                    }
-                    
-                    //Верхняя часть сайта
-                    .header {
-                        background-color: #F5F5F5;
-                        background-image: url(../img/header-img.svg);
-                        background-position: center center;
-                        background-repeat: no-repeat;
-                        height: 797px;
-                        overflow: hidden;
-                        .wrapper {
-                            &.top-header {
+                            
+                            @font-face {
+                                font-family: "PN";
+                                src: url("../fonts/ProximaNova-Semibold.woff");
+                                font-weight: 600;
+                                font-style: normal;
+                            }
+                            
+                            @font-face {
+                                font-family: "PN";
+                                src: url("../fonts/ProximaNova-Bold.woff");
+                                font-weight: bold;
+                                font-style: normal;
+                            }
+                            
+                            * {
+                                margin: 0;
+                                padding: 0;
+                                font-family: 'PN';
+                            }
+                            
+                            body {
+                                overflow-x: hidden;
+                            }
+                            
+                            //Отключение адаптивных блоков
+                            .adaptive {
+                                display: none !important;
+                            }
+                            
+                            //Стили для текстов
+                            .regular-text {
+                                font-style: normal;
+                                font-weight: 400;
+                            }
+                            
+                            //Стили для кнопок
+                            //Легкая зеленая кнопка
+                            .light-green-btn {
+                                background: #FFFFFF;
+                                border-radius: 6px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                & .light-green-btn__text {
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                    line-height: 19px;
+                                    color: #5F5D61;
+                                }
+                                &:hover {
+                                    box-shadow: 0px 12px 24px -4px #0000001F;
+                                    & .light-green-btn__text {
+                                        color: #6EAA1D;
+                                    }
+                                }
+                                &.active {
+                                    pointer-events: none;
+                                    background: #8CC63E;
+                                    & .light-green-btn__text {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            
+                            //Кнопка регистрации
+                            .registration-btn {
+                                position: relative;
+                                z-index: 1;
+                                cursor: pointer;
+                                width: 295px;
+                                height: 45px;
+                                border-radius: 6px;
                                 display: flex;
                                 align-items: center;
-                                .menu {
-                                    margin-left: auto;
-                                    width: fit-content;
-                                    .menu__list {
-                                        list-style-type: none;
+                                justify-content: center;
+                                background: #8CC63E;
+                                color: #fff;
+                                font-size: 16px;
+                                &:hover {
+                                    background: #6EAA1D;
+                                }
+                                &:active {
+                                    background: rgba(110, 170, 29, .8);
+                                }
+                            }
+                            
+                            //Обертка для контента
+                            .wrapper {
+                                box-sizing: border-box;
+                                width: 1140px;
+                                padding: 0 15px 0 15px;
+                                margin: auto;
+                            }
+                            
+                            //Верхняя часть сайта
+                            .header {
+                                background-color: #F5F5F5;
+                                background-image: url(../img/header-img.svg);
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                height: 797px;
+                                overflow: hidden;
+                                &.user-account {
+                                    height: fit-content;
+                                    background-image: none;
+                                    background-color: #FFFFFF;
+                                }
+                                .wrapper {
+                                    &.top-header {
                                         display: flex;
-                                        width: fit-content;
-                                        .item {
-                                            cursor: pointer;
-                                            margin-right: 30px;
-                                            &:last-of-type {
-                                                margin-right: 0;
+                                        align-items: center;
+                                        .menu {
+                                            margin-left: auto;
+                                            width: fit-content;
+                                            .menu__list {
+                                                list-style-type: none;
+                                                display: flex;
+                                                width: fit-content;
+                                                .item {
+                                                    cursor: pointer;
+                                                    margin-right: 30px;
+                                                    &:last-of-type {
+                                                        margin-right: 0;
+                                                    }
+                                                    a {
+                                                        font-style: normal;
+                                                        font-weight: 600;
+                                                        font-size: 16px;
+                                                        line-height: 20px;
+                                                        color: #5F5D61;
+                                                        text-decoration: none;
+                                                    }
+                                                }
                                             }
-                                            a {
+                                        }
+                                        .account {
+                                            margin-left: 120px;
+                                            display: flex;
+                                            .name {
                                                 font-style: normal;
                                                 font-weight: 600;
                                                 font-size: 16px;
-                                                line-height: 20px;
+                                                line-height: 140%;
+                                                text-align: right;
                                                 color: #5F5D61;
-                                                text-decoration: none;
+                                                margin-right: 15px;
+                                            }
+                                        }
+                                        padding-top: 20px;
+                                        padding-bottom: 20px;
+                                        box-sizing: border-box;
+                                        height: fit-content;
+                                        min-height: 80px;
+                                    }
+                                    &.header-info {
+                                        padding-top: 85px;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                        .page-title {
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 24px;
+                                            line-height: 140%;
+                                            text-align: center;
+                                            color: #5F5D61;
+                                            margin-bottom: 10px;
+                                        }
+                                        .page-description {
+                                            width: 650px;
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 24px;
+                                            line-height: 140%;
+                                            text-align: center;
+                                            color: #9B80B9;
+                                            margin-bottom: 30px;
+                                        }
+                                        .page-icons {
+                                            display: flex;
+                                            align-items: center;
+                                            margin-bottom: 20px;
+                                            .online-icon {
+                                                display: flex;
+                                                align-items: center;
+                                                margin-right: 50px;
+                                                .icon {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    transform: rotate(90deg);
+                                                    margin-right: 3px;
+                                                }
+                                                .text {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    line-height: 140%;
+                                                    text-align: center;
+                                                    color: #5F5D61;
+                                                }
+                                            }
+                                            .date-icons {
+                                                display: flex;
+                                                align-items: center;
+                                                .icon {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    transform: rotate(90deg);
+                                                    margin-right: 7px;
+                                                }
+                                                .text {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    line-height: 140%;
+                                                    text-align: center;
+                                                    color: #5F5D61;
+                                                }
                                             }
                                         }
                                     }
                                 }
-                                .account {
-                                    margin-left: 120px;
-                                    display: flex;
-                                    .name {
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 16px;
-                                        line-height: 140%;
-                                        text-align: right;
-                                        color: #5F5D61;
-                                        margin-right: 15px;
-                                    }
-                                }
-                                padding-top: 40px;
                             }
-                            &.header-info {
-                                padding-top: 85px;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                .page-title {
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 24px;
-                                    line-height: 140%;
-                                    text-align: center;
-                                    color: #5F5D61;
-                                    margin-bottom: 10px;
-                                }
-                                .page-description {
-                                    width: 650px;
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 24px;
-                                    line-height: 140%;
-                                    text-align: center;
-                                    color: #9B80B9;
-                                    margin-bottom: 30px;
-                                }
-                                .page-icons {
+                            
+                            //Блок комментариев
+                            .description-block {
+                                width: 100%;
+                                background-color: #fff;
+                                padding-top: 100px;
+                                padding-bottom: 150px;
+                                .wrapper {
                                     display: flex;
+                                    flex-direction: column;
                                     align-items: center;
-                                    margin-bottom: 20px;
-                                    .online-icon {
+                                }
+                                .comment-row {
+                                    width: fit-content;
+                                    display: flex;
+                                    align-items: flex-end;
+                                    margin-bottom: 60px;
+                                    &:last-of-type {
+                                        margin-bottom: 0px;
+                                    }
+                                    &>div:first-child {
+                                        margin-right: 80px;
+                                    }
+                                    .avatar {
+                                        width: fit-content;
                                         display: flex;
-                                        align-items: center;
-                                        margin-right: 50px;
-                                        .icon {
-                                            width: 40px;
-                                            height: 40px;
-                                            transform: rotate(90deg);
-                                            margin-right: 3px;
+                                        flex-direction: column;
+                                        align-items: flex-end;
+                                        .avatar__img {
+                                            margin-bottom: 20px;
                                         }
-                                        .text {
+                                        .avatar__name {
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 18px;
+                                            line-height: 140%;
+                                            color: #373539;
+                                            margin-bottom: 10px;
+                                        }
+                                        .avatar__post {
                                             font-style: normal;
                                             font-weight: normal;
-                                            font-size: 16px;
+                                            font-size: 14px;
                                             line-height: 140%;
-                                            text-align: center;
                                             color: #5F5D61;
+                                            text-align: right;
                                         }
                                     }
-                                    .date-icons {
+                                    .comment {
+                                        position: relative;
                                         display: flex;
                                         align-items: center;
-                                        .icon {
-                                            width: 40px;
-                                            height: 40px;
-                                            transform: rotate(90deg);
-                                            margin-right: 7px;
-                                        }
-                                        .text {
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 16px;
-                                            line-height: 140%;
-                                            text-align: center;
-                                            color: #5F5D61;
+                                        margin-bottom: 9px;
+                                        box-sizing: border-box;
+                                        width: 540px;
+                                        height: 326px;
+                                        background: #F5F5F5;
+                                        border-radius: 8px;
+                                        padding: 0 30px;
+                                        .content {
+                                            .comment__title {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                line-height: 140%;
+                                                color: #373539;
+                                                margin-bottom: 20px;
+                                            }
+                                            .comment__text {
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 16px;
+                                                line-height: 140%;
+                                                color: #5F5D61;
+                                                letter-spacing: .03em;
+                                            }
                                         }
                                     }
                                 }
                             }
-                        }
-                    }
-                    
-                    //Блок комментариев
-                    .description-block {
-                        width: 100%;
-                        background-color: #fff;
-                        padding-top: 100px;
-                        padding-bottom: 150px;
-                        .wrapper {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: center;
-                        }
-                        .comment-row {
-                            width: fit-content;
-                            display: flex;
-                            align-items: flex-end;
-                            margin-bottom: 60px;
-                            &:last-of-type {
-                                margin-bottom: 0px;
-                            }
-                            &>div:first-child {
-                                margin-right: 80px;
-                            }
-                            .avatar {
-                                width: fit-content;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: flex-end;
-                                .avatar__img {
-                                    margin-bottom: 20px;
-                                }
-                                .avatar__name {
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 18px;
-                                    line-height: 140%;
-                                    color: #373539;
-                                    margin-bottom: 10px;
-                                }
-                                .avatar__post {
-                                    font-style: normal;
-                                    font-weight: normal;
-                                    font-size: 14px;
-                                    line-height: 140%;
-                                    color: #5F5D61;
-                                    text-align: right;
-                                }
-                            }
-                            .comment {
+                            
+                            //Программа
+                            .programm-block {
+                                padding: 100px 0 150px 0;
+                                width: 100%;
+                                background-color: #fff;
                                 position: relative;
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: 9px;
-                                box-sizing: border-box;
-                                width: 540px;
-                                height: 326px;
-                                background: #F5F5F5;
-                                border-radius: 8px;
-                                padding: 0 30px;
-                                .content {
-                                    .comment__title {
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 20px;
-                                        line-height: 140%;
-                                        color: #373539;
-                                        margin-bottom: 20px;
+                                .background-decoration {
+                                    position: absolute;
+                                    top: 0;
+                                    width: 100%;
+                                    height: 500px;
+                                    background-color: #F5F5F5;
+                                }
+                                .wrapper {
+                                    position: relative;
+                                    z-index: 1;
+                                    .programm-block-title {
+                                        .programm-calendar {
+                                            display: flex;
+                                            align-items: center;
+                                            margin-bottom: 6px;
+                                            .programm-calendar__calendar-icon {
+                                                margin-right: 9px;
+                                            }
+                                            .programm-calendar__date {
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 18px;
+                                                line-height: 140%;
+                                                color: #5F5D61;
+                                            }
+                                        }
+                                        .title-row {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            margin-bottom: 30px;
+                                            .title-text {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 30px;
+                                                line-height: 140%;
+                                                color: #373539;
+                                            }
+                                            .online-format-block {
+                                                display: flex;
+                                                align-items: center;
+                                                .online-format-block__text {
+                                                    width: 100%;
+                                                    margin-right: 3px;
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    line-height: 140%;
+                                                    text-align: center;
+                                                    color: #5F5D61;
+                                                }
+                                            }
+                                        }
                                     }
-                                    .comment__text {
-                                        font-style: normal;
-                                        font-weight: normal;
-                                        font-size: 16px;
-                                        line-height: 140%;
-                                        color: #5F5D61;
-                                        letter-spacing: .03em;
+                                    .programm-tabs-btns-row {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        margin-bottom: 20px;
+                                        .tabs-btns-container {
+                                            display: flex;
+                                            .tabs-btn {
+                                                width: 117px;
+                                                height: 45px;
+                                                border-radius: 6px;
+                                                &:first-of-type {
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                        }
+                                        .description {
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: 14px;
+                                            line-height: 17px;
+                                            text-align: right;
+                                            color: #5F5D61;
+                                        }
+                                    }
+                                    .programm-tabs-container {
+                                        width: 100%;
+                                        height: fit-content;
+                                        border-radius: 6px;
+                                        background-color: #fff;
+                                        .programm-tab {
+                                            height: fit-content;
+                                            box-shadow: 0px 12px 24px -4px #0000001F;
+                                            &.hidden {
+                                                display: none;
+                                            }
+                                            .event {
+                                                cursor: pointer;
+                                                width: 100%;
+                                                padding: 30px;
+                                                box-sizing: border-box;
+                                                border-bottom: 1px solid #F5F5F5;
+                                                .event__time {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    margin-bottom: 10px;
+                                                    .event__time-icon {
+                                                        margin-right: 7px;
+                                                    }
+                                                    .event__time-online {
+                                                        display: none;
+                                                        width: 8px;
+                                                        height: 8px;
+                                                        background-color: #FF0000;
+                                                        border-radius: 100%;
+                                                        margin-left: 10px;
+                                                    }
+                                                }
+                                                .event__group {
+                                                    background: #EEF6E2;
+                                                    border-radius: 6px;
+                                                    width: fit-content;
+                                                    padding: 4px 8px;
+                                                    margin-bottom: 20px;
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #6EAA1D;
+                                                }
+                                                .event__name {
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #373539;
+                                                    margin-bottom: 20px;
+                                                }
+                                                .event__speaker {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    .speaker {
+                                                        display: flex;
+                                                        margin-right: 20px;
+                                                        &:last-of-type {
+                                                            margin-right: 0;
+                                                        }
+                                                        .avatar {
+                                                            width: 36px;
+                                                            height: 36px;
+                                                            overflow: hidden;
+                                                            background: #C4C4C4;
+                                                            border-radius: 6px;
+                                                            margin-right: 10px;
+                                                        }
+                                                        .speaker__description {
+                                                            display: flex;
+                                                            flex-direction: column;
+                                                            justify-content: space-between;
+                                                            .post {
+                                                                font-style: normal;
+                                                                font-weight: normal;
+                                                                font-size: 12px;
+                                                                line-height: 15px;
+                                                                color: #5F5D61;
+                                                                &.moderator {
+                                                                    color: #6EAA1D;
+                                                                }
+                                                            }
+                                                            .name {
+                                                                font-style: normal;
+                                                                font-weight: 600;
+                                                                font-size: 14px;
+                                                                line-height: 17px;
+                                                                color: #373539;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.online {
+                                                    .event__time {
+                                                        .event__time-online {
+                                                            display: block;
+                                                            animation: onlineDotAnimation 1.4s linear infinite;
+                                                            @keyframes onlineDotAnimation {
+                                                                0% {
+                                                                    opacity: 0;
+                                                                }
+                                                                70% {
+                                                                    opacity: 1;
+                                                                }
+                                                                100% {
+                                                                    opacity: 0;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.break {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    background-color: #8CC63E;
+                                                    border-bottom: 0;
+                                                    * {
+                                                        color: #fff;
+                                                    }
+                                                    .beak-icon {
+                                                        width: 58px;
+                                                        height: 58px;
+                                                        border-radius: 10px;
+                                                        margin-right: 20px;
+                                                        background-color: #fff;
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        .beak-icon__img {
+                                                            width: 36px;
+                                                            height: 36px;
+                                                        }
+                                                    }
+                                                    .event__name {
+                                                        margin-bottom: 0;
+                                                        font-weight: 400;
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
-                        }
-                    }
-                    
-                    //Программа
-                    .programm-block {
-                        padding: 100px 0 150px 0;
-                        width: 100%;
-                        background-color: #fff;
-                        position: relative;
-                        .background-decoration {
-                            position: absolute;
-                            top: 0;
-                            width: 100%;
-                            height: 500px;
-                            background-color: #F5F5F5;
-                        }
-                        .wrapper {
-                            position: relative;
-                            z-index: 1;
-                            .programm-block-title {
-                                .programm-calendar {
-                                    display: flex;
-                                    align-items: center;
-                                    margin-bottom: 6px;
-                                    .programm-calendar__calendar-icon {
-                                        margin-right: 9px;
-                                    }
-                                    .programm-calendar__date {
-                                        font-style: normal;
-                                        font-weight: normal;
-                                        font-size: 18px;
-                                        line-height: 140%;
-                                        color: #5F5D61;
-                                    }
+                            
+                            //Блок спикеров
+                            .speakers-block {
+                                padding-bottom: 150px;
+                                .wrapper {
+                                    position: relative;
                                 }
-                                .title-row {
+                                .speakers-block__title {
                                     display: flex;
-                                    justify-content: space-between;
                                     align-items: center;
-                                    margin-bottom: 30px;
-                                    .title-text {
+                                    margin-bottom: 40px;
+                                    .circle {
+                                        width: 12px;
+                                        height: 12px;
+                                        background-color: #9B80B9;
+                                        border-radius: 100%;
+                                        margin-right: 10px;
+                                    }
+                                    .title {
                                         font-style: normal;
                                         font-weight: 600;
                                         font-size: 30px;
                                         line-height: 140%;
-                                        color: #373539;
+                                        color: #9B80B9;
                                     }
-                                    .online-format-block {
-                                        display: flex;
-                                        align-items: center;
-                                        .online-format-block__text {
+                                }
+                                .speakers-block__cards {
+                                    display: grid;
+                                    grid-template-columns: repeat(6, 160px);
+                                    // justify-content: space-between;
+                                    grid-row-gap: 30px;
+                                    grid-column-gap: 30px;
+                                    .speaker-card {
+                                        width: 160px;
+                                        height: 293px;
+                                        background-color: #F5F5F5;
+                                        border-radius: 6px;
+                                        .avatar-block {
+                                            border-radius: 6px 6px 0px 0px;
                                             width: 100%;
-                                            margin-right: 3px;
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 16px;
-                                            line-height: 140%;
-                                            text-align: center;
-                                            color: #5F5D61;
-                                        }
-                                    }
-                                }
-                            }
-                            .programm-tabs-btns-row {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                margin-bottom: 20px;
-                                .tabs-btns-container {
-                                    display: flex;
-                                    .tabs-btn {
-                                        width: 117px;
-                                        height: 45px;
-                                        border-radius: 6px;
-                                        &:first-of-type {
-                                            margin-right: 10px;
-                                        }
-                                    }
-                                }
-                                .description {
-                                    font-style: normal;
-                                    font-weight: normal;
-                                    font-size: 14px;
-                                    line-height: 17px;
-                                    text-align: right;
-                                    color: #5F5D61;
-                                }
-                            }
-                            .programm-tabs-container {
-                                width: 100%;
-                                height: fit-content;
-                                border-radius: 6px;
-                                background-color: #fff;
-                                .programm-tab {
-                                    height: fit-content;
-                                    box-shadow: 0px 12px 24px -4px #0000001F;
-                                    &.hidden {
-                                        display: none;
-                                    }
-                                    .event {
-                                        cursor: pointer;
-                                        width: 100%;
-                                        padding: 30px;
-                                        box-sizing: border-box;
-                                        border-bottom: 1px solid #F5F5F5;
-                                        .event__time {
-                                            display: flex;
-                                            align-items: center;
-                                            margin-bottom: 10px;
-                                            .event__time-icon {
-                                                margin-right: 7px;
-                                            }
-                                            .event__time-online {
-                                                display: none;
-                                                width: 8px;
-                                                height: 8px;
-                                                background-color: #FF0000;
-                                                border-radius: 100%;
-                                                margin-left: 10px;
+                                            height: 150px;
+                                            overflow: hidden;
+                                            .avatar-img {
+                                                width: 100%;
+                                                height: 100%;
                                             }
                                         }
-                                        .event__group {
-                                            background: #EEF6E2;
-                                            border-radius: 6px;
-                                            width: fit-content;
-                                            padding: 4px 8px;
-                                            margin-bottom: 20px;
-                                            font-style: normal;
-                                            font-weight: 600;
-                                            font-size: 16px;
-                                            line-height: 19px;
-                                            color: #6EAA1D;
-                                        }
-                                        .event__name {
-                                            font-style: normal;
-                                            font-weight: 600;
-                                            font-size: 16px;
-                                            line-height: 19px;
-                                            color: #373539;
-                                            margin-bottom: 20px;
-                                        }
-                                        .event__speaker {
-                                            display: flex;
-                                            align-items: center;
-                                            .speaker {
-                                                display: flex;
-                                                margin-right: 20px;
-                                                &:last-of-type {
-                                                    margin-right: 0;
-                                                }
-                                                .avatar {
-                                                    width: 36px;
-                                                    height: 36px;
-                                                    overflow: hidden;
-                                                    background: #C4C4C4;
-                                                    border-radius: 6px;
-                                                    margin-right: 10px;
-                                                }
-                                                .speaker__description {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    justify-content: space-between;
-                                                    .post {
-                                                        font-style: normal;
-                                                        font-weight: normal;
-                                                        font-size: 12px;
-                                                        line-height: 15px;
-                                                        color: #5F5D61;
-                                                        &.moderator {
-                                                            color: #6EAA1D;
-                                                        }
-                                                    }
-                                                    .name {
-                                                        font-style: normal;
-                                                        font-weight: 600;
-                                                        font-size: 14px;
-                                                        line-height: 17px;
-                                                        color: #373539;
-                                                    }
-                                                }
+                                        .speaker-description {
+                                            padding: 15px;
+                                            .name {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 18px;
+                                                line-height: 22px;
+                                                color: #373539;
+                                                margin-bottom: 10px;
                                             }
-                                        }
-                                        &.online {
-                                            .event__time {
-                                                .event__time-online {
-                                                    display: block;
-                                                    animation: onlineDotAnimation 1.4s linear infinite;
-                                                    @keyframes onlineDotAnimation {
-                                                        0% {
-                                                            opacity: 0;
-                                                        }
-                                                        70% {
-                                                            opacity: 1;
-                                                        }
-                                                        100% {
-                                                            opacity: 0;
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        &.break {
-                                            display: flex;
-                                            align-items: center;
-                                            background-color: #8CC63E;
-                                            border-bottom: 0;
-                                            * {
-                                                color: #fff;
-                                            }
-                                            .beak-icon {
-                                                width: 58px;
-                                                height: 58px;
-                                                border-radius: 10px;
-                                                margin-right: 20px;
-                                                background-color: #fff;
-                                                display: flex;
-                                                align-items: center;
-                                                justify-content: center;
-                                                .beak-icon__img {
-                                                    width: 36px;
-                                                    height: 36px;
-                                                }
-                                            }
-                                            .event__name {
-                                                margin-bottom: 0;
-                                                font-weight: 400;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    //Блок спикеров
-                    .speakers-block {
-                        padding-bottom: 150px;
-                        .speakers-block__title {
-                            display: flex;
-                            align-items: center;
-                            margin-bottom: 40px;
-                            .circle {
-                                width: 12px;
-                                height: 12px;
-                                background-color: #9B80B9;
-                                border-radius: 100%;
-                                margin-right: 10px;
-                            }
-                            .title {
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 30px;
-                                line-height: 140%;
-                                color: #9B80B9;
-                            }
-                        }
-                        .speakers-block__cards {
-                            display: grid;
-                            grid-template-columns: repeat(6, 160px);
-                            // justify-content: space-between;
-                            grid-row-gap: 30px;
-                            grid-column-gap: 30px;
-                            .speaker-card {
-                                width: 160px;
-                                height: 293px;
-                                background-color: #F5F5F5;
-                                border-radius: 6px;
-                                .avatar-block {
-                                    width: 100%;
-                                    height: 150px;
-                                    overflow: hidden;
-                                }
-                                .speaker-description {
-                                    padding: 15px;
-                                    .name {
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 18px;
-                                        line-height: 22px;
-                                        color: #373539;
-                                        margin-bottom: 10px;
-                                    }
-                                    .post {
-                                        font-style: normal;
-                                        font-weight: normal;
-                                        font-size: 14px;
-                                        line-height: 17px;
-                                        color: #5F5D61;
-                                        margin-bottom: 15px;
-                                    }
-                                    .detailed {
-                                        width: 100%;
-                                        height: 37px;
-                                        border-radius: 6px;
-                                        background: rgba(95, 93, 97, .1);
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 14px;
-                                        line-height: 17px;
-                                        color: #373539;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        cursor: pointer;
-                                        user-select: none;
-                                        &:hover {
-                                            background: rgba(95, 93, 97, .3);
-                                        }
-                                        &:active {
-                                            background: rgba(95, 93, 97, .2);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    //Блок материалов
-                    .material-info-block {
-                        padding-bottom: 150px;
-                        .material-info-content {
-                            padding: 0 95px;
-                            padding-top: 60px;
-                            position: relative;
-                            align-items: center;
-                            justify-content: space-between;
-                            display: flex;
-                            user-select: none;
-                            .description {
-                                position: relative;
-                                z-index: 1;
-                                .green-text {
-                                    font-style: normal;
-                                    font-weight: bold;
-                                    font-size: 30px;
-                                    line-height: 140%;
-                                    color: #6EAA1D;
-                                    margin-bottom: 20px;
-                                }
-                                .text {
-                                    font-style: normal;
-                                    font-weight: 600;
-                                    font-size: 16px;
-                                    line-height: 140%;
-                                    color: #5F5D61;
-                                }
-                            }
-                            .decoration {
-                                position: absolute;
-                                top: 0;
-                                right: 375px;
-                            }
-                        }
-                    }
-                    
-                    //Блок вопросов
-                    .question-block {
-                        padding: 100px 0px;
-                        background-color: #FAFAFA;
-                        .title {
-                            width: 100%;
-                            text-align: center;
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 30px;
-                            line-height: 37px;
-                            color: #9B80B9;
-                            margin-bottom: 50px;
-                        }
-                        .content {
-                            .question-container {
-                                width: 100%;
-                                margin-bottom: 20px;
-                                .question {
-                                    width: 100%;
-                                    height: 60px;
-                                    border-radius: 6px;
-                                    padding: 0 20px;
-                                    box-sizing: border-box;
-                                    background-color: #fff;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    cursor: pointer;
-                                    .question-text {
-                                        font-style: normal;
-                                        font-weight: normal;
-                                        font-size: 24px;
-                                        line-height: 29px;
-                                        color: #373539;
-                                    }
-                                    .corner {
-                                        transition: transform .6s;
-                                        transform: rotate(0deg);
-                                    }
-                                }
-                                .ansver {
-                                    padding: 0px 20px 0px 20px;
-                                    width: 100%;
-                                    box-sizing: border-box;
-                                    max-height: 0px;
-                                    overflow: hidden;
-                                    height: fit-content;
-                                    .ansver-text {
-                                        margin-bottom: 15px;
-                                        * {
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 16px;
-                                            line-height: 19px;
-                                            color: #5F5D61;
-                                        }
-                                    }
-                                    .line {
-                                        width: 100%;
-                                        height: 1px;
-                                        background: #373539;
-                                        opacity: 0.1;
-                                    }
-                                }
-                                &:hover {
-                                    .question {
-                                        box-shadow: 0px 12px 24px -9px #0000001F;
-                                    }
-                                }
-                                &.open {
-                                    .question {
-                                        background: #8CC63E;
-                                        .question-text {
-                                            color: #fff;
-                                        }
-                                        .corner {
-                                            transition: transform .6s;
-                                            transform: rotate(180deg);
-                                        }
-                                        path {
-                                            fill: #fff;
-                                        }
-                                    }
-                                    .ansver {
-                                        padding-top: 20px;
-                                        transition: max-height 1.2s;
-                                        max-height: 1000px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    //Блок организаторов
-                    .organizers-block {
-                        padding: 150px 0;
-                        .title {
-                            width: 100%;
-                            text-align: center;
-                            font-style: normal;
-                            font-weight: 600;
-                            font-size: 30px;
-                            line-height: 37px;
-                            color: #9B80B9;
-                            margin-bottom: 50px;
-                        }
-                        .organizers-wrapper {
-                            padding: 0 95px;
-                            display: flex;
-                            justify-content: space-between;
-                            .organizers-item {
-                                text-decoration: none;
-                                width: 255px;
-                                &:hover {
-                                    .organizers-item__img {
-                                        box-shadow: 0px 12px 24px -4px rgba(0, 0, 0, 0.1);
-                                    }
-                                }
-                                .organizers-item__img {
-                                    width: 255px;
-                                    height: 255px;
-                                    background-color: #F5F5F5;
-                                    border-radius: 6px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin-bottom: 20px;
-                                }
-                                .name {
-                                    padding: 0 20px;
-                                    font-style: normal;
-                                    font-weight: normal;
-                                    font-size: 18px;
-                                    line-height: 140%;
-                                    text-align: center;
-                                    color: #373539;
-                                }
-                            }
-                        }
-                    }
-                    
-                    //Блок трансляции
-                    .broadcast-link-block {
-                        background: #F5F5F5;
-                        position: relative;
-                        overflow: hidden;
-                        .wrapper {
-                            padding: 100px 110px 0px 110px;
-                            display: flex;
-                            position: relative;
-                            z-index: 1;
-                            .broadcast-wrapper {
-                                margin-left: auto;
-                                .broadcast-description {
-                                    width: 280px;
-                                    font-style: normal;
-                                    font-weight: normal;
-                                    font-size: 16px;
-                                    line-height: 140%;
-                                    color: #5F5D61;
-                                    margin-bottom: 40px;
-                                }
-                                .broadcast-btn {
-                                    margin-bottom: 40px;
-                                    background-color: #6EAA1D;
-                                    width: 300px;
-                                    height: 54px;
-                                    border-radius: 6px;
-                                    position: relative;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    cursor: pointer;
-                                    .text {
-                                        font-style: normal;
-                                        font-weight: 600;
-                                        font-size: 24px;
-                                        line-height: 29px;
-                                        color: #FFFFFF;
-                                    }
-                                    .online-icon {
-                                        position: absolute;
-                                        top: -39px;
-                                        right: -43px;
-                                        transform: rotate(-125deg);
-                                    }
-                                    &:hover {
-                                        background-color: #8CC63E;
-                                    }
-                                }
-                                .date-time {
-                                    width: 351px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    .broadcast-time {
-                                        display: flex;
-                                        align-items: center;
-                                        .time {
-                                            margin-right: 10px;
-                                            .time-icon {
-                                                width: 30px;
-                                                height: 30px;
-                                            }
-                                        }
-                                        .time-value {
-                                            .text {
+                                            .post {
                                                 font-style: normal;
                                                 font-weight: normal;
                                                 font-size: 14px;
                                                 line-height: 17px;
-                                                color: #9B80B9;
+                                                color: #5F5D61;
+                                                margin-bottom: 15px;
                                             }
-                                            .value {
+                                            .speaker-description__detailed {
+                                                width: 100%;
+                                                height: 37px;
+                                                border-radius: 6px;
+                                                background: rgba(95, 93, 97, .1);
                                                 font-style: normal;
                                                 font-weight: 600;
-                                                font-size: 20px;
-                                                line-height: 24px;
+                                                font-size: 14px;
+                                                line-height: 17px;
+                                                color: #373539;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                cursor: pointer;
+                                                user-select: none;
+                                                &:hover {
+                                                    background: rgba(95, 93, 97, .3);
+                                                }
+                                                &:active {
+                                                    background: rgba(95, 93, 97, .2);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .more-block {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    display: none;
+                                    justify-content: center;
+                                    &.open {
+                                        display: flex;
+                                    }
+                                    .more-popup {
+                                        position: absolute;
+                                        box-sizing: border-box;
+                                        width: 730px;
+                                        height: fit-content;
+                                        min-height: 490px;
+                                        padding: 30px;
+                                        border-radius: 6px;
+                                        background-color: #fff;
+                                        box-shadow: 0px 12px 24px -4px #0000001F;
+                                        .close-btn {
+                                            position: absolute;
+                                            width: 35px;
+                                            height: 35px;
+                                            top: 10px;
+                                            right: 10px;
+                                            border-radius: 6px;
+                                            background-color: #8CC63E;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            user-select: none;
+                                            cursor: pointer;
+                                            &:hover {
+                                                background-color: #6EAA1D;
+                                            }
+                                            &:active {
+                                                opacity: .7;
+                                            }
+                                        }
+                                        display: flex;
+                                        .left {
+                                            margin-right: 30px;
+                                            .avatar {
+                                                width: 277px;
+                                                height: 260px;
+                                                border-radius: 6px;
+                                                margin-bottom: 20px;
+                                                overflow: hidden;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                .avatar__img {
+                                                    width: 100%;
+                                                    height: auto;
+                                                }
+                                            }
+                                            .post {
+                                                margin-bottom: 10px;
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 16px;
+                                                line-height: 19px;
+                                                color: #5F5D61;
+                                            }
+                                            .name {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 24px;
+                                                line-height: 29px;
                                                 color: #373539;
                                             }
                                         }
-                                    }
-                                    .broadcast-date {
-                                        display: flex;
-                                        align-items: center;
-                                        .date-icon {
-                                            margin-right: 10px;
-                                        }
-                                        .date {
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 18px;
-                                            line-height: 140%;
-                                            text-align: center;
-                                            color: #5F5D61;
-                                        }
-                                    }
-                                }
-                            }
-                            #antena1,
-                            #antena2,
-                            #antena3,
-                            #antena4 {
-                                transform-origin: 75% 25%;
-                                animation: antena1Animation 2.5s linear infinite;
-                                @keyframes antena1Animation {
-                                    0% {
-                                        transform: rotate(3deg);
-                                    }
-                                    50% {
-                                        transform: rotate(-6deg);
-                                    }
-                                    100% {
-                                        transform: rotate(3deg);
-                                    }
-                                }
-                            }
-                            #signal1 {
-                                animation: signal .5s linear infinite;
-                            }
-                            #signal2 {
-                                animation: signal .5s .4s linear infinite;
-                            }
-                            #signal3 {
-                                animation: signal .5s .8s linear infinite;
-                            }
-                            @keyframes signal {
-                                0% {
-                                    opacity: 0;
-                                }
-                                100% {
-                                    opacity: 1;
-                                }
-                            }
-                        }
-                        .decor1 {
-                            position: absolute;
-                            top: 100px;
-                            left: calc(-387px + 387 * ((100vw - 1140px) / (1920 - 1140)));
-                        }
-                        .decor2 {
-                            position: absolute;
-                            top: 127px;
-                            right: calc(-280px + 280 * ((100vw - 1140px) / (1920 - 1140)));
-                        }
-                    }
-                    
-                    //Футер
-                    .footer {
-                        padding-top: 150px;
-                        padding-bottom: 60px;
-                        .wrapper {
-                            display: flex;
-                            align-items: center;
-                            .shild {
-                                margin-right: 25px;
-                            }
-                            .description {
-                                width: 380px;
-                                font-style: normal;
-                                font-weight: normal;
-                                font-size: 16px;
-                                line-height: 140%;
-                                color: #373539;
-                            }
-                            .contacts {
-                                margin-left: auto;
-                                a {
-                                    text-decoration: none;
-                                }
-                                .phone {
-                                    display: flex;
-                                    align-items: center;
-                                    .icon {
-                                        margin-right: 14px;
-                                    }
-                                    .phone-number {
-                                        font-style: normal;
-                                        font-weight: normal;
-                                        font-size: 24px;
-                                        line-height: 140%;
-                                        color: #373539;
-                                    }
-                                }
-                                .mail {
-                                    display: flex;
-                                    align-items: center;
-                                    .icon {
-                                        margin-right: 16px;
-                                    }
-                                    .mail-link {
-                                        font-style: normal;
-                                        font-weight: normal;
-                                        font-size: 18px;
-                                        line-height: 140%;
-                                        color: #373539;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    
-                    //Блок разработчиков
-                    .developer-block {
-                        background: #F5F5F5;
-                        .wrapper {
-                            padding-top: 20px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-                    
-                    @media screen and (max-width: 1139px) and (min-width: 768px) {
-                        //Отключение неадаптивных блоков
-                        .desctop {
-                            display: none !important;
-                        }
-                        //Включение адаптивных блоков
-                        .adaptive {
-                            display: block !important;
-                        }
-                        .wrapper {
-                            box-sizing: border-box;
-                            width: 768px;
-                            padding: 0 45px 0 45px;
-                            margin: auto;
-                        }
-                        //Верхняя часть сайта
-                        .header {
-                            background-image: url(../img/header-img-tablet.svg);
-                            background-position: center bottom;
-                            background-size: 100% auto;
-                            .wrapper {
-                                &.top-header {
-                                    display: flex;
-                                    flex-direction: column;
-                                    align-items: center;
-                                    .top {
-                                        display: flex;
-                                        margin-bottom: 30px;
-                                        .account {
-                                            margin-left: auto;
-                                        }
-                                    }
-                                    .menu {
-                                        margin-left: 0px;
-                                        margin-right: 0px;
-                                    }
-                                }
-                            }
-                        }
-                        //Блок комментариев
-                        .description-block {
-                            padding-top: 70px;
-                            padding-bottom: 120px;
-                            .comment-row {
-                                align-items: flex-start;
-                                .avatar {
-                                    width: 206px;
-                                    .avatar__img {
-                                        width: 100%;
-                                        height: auto;
-                                    }
-                                }
-                                .comment {
-                                    margin-top: 43px;
-                                    width: 442px;
-                                    padding: 40px 30px 30px 30px;
-                                    height: fit-content;
-                                }
-                            }
-                        }
-                        //Программа
-                        .programm-block {
-                            padding: 70px 0 120px 0;
-                        }
-                        //Блок спикеров
-                        .speakers-block {
-                            padding-bottom: 120px;
-                            .speakers-block__cards {
-                                grid-template-columns: repeat(4, 160px);
-                                grid-row-gap: 30px;
-                                grid-column-gap: 12px;
-                            }
-                        }
-                        //Блок материалов
-                        .material-info-block {
-                            padding-bottom: 120px;
-                            .material-info-content {
-                                padding: 0;
-                            }
-                            .decoration {
-                                top: -54px !important;
-                                right: 249px !important;
-                            }
-                        }
-                        //Блок вопросов
-                        .question-block {
-                            padding: 80px 0px;
-                        }
-                        //Блок организаторов
-                        .organizers-block {
-                            padding: 120px 0;
-                            .organizers-wrapper {
-                                padding: 0;
-                                .organizers-item {
-                                    width: 206px;
-                                    .organizers-item__img {
-                                        width: 206px;
-                                        height: 206px;
-                                    }
-                                    .name {
-                                        padding: 0;
-                                    }
-                                }
-                            }
-                        }
-                        //Блок трансляции
-                        .broadcast-link-block {
-                            overflow: hidden;
-                            .wrapper {
-                                padding: 100px 0px 0px 0px;
-                                svg {
-                                    width: 331px;
-                                    height: auto;
-                                }
-                            }
-                            .decor1 {
-                                left: calc(-650px + 185 * ((100vw - 768px) / (1139 - 768)));
-                                top: 60px;
-                            }
-                            .decor2 {
-                                display: none;
-                            }
-                        }
-                    }
-                    
-                    @media screen and (max-width: 767px) and (min-width: 320px) {
-                        //Отключение неадаптивных блоков
-                        .desctop {
-                            display: none !important;
-                        }
-                        //Включение адаптивных блоков
-                        .adaptive {
-                            display: block !important;
-                        }
-                        //Обертка для контента
-                        .wrapper {
-                            box-sizing: border-box;
-                            width: 100%;
-                            max-width: 500px;
-                            padding: 0 20px 0 20px;
-                            margin: auto;
-                        }
-                        //Верхняя часть сайта
-                        .header {}
-                        //Блок комментариев
-                        .description-block {
-                            padding-top: 50px;
-                            padding-bottom: 100px;
-                            .comment-row {
-                                flex-direction: column;
-                                align-items: center;
-                                &:last-of-type {
-                                    flex-direction: column-reverse;
-                                }
-                                .avatar {
-                                    align-items: center;
-                                    margin-right: 0px !important;
-                                    margin-bottom: 30px;
-                                    .avatar__post {
-                                        text-align: center;
-                                    }
-                                }
-                                .comment {
-                                    width: 100%;
-                                    margin-right: 0px !important;
-                                    height: fit-content;
-                                    padding: 40px 30px 30px 30px;
-                                    .content {}
-                                }
-                            }
-                        }
-                        //Программа
-                        .programm-block {
-                            padding: 50px 0 100px 0;
-                            .wrapper {
-                                .programm-block-title {
-                                    .programm-calendar {
-                                        .programm-calendar__calendar-icon {
-                                            width: 30px;
-                                            height: 30px;
-                                            margin-right: 5px;
-                                        }
-                                    }
-                                    .title-row {
-                                        position: relative;
-                                        flex-direction: column-reverse;
-                                        align-items: flex-start;
-                                        top: -36px;
-                                        margin-bottom: -16px !important;
-                                        .title-text {
-                                            font-size: 24px;
-                                        }
-                                        .online-format-block {
-                                            margin-left: auto;
-                                            margin-bottom: 10px;
-                                            .online-format-block_icon {
-                                                width: 30px;
-                                                height: 30px;
-                                            }
-                                        }
-                                    }
-                                }
-                                .programm-tabs-btns-row {
-                                    flex-direction: column-reverse;
-                                    align-items: flex-start;
-                                    .description {
-                                        text-align: left;
-                                        margin-bottom: 20px;
-                                    }
-                                }
-                            }
-                            @media screen and (max-width: 375px) and (min-width: 320px) {
-                                .wrapper {
-                                    .programm-block-title {
-                                        .programm-calendar {
-                                            .programm-calendar__calendar-icon {
-                                                width: 30px;
-                                                height: 30px;
-                                                margin-right: 5px;
-                                            }
-                                        }
-                                        .title-row {
-                                            top: 0 !important;
-                                            position: relative;
-                                            flex-direction: column-reverse;
-                                            align-items: flex-start;
-                                            margin-bottom: 20px !important;
-                                            .title-text {
-                                                font-size: 22px;
-                                            }
-                                            .online-format-block {
-                                                margin-left: 0 !important;
-                                                margin-bottom: 0 !important;
-                                                .online-format-block_icon {
-                                                    width: 30px;
-                                                    height: 30px;
+                                        .right {
+                                            padding-top: 20px;
+                                            .info {
+                                                margin-bottom: 25px;
+                                                &:last-of-type {
+                                                    margin-bottom: 0px;
+                                                }
+                                                .title {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 14px;
+                                                    line-height: 17px;
+                                                    color: #5F5D61;
+                                                    margin-bottom: 7px;
+                                                }
+                                                .value {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #373539;
                                                 }
                                             }
                                         }
                                     }
                                 }
                             }
-                        }
-                        //Блок спикеров
-                        .speakers-block {
-                            padding-bottom: 100px;
-                            .speakers-block__cards {
-                                grid-template-columns: repeat(2, 160px);
-                                grid-row-gap: 30px;
-                                grid-column-gap: 15px;
+                            
+                            //Блок материалов
+                            .material-info-block {
+                                padding-bottom: 150px;
+                                .material-info-content {
+                                    padding: 0 95px;
+                                    padding-top: 60px;
+                                    position: relative;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    display: flex;
+                                    user-select: none;
+                                    .description {
+                                        position: relative;
+                                        z-index: 1;
+                                        .green-text {
+                                            font-style: normal;
+                                            font-weight: bold;
+                                            font-size: 30px;
+                                            line-height: 140%;
+                                            color: #6EAA1D;
+                                            margin-bottom: 20px;
+                                        }
+                                        .text {
+                                            font-style: normal;
+                                            font-weight: 600;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            color: #5F5D61;
+                                        }
+                                    }
+                                    .decoration {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 375px;
+                                    }
+                                }
                             }
-                            @media screen and (max-width: 375px) and (min-width: 320px) {
-                                .speakers-block__cards {
-                                    grid-template-columns: repeat(2, 120px);
-                                    grid-row-gap: 30px;
-                                    grid-column-gap: 12px;
-                                    .speaker-card {
-                                        width: 120px;
-                                        height: fit-content;
-                                        .avatar-block {
-                                            width: 120px;
-                                            .avatar-img {
+                            
+                            //Блок вопросов
+                            .question-block {
+                                padding: 100px 0px;
+                                background-color: #FAFAFA;
+                                .title {
+                                    width: 100%;
+                                    text-align: center;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 30px;
+                                    line-height: 37px;
+                                    color: #9B80B9;
+                                    margin-bottom: 50px;
+                                }
+                                .content {
+                                    .question-container {
+                                        width: 100%;
+                                        margin-bottom: 20px;
+                                        .question {
+                                            width: 100%;
+                                            height: fit-content;
+                                            border-radius: 6px;
+                                            padding: 17px 20px;
+                                            box-sizing: border-box;
+                                            background-color: #fff;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            cursor: pointer;
+                                            .question-text {
+                                                .question-content {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 20px;
+                                                    line-height: 24px;
+                                                    color: #373539;
+                                                    margin-bottom: 5px;
+                                                }
+                                                .question-author {
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 14px;
+                                                    line-height: 17px;
+                                                    color: #5F5D61;
+                                                }
+                                                margin-right: 20px;
+                                            }
+                                            .corner {
+                                                transition: transform .6s;
+                                                transform: rotate(0deg);
+                                            }
+                                        }
+                                        .ansver {
+                                            padding: 0px 20px 0px 20px;
+                                            width: 100%;
+                                            box-sizing: border-box;
+                                            max-height: 0px;
+                                            overflow: hidden;
+                                            height: fit-content;
+                                            .ansver-text {
+                                                margin-bottom: 5px;
+                                                * {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #5F5D61;
+                                                }
+                                            }
+                                            .ansver-author {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 14px;
+                                                line-height: 17px;
+                                                color: #5F5D61;
+                                                margin-bottom: 15px;
+                                            }
+                                            .line {
+                                                width: 100%;
+                                                height: 1px;
+                                                background: #373539;
+                                                opacity: 0.1;
+                                            }
+                                        }
+                                        &:hover {
+                                            .question {
+                                                box-shadow: 0px 12px 24px -9px #0000001F;
+                                            }
+                                        }
+                                        &.open {
+                                            .question {
+                                                background: #8CC63E;
+                                                .question-text {
+                                                    color: #fff;
+                                                }
+                                                .corner {
+                                                    transition: transform .6s;
+                                                    transform: rotate(180deg);
+                                                }
+                                                path {
+                                                    fill: #fff;
+                                                }
+                                            }
+                                            .ansver {
+                                                padding-top: 20px;
+                                                transition: max-height 1.2s;
+                                                max-height: 1000px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            //Блок организаторов
+                            .organizers-block {
+                                padding: 150px 0;
+                                .title {
+                                    width: 100%;
+                                    text-align: center;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    font-size: 30px;
+                                    line-height: 37px;
+                                    color: #9B80B9;
+                                    margin-bottom: 50px;
+                                }
+                                .organizers-wrapper {
+                                    padding: 0 95px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .organizers-item {
+                                        text-decoration: none;
+                                        width: 255px;
+                                        &:hover {
+                                            .organizers-item__img {
+                                                box-shadow: 0px 12px 24px -4px rgba(0, 0, 0, 0.1);
+                                            }
+                                        }
+                                        .organizers-item__img {
+                                            width: 255px;
+                                            height: 255px;
+                                            background-color: #F5F5F5;
+                                            border-radius: 6px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin-bottom: 20px;
+                                        }
+                                        .name {
+                                            padding: 0 20px;
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: 18px;
+                                            line-height: 140%;
+                                            text-align: center;
+                                            color: #373539;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            //Блок трансляции
+                            .broadcast-link-block {
+                                background: #F5F5F5;
+                                position: relative;
+                                overflow: hidden;
+                                .wrapper {
+                                    padding: 100px 110px 0px 110px;
+                                    display: flex;
+                                    position: relative;
+                                    z-index: 1;
+                                    .broadcast-wrapper {
+                                        margin-left: auto;
+                                        .broadcast-description {
+                                            width: 280px;
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: 16px;
+                                            line-height: 140%;
+                                            color: #5F5D61;
+                                            margin-bottom: 40px;
+                                        }
+                                        .broadcast-btn {
+                                            margin-bottom: 40px;
+                                            background-color: #6EAA1D;
+                                            width: 300px;
+                                            height: 54px;
+                                            border-radius: 6px;
+                                            position: relative;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            cursor: pointer;
+                                            .text {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 24px;
+                                                line-height: 29px;
+                                                color: #FFFFFF;
+                                            }
+                                            .online-icon {
+                                                position: absolute;
+                                                top: -39px;
+                                                right: -43px;
+                                                transform: rotate(-125deg);
+                                            }
+                                            &:hover {
+                                                background-color: #8CC63E;
+                                            }
+                                        }
+                                        .date-time {
+                                            width: 351px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            .broadcast-time {
+                                                display: flex;
+                                                align-items: center;
+                                                .time {
+                                                    margin-right: 10px;
+                                                    .time-icon {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                    }
+                                                }
+                                                .time-value {
+                                                    .text {
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 14px;
+                                                        line-height: 17px;
+                                                        color: #9B80B9;
+                                                    }
+                                                    .value {
+                                                        font-style: normal;
+                                                        font-weight: 600;
+                                                        font-size: 20px;
+                                                        line-height: 24px;
+                                                        color: #373539;
+                                                    }
+                                                }
+                                            }
+                                            .broadcast-date {
+                                                display: flex;
+                                                align-items: center;
+                                                .date-icon {
+                                                    margin-right: 10px;
+                                                }
+                                                .date {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 18px;
+                                                    line-height: 140%;
+                                                    text-align: center;
+                                                    color: #5F5D61;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    #antena1,
+                                    #antena2,
+                                    #antena3,
+                                    #antena4 {
+                                        transform-origin: 75% 25%;
+                                        animation: antena1Animation 2.5s linear infinite;
+                                        @keyframes antena1Animation {
+                                            0% {
+                                                transform: rotate(3deg);
+                                            }
+                                            50% {
+                                                transform: rotate(-6deg);
+                                            }
+                                            100% {
+                                                transform: rotate(3deg);
+                                            }
+                                        }
+                                    }
+                                    #signal1 {
+                                        animation: signal .5s linear infinite;
+                                    }
+                                    #signal2 {
+                                        animation: signal .5s .4s linear infinite;
+                                    }
+                                    #signal3 {
+                                        animation: signal .5s .8s linear infinite;
+                                    }
+                                    @keyframes signal {
+                                        0% {
+                                            opacity: 0;
+                                        }
+                                        100% {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                                .decor1 {
+                                    position: absolute;
+                                    top: 100px;
+                                    left: calc(-387px + 387 * ((100vw - 1140px) / (1920 - 1140)));
+                                }
+                                .decor2 {
+                                    position: absolute;
+                                    top: 127px;
+                                    right: calc(-280px + 280 * ((100vw - 1140px) / (1920 - 1140)));
+                                }
+                            }
+                            
+                            //Футер
+                            .footer {
+                                padding-top: 150px;
+                                padding-bottom: 60px;
+                                .wrapper {
+                                    display: flex;
+                                    align-items: center;
+                                    .shild {
+                                        margin-right: 25px;
+                                    }
+                                    .description {
+                                        width: 380px;
+                                        font-style: normal;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                        line-height: 140%;
+                                        color: #373539;
+                                    }
+                                    .contacts {
+                                        margin-left: auto;
+                                        a {
+                                            text-decoration: none;
+                                        }
+                                        .phone {
+                                            display: flex;
+                                            align-items: center;
+                                            .icon {
+                                                margin-right: 14px;
+                                            }
+                                            .phone-number {
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 24px;
+                                                line-height: 140%;
+                                                color: #373539;
+                                            }
+                                        }
+                                        .mail {
+                                            display: flex;
+                                            align-items: center;
+                                            .icon {
+                                                margin-right: 16px;
+                                            }
+                                            .mail-link {
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 18px;
+                                                line-height: 140%;
+                                                color: #373539;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            //Блок разработчиков
+                            .developer-block {
+                                background: #F5F5F5;
+                                .wrapper {
+                                    padding-top: 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+                            
+                            //Страница личного кабинета
+                            .account-page {
+                                border-top: 1px solid #F5F5F5;
+                                padding-top: 30px;
+                                .page-title {
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 36px;
+                                    line-height: 44px;
+                                    color: #373539;
+                                    margin-bottom: 50px;
+                                }
+                                .account-tabs-wrapper {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .account-tabs-wrapper__buttons {
+                                        .tab__btn {
+                                            width: 255px;
+                                            height: 45px;
+                                            border-radius: 6px;
+                                            box-sizing: border-box;
+                                            background-color: #F5F5F5;
+                                            margin-bottom: 10px;
+                                            padding: 0 20px;
+                                            cursor: pointer;
+                                            user-select: none;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: space-between;
+                                            &:hover {
+                                                background-color: #EBEBEC;
+                                            }
+                                            &.active {
+                                                background: #8CC63E;
+                                                .text {
+                                                    color: #F5F5F5;
+                                                }
+                                            }
+                                            &.question {
+                                                margin-top: 20px;
+                                                margin-bottom: 30px;
+                                                background: rgba(140, 198, 62, .1);
+                                                .text {
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #6EAA1D;
+                                                }
+                                                &:hover {
+                                                    background: rgba(140, 198, 62, .15);
+                                                }
+                                                &.active {
+                                                    background: rgba(140, 198, 62, .3);
+                                                    .text {
+                                                        color: #6EAA1D;
+                                                    }
+                                                }
+                                            }
+                                            &.ansver {
+                                                .new-message {
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    background-color: #5F5D61;
+                                                    border-radius: 100%;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    .value {
+                                                        font-family: "SFUIT";
+                                                        font-style: normal;
+                                                        font-weight: 500;
+                                                        font-size: 12px;
+                                                        line-height: 22px;
+                                                        color: #FFFFFF;
+                                                    }
+                                                }
+                                                &.active {
+                                                    background: #8CC63E;
+                                                    .new-message {
+                                                        background-color: #F5F5F5;
+                                                        .value {
+                                                            color: #8CC63E;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.sign-out {
+                                                background-color: #373539;
+                                                .text {
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #FFFFFF;
+                                                }
+                                                &:hover {
+                                                    background-color: rgba(55, 53, 57, .8);
+                                                }
+                                            }
+                                            .text {
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                line-height: 19px;
+                                                color: #5F5D61;
+                                            }
+                                            &:active {
+                                                opacity: .5;
+                                            }
+                                        }
+                                    }
+                                    .account-tabs-wrapper__content {
+                                        width: 825px;
+                                        height: 679px;
+                                        #personal-data {
+                                            .login {
+                                                width: 100%;
+                                                height: 45px;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: flex-start;
+                                                padding-left: 15px;
+                                                margin-bottom: 10px;
+                                                //Текст
+                                                font-style: normal;
+                                                font-weight: 600;
+                                                font-size: 16px;
+                                                line-height: 19px;
+                                                color: #5F5D61;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            @media screen and (max-width: 1139px) and (min-width: 768px) {
+                                //Отключение неадаптивных блоков
+                                .desctop {
+                                    display: none !important;
+                                }
+                                //Включение адаптивных блоков
+                                .adaptive {
+                                    display: block !important;
+                                }
+                                .wrapper {
+                                    box-sizing: border-box;
+                                    width: 768px;
+                                    padding: 0 45px 0 45px;
+                                    margin: auto;
+                                }
+                                //Верхняя часть сайта
+                                .header {
+                                    background-image: url(../img/header-img-tablet.svg);
+                                    background-position: center bottom;
+                                    background-size: 100% auto;
+                                    .wrapper {
+                                        &.top-header {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            .top {
+                                                display: flex;
+                                                margin-bottom: 30px;
+                                                .account {
+                                                    margin-left: auto;
+                                                }
+                                            }
+                                            .menu {
+                                                margin-left: 0px;
+                                                margin-right: 0px;
+                                                .menu__list {
+                                                    .first {
+                                                        display: flex;
+                                                        margin-right: 30px;
+                                                    }
+                                                    .second {
+                                                        display: flex;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //Блок комментариев
+                                .description-block {
+                                    padding-top: 70px;
+                                    padding-bottom: 120px;
+                                    .comment-row {
+                                        align-items: flex-start;
+                                        .avatar {
+                                            width: 206px;
+                                            .avatar__img {
                                                 width: 100%;
                                                 height: auto;
                                             }
                                         }
-                                    }
-                                }
-                            }
-                        }
-                        //Блок материалов
-                        .material-info-block {
-                            padding-bottom: 80px;
-                            .material-info-content {
-                                padding: 0;
-                                flex-direction: column;
-                                .description {
-                                    margin-bottom: 30px;
-                                    * {
-                                        text-align: center;
-                                    }
-                                    .green-text {
-                                        font-size: 22px;
-                                        margin-bottom: 10px;
-                                    }
-                                }
-                                .decoration {
-                                    display: none;
-                                }
-                            }
-                        }
-                        //Блок вопросов
-                        .question-block {
-                            padding: 50px 0;
-                            .title {
-                                font-size: 22px;
-                            }
-                            .content {
-                                .question-container {
-                                    .question {
-                                        .question-text {
-                                            font-size: 18px;
+                                        .comment {
+                                            margin-top: 43px;
+                                            width: 442px;
+                                            padding: 40px 30px 30px 30px;
+                                            height: fit-content;
                                         }
                                     }
                                 }
-                            }
-                        }
-                        //Блок организаторов
-                        .organizers-block {
-                            padding: 80px 0;
-                            .title {
-                                font-size: 22px;
-                            }
-                            .organizers-wrapper {
-                                padding: 0;
-                                flex-direction: column;
-                                align-items: center;
-                                .organizers-item {
-                                    margin-bottom: 30px;
+                                //Программа
+                                .programm-block {
+                                    padding: 70px 0 120px 0;
                                 }
-                            }
-                        }
-                        //Блок трансляции
-                        .broadcast-link-block {
-                            .wrapper {
-                                padding: 40px 20px 0px 20px;
-                                flex-direction: column-reverse;
-                                .broadcast-wrapper {
-                                    width: 100%;
-                                    .broadcast-btn {
-                                        width: calc(100% - 60px) !important;
-                                        max-width: 300px;
-                                        margin-bottom: 30px;
-                                        @media screen and (max-width: 376px) and (min-width: 320px) {
-                                            .text {
-                                                font-size: 18px;
+                                //Блок спикеров
+                                .speakers-block {
+                                    padding-bottom: 120px;
+                                    .speakers-block__cards {
+                                        grid-template-columns: repeat(4, 160px);
+                                        grid-row-gap: 30px;
+                                        grid-column-gap: 12px;
+                                        justify-content: center;
+                                    }
+                                }
+                                //Блок материалов
+                                .material-info-block {
+                                    padding-bottom: 120px;
+                                    .material-info-content {
+                                        padding: 0;
+                                    }
+                                    .decoration {
+                                        top: -54px !important;
+                                        right: 249px !important;
+                                    }
+                                }
+                                //Блок вопросов
+                                .question-block {
+                                    padding: 80px 0px;
+                                }
+                                //Блок организаторов
+                                .organizers-block {
+                                    padding: 120px 0;
+                                    .organizers-wrapper {
+                                        padding: 0;
+                                        .organizers-item {
+                                            width: 206px;
+                                            .organizers-item__img {
+                                                width: 206px;
+                                                height: 206px;
+                                            }
+                                            .name {
+                                                padding: 0;
                                             }
                                         }
                                     }
-                                    .date-time {
-                                        width: 100% !important;
+                                }
+                                //Блок трансляции
+                                .broadcast-link-block {
+                                    overflow: hidden;
+                                    .wrapper {
+                                        padding: 100px 0px 0px 0px;
+                                        svg {
+                                            width: 331px;
+                                            height: auto;
+                                        }
                                     }
-                                }
-                                svg {
-                                    width: 100%;
-                                    height: auto;
-                                }
-                            }
-                            .decor1 {
-                                top: auto;
-                                bottom: 130px;
-                                left: -260px;
-                                @media screen and (max-width: 500px) and (min-width: 320px) {
-                                    bottom: calc(-5px + 142 * ((100vw - 320px) / (500 - 320)));
-                                    left: calc(-603px + 343 * ((100vw - 320px) / (500 - 320)));
-                                }
-                            }
-                            .decor2 {
-                                display: none !important;
-                            }
-                        }
-                        .footer {
-                            padding-top: 50px;
-                            padding-bottom: 20px;
-                            .wrapper {
-                                flex-direction: column;
-                                align-items: center;
-                                .shild {
-                                    margin-bottom: 20px;
-                                }
-                                .description {
-                                    width: 100%;
-                                    max-width: 380px;
-                                    text-align: center;
-                                    margin-bottom: 30px;
-                                }
-                                .contacts {
-                                    margin-left: 0;
-                                    .phone {
-                                        margin-bottom: 10px;
+                                    .decor1 {
+                                        left: calc(-650px + 185 * ((100vw - 768px) / (1139 - 768)));
+                                        top: 60px;
+                                    }
+                                    .decor2 {
+                                        display: none;
                                     }
                                 }
                             }
-                        }
-                    }
+                            
+                            @media screen and (max-width: 767px) and (min-width: 320px) {
+                                //Отключение неадаптивных блоков
+                                .desctop {
+                                    display: none !important;
+                                }
+                                //Включение адаптивных блоков
+                                .adaptive {
+                                    display: block !important;
+                                }
+                                //Обертка для контента
+                                .wrapper {
+                                    box-sizing: border-box;
+                                    width: 100%;
+                                    max-width: 500px;
+                                    padding: 0 20px 0 20px;
+                                    margin: auto;
+                                }
+                                //Верхняя часть сайта
+                                .header {
+                                    background-image: url(../img/header-img-phone.svg);
+                                    background-position: center bottom;
+                                    background-size: 100% auto;
+                                    .wrapper {
+                                        &.top-header {
+                                            .top {
+                                                display: flex;
+                                                margin-bottom: 30px;
+                                                justify-content: space-between;
+                                                .account {
+                                                    margin-left: auto;
+                                                }
+                                            }
+                                            .menu {
+                                                margin-left: 0;
+                                                width: 100%;
+                                                align-items: center;
+                                                justify-content: center;
+                                                display: flex;
+                                                .menu__list {
+                                                    width: 100%;
+                                                    align-items: center;
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    a {
+                                                        font-size: 14px !important;
+                                                    }
+                                                    .first {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        margin-bottom: 15px;
+                                                        .item {
+                                                            margin-right: 0;
+                                                        }
+                                                    }
+                                                    .second {
+                                                        width: 100%;
+                                                        justify-content: space-around;
+                                                        display: flex;
+                                                        .item {
+                                                            margin-right: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &.header-info {
+                                            .page-description {
+                                                width: 100%;
+                                            }
+                                            .page-icons {
+                                                .online-icon {
+                                                    margin-right: 23px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //Блок комментариев
+                                .description-block {
+                                    padding-top: 50px;
+                                    padding-bottom: 100px;
+                                    .comment-row {
+                                        flex-direction: column;
+                                        align-items: center;
+                                        &:last-of-type {
+                                            flex-direction: column-reverse;
+                                        }
+                                        .avatar {
+                                            align-items: center;
+                                            margin-right: 0px !important;
+                                            margin-bottom: 30px;
+                                            .avatar__post {
+                                                text-align: center;
+                                            }
+                                        }
+                                        .comment {
+                                            width: 100%;
+                                            margin-right: 0px !important;
+                                            height: fit-content;
+                                            padding: 40px 30px 30px 30px;
+                                            .content {}
+                                        }
+                                    }
+                                }
+                                //Программа
+                                .programm-block {
+                                    padding: 50px 0 100px 0;
+                                    .wrapper {
+                                        .programm-block-title {
+                                            .programm-calendar {
+                                                .programm-calendar__calendar-icon {
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    margin-right: 5px;
+                                                }
+                                            }
+                                            .title-row {
+                                                position: relative;
+                                                flex-direction: column-reverse;
+                                                align-items: flex-start;
+                                                top: -36px;
+                                                margin-bottom: -16px !important;
+                                                .title-text {
+                                                    font-size: 24px;
+                                                }
+                                                .online-format-block {
+                                                    margin-left: auto;
+                                                    margin-bottom: 10px;
+                                                    .online-format-block_icon {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .programm-tabs-btns-row {
+                                            flex-direction: column-reverse;
+                                            align-items: flex-start;
+                                            .description {
+                                                text-align: left;
+                                                margin-bottom: 20px;
+                                            }
+                                        }
+                                    }
+                                    @media screen and (max-width: 375px) and (min-width: 320px) {
+                                        .wrapper {
+                                            .programm-block-title {
+                                                .programm-calendar {
+                                                    .programm-calendar__calendar-icon {
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        margin-right: 5px;
+                                                    }
+                                                }
+                                                .title-row {
+                                                    top: 0 !important;
+                                                    position: relative;
+                                                    flex-direction: column-reverse;
+                                                    align-items: flex-start;
+                                                    margin-bottom: 20px !important;
+                                                    .title-text {
+                                                        font-size: 22px;
+                                                    }
+                                                    .online-format-block {
+                                                        margin-left: 0 !important;
+                                                        margin-bottom: 0 !important;
+                                                        .online-format-block_icon {
+                                                            width: 30px;
+                                                            height: 30px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //Блок спикеров
+                                .speakers-block {
+                                    padding-bottom: 100px;
+                                    .speakers-block__cards {
+                                        grid-template-columns: repeat(2, 160px);
+                                        grid-row-gap: 30px;
+                                        grid-column-gap: 15px;
+                                        justify-content: space-around;
+                                    }
+                                    @media screen and (max-width: 374px) and (min-width: 320px) {
+                                        .speakers-block__cards {
+                                            grid-template-columns: repeat(2, 120px);
+                                            grid-row-gap: 30px;
+                                            grid-column-gap: 12px;
+                                            .speaker-card {
+                                                width: 120px;
+                                                height: fit-content;
+                                                .avatar-block {
+                                                    width: 120px;
+                                                    .avatar-img {
+                                                        width: 100%;
+                                                        height: auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //Блок материалов
+                                .material-info-block {
+                                    padding-bottom: 80px;
+                                    .material-info-content {
+                                        padding: 0;
+                                        flex-direction: column;
+                                        .description {
+                                            margin-bottom: 30px;
+                                            * {
+                                                text-align: center;
+                                            }
+                                            .green-text {
+                                                font-size: 22px;
+                                                margin-bottom: 10px;
+                                            }
+                                        }
+                                        .decoration {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                //Блок вопросов
+                                .question-block {
+                                    padding: 50px 0;
+                                    .title {
+                                        font-size: 22px;
+                                    }
+                                    .content {
+                                        .question-container {
+                                            .question {
+                                                .question-text {
+                                                    font-size: 18px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                //Блок организаторов
+                                .organizers-block {
+                                    padding: 80px 0;
+                                    .title {
+                                        font-size: 22px;
+                                    }
+                                    .organizers-wrapper {
+                                        padding: 0;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        .organizers-item {
+                                            margin-bottom: 30px;
+                                        }
+                                    }
+                                }
+                                //Блок трансляции
+                                .broadcast-link-block {
+                                    .wrapper {
+                                        padding: 40px 20px 0px 20px;
+                                        flex-direction: column-reverse;
+                                        .broadcast-wrapper {
+                                            width: 100%;
+                                            .broadcast-btn {
+                                                width: calc(100% - 60px) !important;
+                                                max-width: 300px;
+                                                margin-bottom: 30px;
+                                                @media screen and (max-width: 376px) and (min-width: 320px) {
+                                                    .text {
+                                                        font-size: 18px;
+                                                    }
+                                                }
+                                            }
+                                            .date-time {
+                                                width: 100% !important;
+                                            }
+                                        }
+                                        svg {
+                                            width: 100%;
+                                            height: auto;
+                                        }
+                                    }
+                                    .decor1 {
+                                        top: auto;
+                                        bottom: 130px;
+                                        left: -260px;
+                                        @media screen and (max-width: 500px) and (min-width: 320px) {
+                                            bottom: calc(-5px + 142 * ((100vw - 320px) / (500 - 320)));
+                                            left: calc(-603px + 343 * ((100vw - 320px) / (500 - 320)));
+                                        }
+                                    }
+                                    .decor2 {
+                                        display: none !important;
+                                    }
+                                }
+                                .footer {
+                                    padding-top: 50px;
+                                    padding-bottom: 20px;
+                                    .wrapper {
+                                        flex-direction: column;
+                                        align-items: center;
+                                        .shild {
+                                            margin-bottom: 20px;
+                                        }
+                                        .description {
+                                            width: 100%;
+                                            max-width: 380px;
+                                            text-align: center;
+                                            margin-bottom: 30px;
+                                        }
+                                        .contacts {
+                                            margin-left: 0;
+                                            .phone {
+                                                margin-bottom: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }

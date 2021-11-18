@@ -27,6 +27,36 @@ for (i = 0; i < tabsBtnsArr.length; ++i) {
 //     constructor()
 // }
 
+let moreSpeakerBtnArr = document.getElementsByClassName("speaker-description__detailed");
+for (i = 0; i < moreSpeakerBtnArr.length; ++i) {
+    moreSpeakerBtnArr[i].addEventListener("click", function() {
+        // alert(this.closest('.speaker-card').id);
+        let parrentSpeakerCard = this.closest('.speaker-card');
+        morePopUpOn(parrentSpeakerCard.offsetTop + parrentSpeakerCard.offsetHeight / 6);
+        // let parrentSpeakerBlockPosition = document.getElementsByClassName("speakers-block").;
+    })
+}
+
+let closePopUpBtn = document.querySelector(".close-btn");
+closePopUpBtn.addEventListener("click", function() {
+    morePopUpOff();
+});
+
+function morePopUpOn(position) {
+    let moreBlock = document.querySelector(".more-block");
+    let moreBlockPopUp = document.querySelector(".more-block .more-popup");
+    if (position + moreBlockPopUp.offsetHeight > moreBlock.offsetHeight) {
+        // дописать проверку
+    }
+    moreBlock.classList.add("open");
+    moreBlockPopUp.style.top = position + "px";
+}
+
+function morePopUpOff() {
+    let moreBlock = document.querySelector(".more-block");
+    moreBlock.classList.remove("open");
+}
+
 //Работа блока "вопрос-ответ"
 let questionArr = document.getElementsByClassName("question");
 for (i = 0; i < questionArr.length; ++i) {
