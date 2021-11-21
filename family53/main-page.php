@@ -1,124 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+/*
+Template Name: Главной страницы
+*/
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <title>Document</title>
-</head>
+<?php
+get_header();
+?>
 
-<body>
-    <header class="header">
-        <div class="wrapper top-header desctop">
-            <div class="logo"></div>
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="item"><a>Программа</a></li>
-                    <li class="item"><a>Спикеры</a></li>
-                    <li class="item"><a>Вопросы</a></li>
-                    <li class="item"><a>Организаторы</a></li>
-                    <li class="item"><a>Ссылка на конференцию</a></li>
-                </ul>
-            </nav>
-            <div class="account">
-                <div class="name">Личный кабинет</div>
-                <div class="avatar">
-                    <img src="../assets/img/icons/avatar-icon.svg" alt="Фото">
-                </div>
-            </div>
-        </div>
-        <div class="wrapper top-header adaptive">
-            <div class="top">
-                <div class="logo"></div>
-                <div class="account">
-                    <div class="name">Личный кабинет</div>
-                    <div class="avatar">
-                        <img src="../assets/img/icons/avatar-icon.svg" alt="Фото">
-                    </div>
-                </div>
-            </div>
-            <nav class="menu">
-                <ul class="menu__list">
-                    <div class="first">
-                        <li class="item"><a>Программа</a></li>
-                        <li class="item"><a>Спикеры</a></li>
-                        <li class="item"><a>Вопросы</a></li>
-                    </div>
-                    <div class="second">
-                        <li class="item"><a>Организаторы</a></li>
-                        <li class="item"><a>Ссылка на конференцию</a></li>
-                    </div>
-                </ul>
-            </nav>
-
-        </div>
-        <div class="wrapper header-info">
-            <div class="page-title">Конференция</div>
-            <div class="page-description">Эффективные практики оказания социальных услуг для выхода семей с детьми с низким уровнем дохода на уровень самообеспечения</div>
-            <div class="page-icons">
-                <div class="online-icon">
-                    <img src="../assets/img/icons/online-icon.svg" alt="online" class="icon">
-                    <div class="text">Онлайн-формат</div>
-                </div>
-                <div class="date-icons">
-                    <img src="../assets/img/icons/calendar-icons.svg" alt="calendar" class="icon">
-                    <div class="text">1-2 декабря 2021 </div>
-                </div>
-            </div>
-            <div class="registration-btn">Зарегистрироваться</div>
-        </div>
-        <div class="autorization-block">
-            <div class="popup login" id="login">
-                <div class="popup-title">
-                    Вход в Личный кабинет
-                </div>
-                <input class="autorization__input" type="text" name="login__login" placeholder="Логин (или email)">
-                <input class="autorization__input" type="password" name="login__password" placeholder="Пароль">
-                <div class="popup-btn">
-                    Войти
-                </div>
-                <div class="links two">
-                    <div class="link" id="link_registration">
-                        Зарегистрироваться
-                    </div>
-                    <div class="link" id="link_recovery">
-                        Забыли пароль?
-                    </div>
-                </div>
-            </div>
-            <div class="popup registrattion" id="registrattion">
-                <div class="popup-title">
-                    Зарегистрируйтесь<br>на конференцию
-                </div>
-                <input class="autorization__input" type="text" name="registrattion__login" placeholder="Логин (или email)*">
-                <input class="autorization__input" type="password" name="registrattion__password" placeholder="Пароль*">
-                <input class="autorization__input" type="text" name="registrattion__surname" placeholder="Фамилия*">
-                <input class="autorization__input" type="text" name="registrattion__name" placeholder="Имя*">
-                <input class="autorization__input" type="text" name="registrattion__patronymic" placeholder="Отчество*">
-                <input class="autorization__input" type="text" name="registrattion__organization" placeholder="Организация">
-
-                <div class="popup-btn">
-                    Зарегистрироваться
-                </div>
-                <div class="description">Нажимая на кнопку “Зарегистрироваться” я соглашаюсь на обработку персональных данных и политику конфиденциальности</div>
-                <div class="links">
-                    <div class="link" id="link_login">
-                        Войти в «Личный кабинет»
-                    </div>
-                </div>
-            </div>
-            <div class="mask"></div>
-        </div>
-    </header>
-    <main>
+<main>
         <div class="top-block"></div>
         <div class="description-block">
             <div class="wrapper">
                 <div class="comment-row">
                     <div class="avatar">
-                        <img class="avatar__img" src="../assets/img/TestImg.png" alt="commentator1">
+                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/TestImg.png" alt="commentator1">
                         <div class="avatar__name">Алексей <span class="regular-text">Агутин</span></div>
                         <div class="avatar__post">Председатель правления чего-то там</div>
                     </div>
@@ -149,7 +45,7 @@
                         </div>
                     </div>
                     <div class="avatar">
-                        <img class="avatar__img" src="../assets/img/TestImg.png" alt="commentator1">
+                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/TestImg.png" alt="commentator1">
                         <div class="avatar__name">Алексей <span class="regular-text">Агутин</span></div>
                         <div class="avatar__post">Председатель правления чего-то там</div>
                     </div>
@@ -161,14 +57,14 @@
             <div class="wrapper">
                 <div class="programm-block-title">
                     <div class="programm-calendar">
-                        <img class="programm-calendar__calendar-icon" src="../assets/img/icons/calendar-icons.svg" alt="calendar">
+                        <img class="programm-calendar__calendar-icon" src="<?php print_r(get_template_directory_uri());?>/img/icons/calendar-icons.svg" alt="calendar">
                         <p class="programm-calendar__date">1-2 декабря 2021 </p>
                     </div>
                     <div class="title-row">
                         <div class="title-text">Программа конференции</div>
                         <div class="online-format-block">
                             <div class="online-format-block__text">Онлайн-формат</div>
-                            <img class="online-format-block_icon" src="../assets/img/icons/online-format-icon.svg" alt="online">
+                            <img class="online-format-block_icon" src="<?php print_r(get_template_directory_uri());?>/img/icons/online-format-icon.svg" alt="online">
                         </div>
                     </div>
                 </div>
@@ -187,7 +83,7 @@
                     <div class="programm-tab" id="tab_1">
                         <div class="event standart online">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -216,7 +112,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -245,7 +141,7 @@
                         </div>
                         <div class="event break">
                             <div class="beak-icon">
-                                <img class="beak-icon__img" src="../assets/img/icons/break-icon.svg" alt="Перерыв">
+                                <img class="beak-icon__img" src="<?php print_r(get_template_directory_uri());?>/img/icons/break-icon.svg" alt="Перерыв">
                             </div>
                             <div class="brack__description">
                                 <div class="event__time">
@@ -257,7 +153,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -286,7 +182,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -315,7 +211,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -346,7 +242,7 @@
                     <div class="programm-tab hidden" id="tab_2">
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -375,7 +271,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -404,7 +300,7 @@
                         </div>
                         <div class="event break">
                             <div class="beak-icon">
-                                <img class="beak-icon__img" src="../assets/img/icons/break-icon.svg" alt="Перерыв">
+                                <img class="beak-icon__img" src="<?php print_r(get_template_directory_uri());?>/img/icons/break-icon.svg" alt="Перерыв">
                             </div>
                             <div class="brack__description">
                                 <div class="event__time">
@@ -416,7 +312,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -445,7 +341,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -474,7 +370,7 @@
                         </div>
                         <div class="event standart">
                             <div class="event__time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
                                 <div class="event__time-value">10:00 - 10:15</div>
                                 <div class="event__time-online"></div>
                             </div>
@@ -514,7 +410,7 @@
                 <div class="speakers-block__cards">
                     <div class="speaker-card" id="speaker_1">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -524,7 +420,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_2">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -534,7 +430,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_3">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -544,7 +440,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_4">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -554,7 +450,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_5">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -564,7 +460,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_6">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -574,7 +470,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_7">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -584,7 +480,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_8">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -594,7 +490,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_9">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -604,7 +500,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_10">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -614,7 +510,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_11">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -624,7 +520,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_12">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -634,7 +530,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_13">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -644,7 +540,7 @@
                     </div>
                     <div class="speaker-card" id="speaker_14">
                         <div class="avatar-block">
-                            <img class="avatar-img" src="../assets/img/avatar.png" alt="Фото">
+                            <img class="avatar-img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                         </div>
                         <div class="speaker-description">
                             <div class="name">Анна Пронина</div>
@@ -656,12 +552,12 @@
                 <div class="more-block">
                     <div class="more-popup">
                         <div class="close-btn">
-                            <img src="../assets/img/icons/x.svg" alt="close">
+                            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/x.svg" alt="close">
 
                         </div>
                         <div class="left">
                             <div class="avatar">
-                                <img class="avatar__img" src="../assets/img/avatar.png" alt="Фото">
+                                <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/avatar.png" alt="Фото">
                             </div>
                             <div class="post">Руководитель «Добрый Доктор»</div>
                             <div class="name">Анна Пронина</div>
@@ -699,7 +595,7 @@
                     <div class="registration-btn">
                         Зарегистрироваться
                     </div>
-                    <img src="../assets/img/icons/material-info-decor.svg" alt="." class="decoration">
+                    <img src="<?php print_r(get_template_directory_uri());?>/img/icons/material-info-decor.svg" alt="." class="decoration">
                 </div>
             </div>
         </div>
@@ -779,19 +675,19 @@
                 <div class="organizers-wrapper">
                     <a class="organizers-item" href="">
                         <div class="organizers-item__img">
-                            <img src="../assets/img/government.png" alt="Правительство">
+                            <img src="<?php print_r(get_template_directory_uri());?>/img/government.png" alt="Правительство">
                         </div>
                         <div class="name">Правительство Новгородской области</div>
                     </a>
                     <a class="organizers-item" href="">
                         <div class="organizers-item__img">
-                            <img src="../assets/img/fund.png" alt="Правительство">
+                            <img src="<?php print_r(get_template_directory_uri());?>/img/fund.png" alt="Правительство">
                         </div>
                         <div class="name">Фонд поддержки детей, находящихся в трудной жизненной ситуации</div>
                     </a>
                     <a class="organizers-item" href="">
                         <div class="organizers-item__img">
-                            <img src="../assets/img/ministry.png" alt="Правительство">
+                            <img src="<?php print_r(get_template_directory_uri());?>/img/ministry.png" alt="Правительство">
                         </div>
                         <div class="name">Министерство труда и социальной защиты Российской Федерации
                         </div>
@@ -800,8 +696,8 @@
             </div>
         </div>
         <div class="broadcast-link-block">
-            <img src="../assets/img/icons/broadcast-decor.svg" alt="decoration" class="decor1">
-            <img src="../assets/img/icons/broadcast-decor2.svg" alt="decoration" class="decor2">
+            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/broadcast-decor.svg" alt="decoration" class="decor1">
+            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/broadcast-decor2.svg" alt="decoration" class="decor2">
             <div class="wrapper">
                 <svg width="428" height="303" viewBox="0 0 428 303" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.758 150.865L11.3675 262.997L425.822 263.118L423.283 207.755C423 201.613 421.108 195.658 417.795 190.478C414.483 185.298 409.864 181.075 404.398 178.227L376.161 163.544L362.97 118.186C361.495 113.171 358.428 108.77 354.228 105.641C350.027 102.512 344.919 100.822 339.664 100.824L62.3856 100.743C55.7637 100.731 49.2002 102.019 43.0707 104.532C36.9412 107.045 31.3658 110.735 26.6636 115.39C21.9614 120.045 18.2246 125.575 15.6669 131.662C13.1093 137.749 11.781 144.274 11.758 150.865Z" fill="#8CC63E"/>
@@ -885,12 +781,12 @@
                     </div>
                     <div class="broadcast-btn">
                         <div class="text">Ссылка на трансляцию</div>
-                        <img src="../assets/img/icons/online-icon.svg" alt="" class="online-icon">
+                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/online-icon.svg" alt="" class="online-icon">
                     </div>
                     <div class="date-time">
                         <div class="broadcast-time">
                             <div class="time">
-                                <img src="../assets/img/icons/time-icon.svg" alt="" class="time-icon">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="" class="time-icon">
                             </div>
                             <div class="time-value">
                                 <div class="text">Включение</div>
@@ -898,7 +794,7 @@
                             </div>
                         </div>
                         <div class="broadcast-date">
-                            <img src="../assets/img/icons/calendar-icons.svg" alt="" class="date-icon">
+                            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/calendar-icons.svg" alt="" class="date-icon">
                             <div class="date">1-2 декабря 2021 </div>
                         </div>
                     </div>
@@ -907,29 +803,6 @@
             </div>
         </div>
     </main>
-    <footer class="footer">
-        <div class="wrapper">
-            <img src="../assets/img/icons/shild.svg" alt="." class="shild">
-            <div class="description">За дополнительной информацией вы можете обращаться в министерство труда и социальной защиты населения Новгородской области</div>
-            <div class="contacts">
-                <div class="phone">
-                    <img src="../assets/img/icons/phone-icon.svg" alt="" class="icon">
-                    <a href="tel:88162983170" class="phone-number">8 (8162) 983-170</a>
-                </div>
-                <div class="mail">
-                    <img src="../assets/img/icons/mail-icon.svg" alt="" class="icon">
-                    <a href="mailto:connect_06@mail.ru" class="mail-link">connect_06@mail.ru</a>
-                </div>
-            </div>
-        </div>
 
-    </footer>
-    <div class="developer-block">
-        <div class="wrapper">
-            <a href="https://artgorka.ru/"><img src="../assets/img/icons/artGorka.svg" alt=""></a>
-        </div>
-    </div>
-    <script src="../assets/js/app.js"></script>
-</body>
-
-</html>
+<?php
+get_footer();

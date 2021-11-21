@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     //Работа переключения табов программы
     let tabBtnFirst = document.getElementById("tab_1");
     let tabBtnSecond = document.getElementById("tab_2");
@@ -67,7 +67,5 @@ $(document).ready(function() {
     }
 
 
-    $('.signout').click(function() {
-        alert(1);
-    })
+
 })
