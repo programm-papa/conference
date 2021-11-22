@@ -250,10 +250,71 @@ function wplb_ajax_request() {
 					// Записываем результаты в массив.
 					$result[ 'status' ] = true;
 				}
+				echo json_encode( $result );
+				break;
+
+
+			case 'registration':
+				$user = username_exists( $_REQUEST[ 'login' ]);
+				if ( !$user && false == email_exists( $_REQUEST['email' ]) ) {
+					$result[ 'status' ] = true;
+					// Создаём массив с данными для регистрации нового пользователя.
+					 $user_data = array(
+						'user_login' => $_REQUEST[ 'login' ], // Логин.
+						'user_email' => $_REQUEST[ 'email' ], // Email.
+						'user_pass' => $_REQUEST[ 'password' ], // Пароль.
+						'display_name' => $_REQUEST[ 'login' ], // Отображаемое имя.
+						'role' => 'subscriber' // Роль.
+					);
+					// Добавляем пользователя в базу данных.
+					$user = wp_insert_user( $user_data );
+					  // Проверка на ошибки.
+				  	if ( is_wp_error( $user ) ) {
+						// Невозможно создать пользователя, записываем результат в массив.
+						$result[ 'status' ] = false;
+						$result[ 'content' ] = $user->get_error_message();
+					} else {
+						// Создаём массив для авторизации.
+						$creds = array(
+							'user_login' => $_REQUEST[ 'login' ], // Логин пользователя.
+							'user_password' => $_REQUEST[ 'password' ], // Пароль пользователя.
+							'remember' => true // Запоминаем.
+						);
+						// Пробуем авторизовать пользователя.
+						$signon = wp_signon( $creds, false );
+						if ( is_wp_error( $signon ) ) {
+							// Авторизовать не получилось.
+							$result[ 'status' ] = false;
+							$result[ 'content' ] = $signon->get_error_message();
+						} else {
+							$user_id = wp_update_user( [
+								'ID'       => $signon->ID,
+								'first_name' => $_REQUEST[ 'name' ],
+								'last_name'  => $_REQUEST[ 'surname' ],
+							] );
+							update_user_meta($signon->ID,'patronymic',$_REQUEST[ 'patronymic' ]);
+							update_user_meta($signon->ID,'organization',$_REQUEST[ 'organization' ]);
+							// Авторизация успешна, устанавливаем необходимые куки.
+							wp_clear_auth_cookie();
+							clean_user_cache( $signon->ID );
+							wp_set_current_user( $signon->ID );
+							wp_set_auth_cookie( $signon->ID );
+							update_user_caches( $signon );
+							// Записываем результаты в массив.
+							$result[ 'status' ] = true;
+						}
+					}
+				} else {
+						// Такой пользователь уже существует, регистрация не возможна, записываем данные в массив.
+						$result[ 'status' ] = false;
+						$result[ 'content' ] = esc_html__( 'Пользователь уже существует', 'wplb_ajax_lesson' );
+					}
+
+			echo json_encode( $result );
 				break;
         }
 		 // Конвертируем массив с результатами обработки и передаем его обратно как строку в JSON формате.
-		 echo json_encode( $result );
+		 
     }
     // Заканчиваем работу Ajax.
     wp_die();

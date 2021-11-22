@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
         if (regVerification()) {
             let organization = '';
             if ($(".input[name~='registrattion__organization'").val() !== '') {
-                let organization = $(".input[name~='registrattion__organization'").val();
+                organization = $(".input[name~='registrattion__organization'").val();
             }
             $.ajax({
                     // Путь к файлу admin-ajax.php.
@@ -73,6 +73,7 @@ jQuery(document).ready(function($) {
                         // Передаём значения формы.
                         'login': $("input[name~='registrattion__login']").val(),
                         'password': $("input[name~='registrattion__password']").val(),
+                        'email': $("input[name~='registrattion__email']").val(),
                         'surname': $("input[name~='registrattion__surname']").val(),
                         'name': $("input[name~='registrattion__name']").val(),
                         'patronymic': $("input[name~='registrattion__patronymic']").val(),
@@ -81,7 +82,21 @@ jQuery(document).ready(function($) {
                         beforeSend: function() {}
                     }
                 })
-                .done(function(data) {})
+                .done(function(data) {
+                    // Функция для работы с обработанными данными.
+                    // Переменная $reslut будет хранить результат обработки.
+                    let result = JSON.parse(data);
+                    if (!result.status) {
+                        if (result.content == 'Пользователь уже существует') {
+                            $(".popup.login .autorization__input[name~='registrattion__login']").addClass('error');
+                            $('.popup.login .error-description').addClass('visible');
+                            $('.popup.login .error-description').html('Пользователь с таким Логином или Email уже сущестует');
+                        }
+                    } else {
+                        location.reload();
+                    }
+                    console.log(result);
+                })
                 .fail(function(errorThrown) {
                     // Читать ошибки будем в консоли если что-то пойдет не по плану.
                     console.log(errorThrown);

@@ -37,12 +37,31 @@
                     <li class="item"><a>Ссылка на конференцию</a></li>
                 </ul>
             </nav>
-            <div class="account">
-                <div class="name">Личный кабинет</div>
-                <div class="avatar">
-                    <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
-                </div>
+            <?php 
+                    $cur_user_id = get_current_user_id();
+                    if($cur_user_id !=0) {
+                       
+                        $user_info = get_userdata($cur_user_id);
+                        $user_name = $user_info->user_lastname." ".$user_info->user_firstname;
+                        ?>
+                        <a class="account">
+                            <div class="name"><?= $user_name?></div>
+                            <div class="avatar">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
+                            </div>
+                        </a>
+                         <?php
+                    } else {
+                ?>
+                <div class="account open-registr-popup">
+                    <div class="name">Личный кабинет</div>
+                    <div class="avatar">
+                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
+                    </div>
             </div>
+            <?php
+                    }
+            ?>
         </div>
         <div class="wrapper top-header adaptive">
             <div class="top">
@@ -120,6 +139,7 @@
                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/show_password.svg" alt="">
                     </label>
                 </div>
+                <input class="autorization__input" type="text" name="registrattion__email" placeholder="Email*">
                 <input class="autorization__input" type="text" name="registrattion__surname" placeholder="Фамилия*">
                 <input class="autorization__input" type="text" name="registrattion__name" placeholder="Имя*">
                 <input class="autorization__input" type="text" name="registrattion__patronymic" placeholder="Отчество*">
