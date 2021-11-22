@@ -82,7 +82,7 @@
                     <div class="text">1-2 декабря 2021 </div>
                 </div>
             </div>
-            <div class="registration-btn">Зарегистрироваться</div>
+            <div class="registration-btn open-registr-popup">Зарегистрироваться</div>
         </div>
         <div class="autorization-block">
             <div class="popup login" id="login">
@@ -90,12 +90,18 @@
                     Вход в Личный кабинет
                 </div>
                 <input class="autorization__input" type="text" name="login__login" placeholder="Логин (или email)">
-                <input class="autorization__input" type="password" name="login__password" placeholder="Пароль">
+                <div class="password-block">
+                    <input class="autorization__input password" type="password" name="login__password" placeholder="Пароль">
+                    <label for="login__password">
+                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/show_password.svg" alt="">
+                    </label>
+                </div>
+                <div class="error-description">Неизвестное имя пользователя. Перепроверьте или попробуйте ваш адрес email.</div>
                 <div class="popup-btn">
                     Войти
                 </div>
                 <div class="links two">
-                    <div class="link" id="link_registration">
+                    <div class="link open-registr-popup" id="link_registration">
                         Зарегистрироваться
                     </div>
                     <div class="link" id="link_recovery">
@@ -107,22 +113,30 @@
                 <div class="popup-title">
                     Зарегистрируйтесь<br>на конференцию
                 </div>
-                <input class="autorization__input" type="text" name="registrattion__login" placeholder="Логин (или email)*">
-                <input class="autorization__input" type="password" name="registrattion__password" placeholder="Пароль*">
+                <input class="autorization__input" type="text" name="registrattion__login" placeholder="Логин*">
+                <div class="password-block">
+                    <input class="autorization__input" type="password" name="registrattion__password" placeholder="Пароль*">
+                    <label for="registrattion__password">
+                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/show_password.svg" alt="">
+                    </label>
+                </div>
                 <input class="autorization__input" type="text" name="registrattion__surname" placeholder="Фамилия*">
                 <input class="autorization__input" type="text" name="registrattion__name" placeholder="Имя*">
                 <input class="autorization__input" type="text" name="registrattion__patronymic" placeholder="Отчество*">
                 <input class="autorization__input" type="text" name="registrattion__organization" placeholder="Организация">
-
+                <div class="error-description"></div>
                 <div class="popup-btn">
                     Зарегистрироваться
                 </div>
                 <div class="description">Нажимая на кнопку “Зарегистрироваться” я соглашаюсь на обработку персональных данных и политику конфиденциальности</div>
                 <div class="links">
-                    <div class="link" id="link_login">
+                    <div class="link open-signin-popup" id="link_login">
                         Войти в «Личный кабинет»
                     </div>
                 </div>
+            </div>
+            <div class="close-popup">
+                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/close.svg" alt="">
             </div>
             <div class="mask"></div>
         </div>

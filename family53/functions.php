@@ -252,6 +252,8 @@ function wplb_ajax_request() {
 				}
 				break;
         }
+		 // Конвертируем массив с результатами обработки и передаем его обратно как строку в JSON формате.
+		 echo json_encode( $result );
     }
     // Заканчиваем работу Ajax.
     wp_die();

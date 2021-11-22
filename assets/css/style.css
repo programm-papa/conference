@@ -193,6 +193,7 @@ body {
 }
 
 .header .wrapper.top-header .account {
+  cursor: pointer;
   margin-left: 120px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,6 +336,30 @@ body {
   background-color: rgba(55, 53, 57, 0.8);
 }
 
+.header .autorization-block .close-popup {
+  z-index: 3;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #8CC63E;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.header .autorization-block .close-popup:hover {
+  background-color: #6EAA1D;
+}
+
 .header .autorization-block .popup {
   position: relative;
   z-index: 4;
@@ -403,6 +428,55 @@ body {
 
 .header .autorization-block .popup .autorization__input:last-of-type {
   margin-bottom: 30px;
+}
+
+.header .autorization-block .popup .autorization__input.error {
+  padding: 0 14px;
+  border: 1px solid #FF0000;
+}
+
+.header .autorization-block .popup .password-block {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.header .autorization-block .popup .password-block .autorization__input {
+  margin-bottom: 0;
+  padding-right: 35px;
+}
+
+.header .autorization-block .popup .password-block label {
+  position: absolute;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  right: 10px;
+  cursor: pointer;
+}
+
+.header .autorization-block .popup .password-block label:hover {
+  opacity: .5;
+}
+
+.header .autorization-block .popup .error-description {
+  display: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #FF0000;
+}
+
+.header .autorization-block .popup .error-description.visible {
+  display: block;
 }
 
 .header .autorization-block .popup .popup-btn {

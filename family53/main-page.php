@@ -592,7 +592,7 @@ get_header();
                         <div class="green-text">В личном кабинете вы найдете</div>
                         <div class="text">Материалы для конференции спикеров</div>
                     </div>
-                    <div class="registration-btn">
+                    <div class="registration-btn open-registr-popup">
                         Зарегистрироваться
                     </div>
                     <img src="<?php print_r(get_template_directory_uri());?>/img/icons/material-info-decor.svg" alt="." class="decoration">
@@ -779,10 +779,10 @@ get_header();
                     <div class="broadcast-description">
                         Прямая трансляция будет проходить на YouTube канале “назвнаие”
                     </div>
-                    <div class="broadcast-btn">
+                    <a class="broadcast-btn" href="https://zoom.us/j/98286899158?pwd=a0JTRFJzbFBRbzJINlRNZ2hJYmk3UT09">
                         <div class="text">Ссылка на трансляцию</div>
                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/online-icon.svg" alt="" class="online-icon">
-                    </div>
+                    </a>
                     <div class="date-time">
                         <div class="broadcast-time">
                             <div class="time">

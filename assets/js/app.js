@@ -1,4 +1,4 @@
-$(document).ready(function() {
+jQuery(document).ready(function($) {
     //Работа переключения табов программы
     let tabBtnFirst = document.getElementById("tab_1");
     let tabBtnSecond = document.getElementById("tab_2");
@@ -66,8 +66,56 @@ $(document).ready(function() {
         })
     }
 
+    //Запуск регистрации
+    $('.open-registr-popup').on('click', function() {
+        if ($('.autorization-block').length > 0) {
+            $('.autorization-block').addClass('open');
+        }
+        if ($('.popup.active').length > 0) {
+            $('.popup.active').removeClass('active');
+        }
+        if ($('#registrattion').length > 0) {
+            $('#registrattion').addClass('active');
+        }
+    })
 
-    $('.signout').click(function() {
-        alert(1);
+    //Запуск входа/login
+    $('.open-signin-popup').on('click', function() {
+        if ($('.autorization-block').length > 0) {
+            $('.autorization-block').addClass('open');
+        }
+        if ($('.popup.active').length > 0) {
+            $('.popup.active').removeClass('active');
+        }
+        if ($('#login').length > 0) {
+            $('#login').addClass('active');
+        }
+    })
+
+    //Закрытие попапов
+    $('.close-popup').on('click', function() {
+        if ($('.popup.active').length > 0) {
+            $('.popup.active').removeClass('active');
+        }
+        if ($('.autorization-block.open').length > 0) {
+            $('.autorization-block').removeClass('open');
+        }
+    })
+
+
+    //Валидация, функционал и ошибки в попапах
+    $('.password-block label').hover(function() {
+        $('.password-block label').prev().attr('type', "text");
+    }, function() {
+        $('.password-block label').prev().attr('type', "password");
+    })
+
+
+    $('.autorization__input.error').on('input', function() {
+        $('.autorization__input.error').removeClass('error');
+        if ($('.popup.login .error-description.visible').length > 0) {
+            $('.popup.login .error-description.visible').removeClass('visible');
+        }
+
     })
 })

@@ -66,6 +66,47 @@ jQuery(document).ready(function($) {
         })
     }
 
+    //Запуск регистрации
+    $('.open-registr-popup').on('click', function() {
+        if ($('.autorization-block').length > 0) {
+            $('.autorization-block').addClass('open');
+        }
+        if ($('.popup.active').length > 0) {
+            $('.popup.active').removeClass('active');
+        }
+        if ($('#registrattion').length > 0) {
+            $('#registrattion').addClass('active');
+        }
+    })
+
+    //Запуск входа/login
+    $('.open-signin-popup').on('click', function() {
+        if ($('.autorization-block').length > 0) {
+            $('.autorization-block').addClass('open');
+        }
+        if ($('.popup.active').length > 0) {
+            $('.popup.active').removeClass('active');
+        }
+        if ($('#login').length > 0) {
+            $('#login').addClass('active');
+        }
+    })
+
+    //Закрытие попапов
+    $('.close-popup').on('click', function() {
+        if ($('.popup.active').length > 0) {
+            $('.popup.active').removeClass('active');
+        }
+        if ($('.autorization-block.open').length > 0) {
+            $('.autorization-block').removeClass('open');
+        }
+    })
 
 
+    //Валидация, функционал и ошибки в попапах
+    $('.password-block label').hover(function() {
+        $('.password-block label').prev().attr('type', "text");
+    }, function() {
+        $('.password-block label').prev().attr('type', "password");
+    })
 })
