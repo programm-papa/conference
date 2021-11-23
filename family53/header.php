@@ -24,8 +24,13 @@
 </head>
 
 <body>
-<?php wp_body_open(); ?>
-    <header class="header">
+<?php wp_body_open(); 
+$post_id = get_the_ID();
+$headerClass = "";
+if($post_id == 11) {
+    $headerClass = 'user-account';
+}?>
+    <header class="header <?= $headerClass; ?>">
         <div class="wrapper top-header desctop">
             <div class="logo"></div>
             <nav class="menu">

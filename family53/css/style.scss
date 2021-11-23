@@ -121,6 +121,9 @@
                                     height: fit-content;
                                     background-image: none;
                                     background-color: #FFFFFF;
+                                    .header-info {
+                                        display: none !important;
+                                    }
                                 }
                                 .wrapper {
                                     &.top-header {
@@ -1470,6 +1473,49 @@
                                                 font-size: 16px;
                                                 line-height: 19px;
                                                 color: #5F5D61;
+                                            }
+                                            .input-line {
+                                                display: block;
+                                                width: 100%;
+                                                height: 45px;
+                                                padding: 0px 15px;
+                                                box-sizing: border-box;
+                                                margin-bottom: 10px;
+                                                background: #F5F5F5;
+                                                border-radius: 6px;
+                                                border: none;
+                                                outline: none;
+                                                //Шрифт
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 16px;
+                                                line-height: 19px;
+                                                color: #5F5D61;
+                                                &::placeholder {
+                                                    opacity: .5;
+                                                }
+                                                &:focus {
+                                                    padding: 0px 14px;
+                                                    border: 1px solid rgba(95, 93, 97, .1);
+                                                }
+                                                &.changed {
+                                                    padding: 0px 14px;
+                                                    border: 1px solid #8CC63E;
+                                                }
+                                            }
+                                            textarea.input-line {
+                                                padding: 13px 15px;
+                                                height: 83px;
+                                                box-sizing: border-box;
+                                                &:focus {
+                                                    padding: 12px 14px;
+                                                    border: 1px solid rgba(95, 93, 97, .1);
+                                                }
+                                            }
+                                            .input-line-label {
+                                                display: block;
+                                                width: 100%;
+                                                text-align: right;
                                             }
                                         }
                                     }

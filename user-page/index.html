@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="header user-account">
+    <header class="header  user-account">
         <div class="wrapper top-header desctop">
             <div class="logo"></div>
             <nav class="menu">
@@ -41,14 +41,89 @@
             </div>
             <nav class="menu">
                 <ul class="menu__list">
-                    <li class="item"><a>Программа</a></li>
-                    <li class="item"><a>Спикеры</a></li>
-                    <li class="item"><a>Вопросы</a></li>
-                    <li class="item"><a>Организаторы</a></li>
-                    <li class="item"><a>Ссылка на конференцию</a></li>
+                    <div class="first">
+                        <li class="item"><a>Программа</a></li>
+                        <li class="item"><a>Спикеры</a></li>
+                        <li class="item"><a>Вопросы</a></li>
+                    </div>
+                    <div class="second">
+                        <li class="item"><a>Организаторы</a></li>
+                        <li class="item"><a>Ссылка на конференцию</a></li>
+                    </div>
                 </ul>
             </nav>
 
+        </div>
+        <div class="wrapper header-info">
+            <div class="page-title">Конференция</div>
+            <div class="page-description">Эффективные практики оказания социальных услуг для выхода семей с детьми с низким уровнем дохода на уровень самообеспечения</div>
+            <div class="page-icons">
+                <div class="online-icon">
+                    <img src="../assets/img/icons/online-icon.svg" alt="online" class="icon">
+                    <div class="text">Онлайн-формат</div>
+                </div>
+                <div class="date-icons">
+                    <img src="../assets/img/icons/calendar-icons.svg" alt="calendar" class="icon">
+                    <div class="text">1-2 декабря 2021 </div>
+                </div>
+            </div>
+            <div class="registration-btn open-registr-popup">Зарегистрироваться</div>
+        </div>
+        <div class="autorization-block">
+            <div class="popup login" id="login">
+                <div class="popup-title">
+                    Вход в Личный кабинет
+                </div>
+                <input class="autorization__input" type="text" name="login__login" placeholder="Логин (или email)">
+                <div class="password-block">
+                    <input class="autorization__input password" type="password" name="login__password" placeholder="Пароль">
+                    <label for="login__password">
+                        <img src="../assets/img/icons/show_password.svg" alt="">
+                    </label>
+                </div>
+                <div class="error-description">Неизвестное имя пользователя. Перепроверьте или попробуйте ваш адрес email.</div>
+                <div class="popup-btn">
+                    Войти
+                </div>
+                <div class="links two">
+                    <div class="link open-registr-popup" id="link_registration">
+                        Зарегистрироваться
+                    </div>
+                    <div class="link" id="link_recovery">
+                        Забыли пароль?
+                    </div>
+                </div>
+            </div>
+            <div class="popup registrattion" id="registrattion">
+                <div class="popup-title">
+                    Зарегистрируйтесь<br>на конференцию
+                </div>
+                <input class="autorization__input" type="text" name="registrattion__login" placeholder="Логин (или email)*">
+                <div class="password-block">
+                    <input class="autorization__input" type="password" name="registrattion__password" placeholder="Пароль*">
+                    <label for="registrattion__password">
+                        <img src="../assets/img/icons/show_password.svg" alt="">
+                    </label>
+                </div>
+                <input class="autorization__input" type="text" name="registrattion__surname" placeholder="Фамилия*">
+                <input class="autorization__input" type="text" name="registrattion__name" placeholder="Имя*">
+                <input class="autorization__input" type="text" name="registrattion__patronymic" placeholder="Отчество*">
+                <input class="autorization__input" type="text" name="registrattion__organization" placeholder="Организация">
+                <div class="error-description"></div>
+                <div class="popup-btn">
+                    Зарегистрироваться
+                </div>
+                <div class="description">Нажимая на кнопку “Зарегистрироваться” я соглашаюсь на обработку персональных данных и политику конфиденциальности</div>
+                <div class="links">
+                    <div class="link open-signin-popup" id="link_login">
+                        Войти в «Личный кабинет»
+                    </div>
+                </div>
+            </div>
+            <div class="close-popup">
+                <img src="../assets/img/icons/close.svg" alt="">
+            </div>
+            <div class="mask"></div>
         </div>
     </header>
     <main class="account-page">
@@ -80,10 +155,21 @@
                 <div class="account-tabs-wrapper__content">
                     <div class="tab" id="personal-data">
                         <div class="login">
-                            Login: lorem1999
+                            Login:
                         </div>
-                        <input type="text" class="input-line 
-                        surname">
+                        <input type="text" class="input-line surname*" value="" placeholder="Фамилия*">
+                        <input type="text" class="input-line name*" value="" placeholder="Имя*">
+                        <input type="text" class="input-line patronymic*" value="" placeholder="Отчество*">
+                        <input type="text" class="input-line email*" value="" placeholder="E-mail*">
+                        <input type="phone" class="input-line phone" value="" placeholder="Телефон">
+                        <input type="text" class="input-line organization" value="" placeholder="Организация">
+                        <!-- Поля для выступающих -->
+                        <textarea class="input-line " placeholder="Тема выступления*"></textarea>
+                        <textarea name="about-info" class="input-line" placeholder="Информация о спикере*"></textarea>
+                        <label for="about-info" class="input-line-label">не более 500 символов</label>
+                        <div class="btn-block">
+
+                        </div>
                     </div>
                 </div>
             </div>

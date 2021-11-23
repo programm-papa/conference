@@ -140,6 +140,10 @@ body {
   background-color: #FFFFFF;
 }
 
+.header.user-account .header-info {
+  display: none !important;
+}
+
 .header .wrapper.top-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,10 +456,9 @@ body {
 }
 
 .header .autorization-block .popup .password-block label {
+  display: block;
   position: absolute;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 24px;
   right: 10px;
   cursor: pointer;
 }
@@ -2025,6 +2028,69 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #5F5D61;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 10px;
+  background: #F5F5F5;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #5F5D61;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line::-webkit-input-placeholder {
+  opacity: .5;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line:-ms-input-placeholder {
+  opacity: .5;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line::-ms-input-placeholder {
+  opacity: .5;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line::placeholder {
+  opacity: .5;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line:focus {
+  padding: 0px 14px;
+  border: 1px solid rgba(95, 93, 97, 0.1);
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line.changed {
+  padding: 0px 14px;
+  border: 1px solid #8CC63E;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line {
+  padding: 13px 15px;
+  height: 83px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line:focus {
+  padding: 12px 14px;
+  border: 1px solid rgba(95, 93, 97, 0.1);
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line-label {
+  display: block;
+  width: 100%;
+  text-align: right;
 }
 
 @media screen and (max-width: 1139px) and (min-width: 768px) {
