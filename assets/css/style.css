@@ -2017,6 +2017,16 @@ body {
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content {
   width: 825px;
   height: 679px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content .tab {
+  display: none;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content .tab.active {
+  display: block;
 }
 
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .login {
@@ -2085,16 +2095,27 @@ body {
   border: 1px solid #8CC63E;
 }
 
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line.error {
+  padding: 0px 14px;
+  border: 1px solid #FF0000;
+}
+
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line {
-  padding: 13px 15px;
+  resize: none !important;
+  padding: 13px 15px !important;
   height: 83px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line:focus {
-  padding: 12px 14px;
+  padding: 12px 14px !important;
   border: 1px solid rgba(95, 93, 97, 0.1);
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line.changed {
+  padding: 12px 14px !important;
+  border: 1px solid #8CC63E;
 }
 
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line-label {
@@ -2132,6 +2153,168 @@ body {
 
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .btn-block .save-btn:hover {
   background-color: rgba(110, 170, 29, 0.7);
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .mask {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .mask.active {
+  display: block;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file {
+  width: 100%;
+  height: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+  padding: 0 6px 0px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file .file__name {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #5F5D61;
+  border: none;
+  outline: none;
+  pointer-events: none;
+  display: block;
+  max-width: 50%;
+  margin-right: 10px;
+  background: inherit;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file .file-btn {
+  cursor: pointer;
+  width: 27px;
+  height: 27px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #5F5D61;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file .btn-edit {
+  margin-right: 10px;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file .btn-done-edit {
+  display: none;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file .btn-delete {
+  display: none;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file .btn-download {
+  margin-left: auto;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file:hover, .account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.selected {
+  background: #F5F5F5;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file:hover .file-btn, .account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.selected .file-btn {
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file:hover .btn-download:hover, .account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.selected .btn-download:hover {
+  background: #8CC63E;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file:hover .btn-download:hover svg path, .account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.selected .btn-download:hover svg path {
+  fill: #fff;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable {
+  background: #F5F5F5;
+  position: relative;
+  z-index: 2;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .file__name {
+  pointer-events: visible;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .file-btn {
+  border: 1px solid #fff;
+  background: #fff;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-edit:hover {
+  background: #8CC63E;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-edit:hover svg path {
+  fill: #fff;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-done-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-done-edit:hover {
+  background: #8CC63E;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-done-edit:hover svg path {
+  fill: #fff;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-delete:hover {
+  background: #FF0000;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-delete:hover svg path {
+  fill: #fff;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-download {
+  margin-left: 0;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-download:hover {
+  background: #8CC63E;
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #materials .file.editable .btn-download:hover svg path {
+  fill: #fff;
 }
 
 @media screen and (max-width: 1139px) and (min-width: 768px) {

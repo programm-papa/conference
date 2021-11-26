@@ -106,4 +106,13 @@ jQuery(document).ready(function($) {
     }, function() {
         $('.password-block label').prev().attr('type', "password");
     })
+
+    if ($('.account-page .tab__btn').length > 0) {
+        $('.account-page .tab__btn').each(function() {
+            $(this).click(function() {
+                alert(1);
+            })
+        })
+    }
+
 })

@@ -1521,8 +1521,12 @@
                                                 height: 83px;
                                                 box-sizing: border-box;
                                                 &:focus {
-                                                    padding: 12px 14px;
+                                                    padding: 12px 14px !important;
                                                     border: 1px solid rgba(95, 93, 97, .1);
+                                                }
+                                                &.changed {
+                                                    padding: 12px 14px !important;
+                                                    border: 1px solid #8CC63E;
                                                 }
                                             }
                                             .input-line-label {

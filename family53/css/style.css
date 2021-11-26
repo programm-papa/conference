@@ -2099,8 +2099,13 @@ body {
 }
 
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line:focus {
-  padding: 12px 14px;
+  padding: 12px 14px !important;
   border: 1px solid rgba(95, 93, 97, 0.1);
+}
+
+.account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data textarea.input-line.changed {
+  padding: 12px 14px !important;
+  border: 1px solid #8CC63E;
 }
 
 .account-page .account-tabs-wrapper .account-tabs-wrapper__content #personal-data .input-line-label {

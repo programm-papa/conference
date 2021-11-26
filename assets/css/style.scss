@@ -1466,6 +1466,14 @@
                                     .account-tabs-wrapper__content {
                                         width: 825px;
                                         height: 679px;
+                                        overflow-y: auto;
+                                        overflow-x: hidden;
+                                        .tab {
+                                            display: none;
+                                            &.active {
+                                                display: block;
+                                            }
+                                        }
                                         #personal-data {
                                             .login {
                                                 width: 100%;
@@ -1510,14 +1518,23 @@
                                                     padding: 0px 14px;
                                                     border: 1px solid #8CC63E;
                                                 }
+                                                &.error {
+                                                    padding: 0px 14px;
+                                                    border: 1px solid #FF0000;
+                                                }
                                             }
                                             textarea.input-line {
-                                                padding: 13px 15px;
+                                                resize: none !important;
+                                                padding: 13px 15px !important;
                                                 height: 83px;
                                                 box-sizing: border-box;
                                                 &:focus {
-                                                    padding: 12px 14px;
+                                                    padding: 12px 14px !important;
                                                     border: 1px solid rgba(95, 93, 97, .1);
+                                                }
+                                                &.changed {
+                                                    padding: 12px 14px !important;
+                                                    border: 1px solid #8CC63E;
                                                 }
                                             }
                                             .input-line-label {
@@ -1549,6 +1566,133 @@
                                                     }
                                                 }
                                             }
+                                        }
+                                        #materials {
+                                            .mask {
+                                                z-index: 1;
+                                                position: fixed;
+                                                top: 0;
+                                                left: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                                display: none;
+                                                &.active {
+                                                    display: block;
+                                                }
+                                            }
+                                            .file {
+                                                width: 100%;
+                                                height: 49px;
+                                                display: flex;
+                                                align-items: center;
+                                                border-bottom: 1px solid #F5F5F5;
+                                                padding: 0 6px 0px 15px;
+                                                box-sizing: border-box;
+                                                cursor: pointer;
+                                                .file__name {
+                                                    font-style: normal;
+                                                    font-weight: normal;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    color: #5F5D61;
+                                                    border: none;
+                                                    outline: none;
+                                                    pointer-events: none;
+                                                    display: block;
+                                                    max-width: 50%;
+                                                    margin-right: 10px;
+                                                    background: inherit;
+                                                }
+                                                .file-btn {
+                                                    cursor: pointer;
+                                                    width: 27px;
+                                                    height: 27px;
+                                                    box-sizing: border-box;
+                                                    border-radius: 6px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    border: 1px solid #5F5D61;
+                                                }
+                                                .btn-edit {
+                                                    margin-right: 10px;
+                                                }
+                                                .btn-done-edit {
+                                                    display: none;
+                                                }
+                                                .btn-delete {
+                                                    display: none;
+                                                    margin-left: auto;
+                                                    margin-right: 15px;
+                                                }
+                                                .btn-download {
+                                                    margin-left: auto;
+                                                }
+                                                &:hover,
+                                                &.selected {
+                                                    background: #F5F5F5;
+                                                    .file-btn {
+                                                        border: 1px solid #fff;
+                                                        background: #fff;
+                                                    }
+                                                    .btn-download {
+                                                        &:hover {
+                                                            background: #8CC63E;
+                                                            svg path {
+                                                                fill: #fff;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.editable {
+                                                    background: #F5F5F5;
+                                                    position: relative;
+                                                    z-index: 2;
+                                                    .file__name {
+                                                        pointer-events: visible;
+                                                    }
+                                                    .file-btn {
+                                                        border: 1px solid #fff;
+                                                        background: #fff;
+                                                    }
+                                                    .btn-edit {
+                                                        &:hover {
+                                                            background: #8CC63E;
+                                                            svg path {
+                                                                fill: #fff;
+                                                            }
+                                                        }
+                                                    }
+                                                    .btn-done-edit {
+                                                        display: flex;
+                                                        &:hover {
+                                                            background: #8CC63E;
+                                                            svg path {
+                                                                fill: #fff;
+                                                            }
+                                                        }
+                                                    }
+                                                    .btn-delete {
+                                                        display: flex;
+                                                        &:hover {
+                                                            background: #FF0000;
+                                                            svg path {
+                                                                fill: #fff;
+                                                            }
+                                                        }
+                                                    }
+                                                    .btn-download {
+                                                        margin-left: 0;
+                                                        &:hover {
+                                                            background: #8CC63E;
+                                                            svg path {
+                                                                fill: #fff;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .speaker-add-file-block {}
                                         }
                                     }
                                 }
