@@ -187,12 +187,12 @@ function wpcourses_remove_recentcomments_css() {
 }
 add_action( 'widgets_init', 'wpcourses_remove_recentcomments_css' );
 
-add_action('admin_init', function() {
-  if (current_user_can('subscriber')) {
-      wp_redirect(site_url());
-      die();
-  }
-});
+// add_action('admin_init', function() {
+//   if (current_user_can('subscriber')) {
+//       wp_redirect(site_url());
+//       die();
+//   }
+// });
 
 //Обработка регистрации и входа в аккаунт
 // Добавляем событие в процесс инициализации JS скриптов
@@ -310,9 +310,76 @@ function wplb_ajax_request() {
 						$result[ 'content' ] = esc_html__( 'Пользователь уже существует', 'wplb_ajax_lesson' );
 					}
 
-			echo json_encode( $result );
+				echo json_encode( $result );
 				break;
-        }
+			case 'overwriting':
+				$result[ 'status' ] = false;
+				if($_REQUEST[ 'super' ] == 'true') {
+					$creds = array(
+						'user_id' => $_REQUEST[ 'id' ], // ID пользователя
+						'user_surname' => $_REQUEST[ 'surname' ], // Фамилия пользователя
+						'user_name' => $_REQUEST[ 'name' ], // Имя пользователя
+						'user_patronymic' => $_REQUEST[ 'patronymic' ], // Отчество пользователя
+						'user_email' => $_REQUEST[ 'email' ], // Почта пользователя
+						'user_phone' => $_REQUEST[ 'phone' ], // Телефон пользователя
+						'user_organization' => $_REQUEST[ 'organization' ], // Организация пользователя
+						'user_topic' => $_REQUEST[ 'speechTopic' ], // Название темы выступления пользователя
+						'user_theme_description' => $_REQUEST[ 'speechDescription' ], // Описание выступления пользователя
+					);
+					//Перезапись имени пользователя
+					if($creds['user_topic'] != 'false') {
+						$result[ 'status' ] = update_user_meta($creds[user_id], 'user_topic', $creds[user_topic]);
+					}
+					////Перезапись отчества пользователя
+					if($creds['user_theme_description'] != 'false') {
+						$result[ 'status' ] = update_user_meta($creds[user_id], 'user_theme_description', $creds[user_theme_description]);
+					}
+				}
+				else {
+					$creds = array(
+						'user_id' => $_REQUEST[ 'id' ], // ID пользователя
+						'user_surname' => $_REQUEST[ 'surname' ], // Фамилия пользователя
+						'user_name' => $_REQUEST[ 'name' ], // Имя пользователя
+						'user_patronymic' => $_REQUEST[ 'patronymic' ], // Отчество пользователя
+						'user_email' => $_REQUEST[ 'email' ], // Почта пользователя
+						'user_phone' => $_REQUEST[ 'phone' ], // Телефон пользователя
+						'user_organization' => $_REQUEST[ 'organization' ], // Организация пользователя
+					);
+				}
+				//Перезапись фамилии пользователя
+				if($creds['user_surname'] != 'false') {
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_lastname', $creds[user_surname]);
+				}
+				//Перезапись имени пользователя
+				if($creds['user_name'] != 'false') {
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_firstname', $creds[user_name]);
+				}
+				////Перезапись отчества пользователя
+				if($creds['user_patronymic'] != 'false') {
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_patronymic', $creds['user_patronymic']);
+				}
+				//Перезапись почты пользователя
+				if($creds['user_email'] != 'false') {
+					$updateuser = wp_update_user( [
+						'ID'       => $creds[user_id],
+						'user_email' => $creds[user_email]
+					] );
+					if ( is_wp_error( $updateuser ) ) {
+						$result[ 'status' ] = 'false';
+						$result[ 'content' ] = $updateuser->get_error_message();
+					}
+				}
+				//Перезапись телефона пользователя
+				if($creds['user_phone'] != 'false') {
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_phone', $creds[user_phone]);
+				}
+				//Перезапись организации пользователя
+				if($creds['user_organization'] != 'false') {
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_organization', $creds[user_organization]);
+				}
+				echo json_encode( $result );
+				break;
+		}
 		 // Конвертируем массив с результатами обработки и передаем его обратно как строку в JSON формате.
 		 
     }

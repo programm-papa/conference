@@ -52,7 +52,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="programm-block">
+        <div class="programm-block" id="programm-block">
             <div class="background-decoration"></div>
             <div class="wrapper">
                 <div class="programm-block-title">
@@ -401,7 +401,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="speakers-block">
+        <div class="speakers-block" id="speakers-block">
             <div class="wrapper">
                 <div class="speakers-block__title">
                     <div class="circle"></div>
@@ -585,7 +585,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="material-info-block">
+        <div class="material-info-block" id="material-info-block">
             <div class="wrapper">
                 <div class="material-info-content">
                     <div class="description">
@@ -599,7 +599,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="question-block">
+        <div class="question-block" id="question-block">
             <div class="wrapper">
                 <div class="title">Вопросы - ответы</div>
                 <div class="content">
@@ -669,7 +669,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="organizers-block">
+        <div class="organizers-block" id="organizers-block">
             <div class="wrapper">
                 <div class="title">Организаторы конференции</div>
                 <div class="organizers-wrapper">
@@ -695,7 +695,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="broadcast-link-block">
+        <div class="broadcast-link-block" id="broadcast-link-block">
             <img src="<?php print_r(get_template_directory_uri());?>/img/icons/broadcast-decor.svg" alt="decoration" class="decor1">
             <img src="<?php print_r(get_template_directory_uri());?>/img/icons/broadcast-decor2.svg" alt="decoration" class="decor2">
             <div class="wrapper">

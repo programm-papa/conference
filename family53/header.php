@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?> style = "margin-top: 0px !important;">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,7 +19,19 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+     <?php  $cur_user_id = get_current_user_id();
+            $user_info = get_userdata($cur_user_id);
+            $roles = array_shift($user_info->roles);
+            if($roles == 'subscriber') {?>
+                <style>
+                    #wpadminbar {
+                        display: none !important;
+                    }
+                    html {
+                        margin-top: 0px !important;
+                    }
+                </style>
+            <?php } ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -35,21 +47,18 @@ if($post_id == 11) {
             <div class="logo"></div>
             <nav class="menu">
                 <ul class="menu__list">
-                    <li class="item"><a>Программа</a></li>
-                    <li class="item"><a>Спикеры</a></li>
-                    <li class="item"><a>Вопросы</a></li>
-                    <li class="item"><a>Организаторы</a></li>
-                    <li class="item"><a>Ссылка на конференцию</a></li>
+                    <li class="item"><a href="/#programm-block">Программа</a></li>
+                    <li class="item"><a href="/#speakers-block">Спикеры</a></li>
+                    <li class="item"><a href="/#question-block">Вопросы</a></li>
+                    <li class="item"><a href="/#organizers-block">Организаторы</a></li>
+                    <li class="item"><a href="/#broadcast-link-block">Ссылка на конференцию</a></li>
                 </ul>
             </nav>
             <?php 
-                    $cur_user_id = get_current_user_id();
                     if($cur_user_id !=0) {
-                       
-                        $user_info = get_userdata($cur_user_id);
                         $user_name = $user_info->user_lastname." ".$user_info->user_firstname;
                         ?>
-                        <a class="account">
+                        <a href="/kabinet" class="account">
                             <div class="name"><?= $user_name?></div>
                             <div class="avatar">
                                 <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
@@ -58,12 +67,12 @@ if($post_id == 11) {
                          <?php
                     } else {
                 ?>
-                <div class="account open-registr-popup">
+                <div class="account open-signin-popup">
                     <div class="name">Личный кабинет</div>
                     <div class="avatar">
                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
                     </div>
-            </div>
+                </div>
             <?php
                     }
             ?>
@@ -71,23 +80,38 @@ if($post_id == 11) {
         <div class="wrapper top-header adaptive">
             <div class="top">
                 <div class="logo"></div>
-                <div class="account">
+                <?php 
+                    $cur_user_id = get_current_user_id();
+                    if($cur_user_id !=0) {  ?>
+                      <a href="/kabinet" class="account">
+                            <div class="name"><?= $user_name?></div>
+                            <div class="avatar">
+                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
+                            </div>
+                        </a>
+                         <?php
+                    } else {
+                ?>
+                 <div class="account open-signin-popup">
                     <div class="name">Личный кабинет</div>
                     <div class="avatar">
                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/avatar-icon.svg" alt="Фото">
                     </div>
                 </div>
+            <?php
+                    }
+            ?>
             </div>
             <nav class="menu">
                 <ul class="menu__list">
                     <div class="first">
-                        <li class="item"><a>Программа</a></li>
-                        <li class="item"><a>Спикеры</a></li>
-                        <li class="item"><a>Вопросы</a></li>
+                        <li class="item"><a href="/#programm-block">Программа</a></li>
+                        <li class="item"><a href="/#speakers-block">Спикеры</a></li>
+                        <li class="item"><a href="/#question-block">Вопросы</a></li>
                     </div>
                     <div class="second">
-                        <li class="item"><a>Организаторы</a></li>
-                        <li class="item"><a>Ссылка на конференцию</a></li>
+                        <li class="item"><a href="/#organizers-block">Организаторы</a></li>
+                        <li class="item"><a href="/#broadcast-link-block">Ссылка на конференцию</a></li>
                     </div>
                 </ul>
             </nav>
@@ -106,7 +130,17 @@ if($post_id == 11) {
                     <div class="text">1-2 декабря 2021 </div>
                 </div>
             </div>
+            <?php 
+                    if($cur_user_id == 0) {  ?>
             <div class="registration-btn open-registr-popup">Зарегистрироваться</div>
+            <?php
+                    } else {
+                ?>
+                <a href="/kabinet" class="registration-btn">Личный кабинет</a>
+                <?php
+                    }
+            ?>
+
         </div>
         <div class="autorization-block">
             <div class="popup login" id="login">

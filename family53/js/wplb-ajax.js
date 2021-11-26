@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    //Вход в акаунт
     $('.autorization-block #login .popup-btn').on("click", function() {
         $.ajax({
                 // Путь к файлу admin-ajax.php.
@@ -52,7 +53,7 @@ jQuery(document).ready(function($) {
         // Предотвращаем действие, заложенное в форму по умолчанию.
         // ev.preventDefault();
     });
-
+    //Регистрация пользователя
     $('.autorization-block #registrattion .popup-btn').on("click", function() {
         if (regVerification()) {
             let organization = '';
@@ -173,36 +174,128 @@ jQuery(document).ready(function($) {
         }
 
     });
-    //Кнопка выхода в аккаунте
-    // $('.signout').click(function(ev) {
-    //     $.ajax({
-    //             // Путь к файлу admin-ajax.php.
-    //             url: wplb_ajax_obj.ajaxurl,
-    //             // Создаем объект, содержащий параметры отправки.
-    //             data: {
-    //                 // Событие к которому будем обращаться.
-    //                 'action': 'wplb_ajax_request',
-    //                 // Используем nonce для защиты.
-    //                 'security': wplb_ajax_obj.nonce,
-    //                 // Перед отправкой Ajax в WordPress.
-    //                 beforeSend: function() {}
-    //             }
-    //         })
-    //         .always(function() {
-    //             // Выполнять после каждого Ajax запроса.
+    //Перезапись данных
+    if ($('#personal-data').length > 0) {
+        $('.input-line').each(function() {
+            $(this).on('change', function() {
+                if ($(this).hasClass('email')) {
+                    let emailPattern = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i; //Патерн строки почты
+                    if (!$(this).val().search(emailPattern) == 0 && $(this).val() != '') {
+                        $(this).addClass('error');
+                        return 0;
+                    }
+                }
+                if ($(this).hasClass('phone')) {
+                    let phonePattern = /^(\+)?((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/i; //Патерн строки телефона
+                    if (!$(this).val().search(phonePattern) == 0 && $(this).val() != '') {
+                        $(this).addClass('error');
+                        return 0;
+                    }
+                }
+                if ($(this).hasClass('error')) {
+                    $(this).removeClass('error');
+                }
+                if ($(this).val() != '') {
+                    $(this).addClass('changed');
+                } else {
+                    if ($(this).hasClass('changed')) {
+                        $(this).removeClass('changed');
+                    }
 
-    //         })
-    //         .done(function(data) {
-    //             // Функция для работы с обработанными данными.
+                }
+            })
+        })
+        $('#personal-data .btn-block .save-btn').on("click", function() {
+            //Проверка прав пользователя
+            let roles = $('.input-role').val();
+            //Фамилия
+            let surname = false;
+            if ($('.input-line.surname').hasClass('changed')) {
+                surname = $('.input-line.surname').val();
+            }
+            //Имя
+            let name = false;
+            if ($('.input-line.name').hasClass('changed')) {
+                name = $('.input-line.name').val();
+            }
+            //Отчество
+            let patronymic = false;
+            if ($('.input-line.patronymic').hasClass('changed')) {
+                patronymic = $('.input-line.patronymic').val();
+            }
+            //Почта
+            let email = false;
+            if ($('.input-line.email').hasClass('changed')) {
+                email = $('.input-line.email').val();
+            }
+            //Телефон
+            let phone = false;
+            if ($('.input-line.phone').hasClass('changed')) {
+                phone = $('.input-line.phone').val();
+            }
+            //Организация
+            let organization = false;
+            if ($('.input-line.organization').hasClass('changed')) {
+                organization = $('.input-line.organization').val();
+            }
+            //Тема выступления
+            let speechTopic = false;
+            //Описания выступления
+            let speechDescription = false;
+            //Проверка прав
+            if (roles == 1) {
+                roles = true;
+                if ($('.input-line.speech-topic').hasClass('changed')) {
+                    speechTopic = $('.input-line.speech-topic').val();
+                }
+                if ($('.input-line.speech-description').hasClass('changed')) {
+                    speechDescription = $('.input-line.speech-description').val();
+                }
+            } else {
+                roles = false;
 
-    //         })
-    //         .fail(function(errorThrown) {
-    //             // Читать ошибки будем в консоли если что-то пойдет не по плану.
+            }
+            $.ajax({
+                    // Путь к файлу admin-ajax.php.
+                    url: wplb_ajax_obj.ajaxurl,
+                    // Создаем объект, содержащий параметры отправки.
+                    data: {
+                        // Событие к которому будем обращаться.
+                        'action': 'wplb_ajax_request',
+                        // Используем nonce для защиты.
+                        'security': wplb_ajax_obj.nonce,
+                        // Передаём тип формы.
+                        'type': 'overwriting',
+                        //Права пользователя
+                        'super': roles,
+                        //id пользователя
+                        'id': $('.input-user-id').val(),
+                        // Передаём значения формы.
+                        'surname': surname,
+                        'name': name,
+                        'patronymic': patronymic,
+                        'email': email,
+                        'phone': phone,
+                        'organization': organization,
+                        'speechTopic': speechTopic,
+                        'speechDescription': speechDescription,
+                    }
+                })
+                .done(function(data) {
+                    // Функция для работы с обработанными данными.
+                    // Переменная $reslut будет хранить результат обработки.
+                    let result = JSON.parse(data);
+                    if (!result.status) {
+                        alert(result.status);
+                    } else {
+                        alert(result.status);
+                    }
+                })
+                .fail(function(errorThrown) {
+                    // Читать ошибки будем в консоли если что-то пойдет не по плану.
+                    console.log(errorThrown);
 
-    //             console.log(errorThrown);
-
-    //         });
-    //     // Предотвращаем действие, заложенное в форму по умолчанию.
-    //     ev.preventDefault();
-    // })
+                });
+        });
+    }
 })

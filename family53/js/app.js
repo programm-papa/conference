@@ -33,24 +33,21 @@ jQuery(document).ready(function($) {
         moreSpeakerBtnArr[i].addEventListener("click", function() {
             // alert(this.closest('.speaker-card').id);
             let parrentSpeakerCard = this.closest('.speaker-card');
-            morePopUpOn(parrentSpeakerCard.offsetTop + parrentSpeakerCard.offsetHeight / 6);
+            morePopUpOn();
             // let parrentSpeakerBlockPosition = document.getElementsByClassName("speakers-block").;
         })
     }
 
-    let closePopUpBtn = document.querySelector(".close-btn");
-    closePopUpBtn.addEventListener("click", function() {
-        morePopUpOff();
-    });
+    let closePopUpBtn = $(".close-btn");
+    if (closePopUpBtn.length > 0) {
+        closePopUpBtn.on("click", function() {
+            morePopUpOff();
+        });
+    }
 
-    function morePopUpOn(position) {
+    function morePopUpOn() {
         let moreBlock = document.querySelector(".more-block");
-        let moreBlockPopUp = document.querySelector(".more-block .more-popup");
-        if (position + moreBlockPopUp.offsetHeight > moreBlock.offsetHeight) {
-            // дописать проверку
-        }
         moreBlock.classList.add("open");
-        moreBlockPopUp.style.top = position + "px";
     }
 
     function morePopUpOff() {

@@ -33,6 +33,10 @@
                                 font-family: 'PN';
                             }
                             
+                            a {
+                                text-decoration: none !important;
+                            }
+                            
                             body {
                                 overflow-x: hidden;
                             }
@@ -157,6 +161,7 @@
                                             cursor: pointer;
                                             margin-left: 120px;
                                             display: flex;
+                                            text-decoration: none;
                                             .name {
                                                 font-style: normal;
                                                 font-weight: 600;
@@ -743,6 +748,8 @@
                             
                             //Блок спикеров
                             .speakers-block {
+                                padding-top: 150px;
+                                margin-top: -150px;
                                 padding-bottom: 150px;
                                 .wrapper {
                                     position: relative;
@@ -838,6 +845,7 @@
                                     height: 100%;
                                     display: none;
                                     justify-content: center;
+                                    align-items: center;
                                     &.open {
                                         display: flex;
                                     }
@@ -1502,9 +1510,14 @@
                                                     padding: 0px 14px;
                                                     border: 1px solid #8CC63E;
                                                 }
+                                                &.error {
+                                                    padding: 0px 14px;
+                                                    border: 1px solid #FF0000;
+                                                }
                                             }
                                             textarea.input-line {
-                                                padding: 13px 15px;
+                                                resize: none !important;
+                                                padding: 13px 15px !important;
                                                 height: 83px;
                                                 box-sizing: border-box;
                                                 &:focus {
@@ -1516,6 +1529,30 @@
                                                 display: block;
                                                 width: 100%;
                                                 text-align: right;
+                                            }
+                                            .btn-block {
+                                                .save-btn {
+                                                    border-radius: 6px;
+                                                    width: 160px;
+                                                    height: 45px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                    background-color: #8CC63E;
+                                                    font-style: normal;
+                                                    font-weight: 600;
+                                                    font-size: 16px;
+                                                    line-height: 19px;
+                                                    text-align: center;
+                                                    color: #FFFFFF;
+                                                    cursor: pointer;
+                                                    &:hover {
+                                                        background-color: #6EAA1D;
+                                                    }
+                                                    &:hover {
+                                                        background-color: rgba(110, 170, 29, .7);
+                                                    }
+                                                }
                                             }
                                         }
                                     }
