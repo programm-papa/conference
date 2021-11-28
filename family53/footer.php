@@ -18,7 +18,7 @@
             <div class="contacts">
                 <div class="phone">
                     <img src="<?php print_r(get_template_directory_uri());?>/img/icons/phone-icon.svg" alt="" class="icon">
-                    <a href="tel:88162983170" class="phone-number">8 (8162) 983-170</a>
+                    <a href="tel:88162983170" class="phone-number">8 (8162) 983-175</a>
                 </div>
                 <div class="mail">
                     <img src="<?php print_r(get_template_directory_uri());?>/img/icons/mail-icon.svg" alt="" class="icon">

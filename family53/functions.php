@@ -187,12 +187,42 @@ function wpcourses_remove_recentcomments_css() {
 }
 add_action( 'widgets_init', 'wpcourses_remove_recentcomments_css' );
 
-// add_action('admin_init', function() {
-//   if (current_user_can('subscriber')) {
-//       wp_redirect(site_url());
-//       die();
-//   }
-// });
+add_action( 'init', 'register_post_types' );
+function register_post_types(){
+	register_post_type( 'programm', [
+		'label'  => null,
+		'labels' => [
+			'name'               => 'Программа', // основное название для типа записи
+			'singular_name'      => 'Выступление', // название для одной записи этого типа
+			'add_new'            => 'Добавить выступление', // для добавления новой записи
+			'add_new_item'       => 'Добавление выступления', // заголовка у вновь создаваемой записи в админ-панели.
+			'edit_item'          => 'Редактирование выступления', // для редактирования типа записи
+			'new_item'           => 'Новое выступление', // текст новой записи
+			'view_item'          => 'Смотреть выступление', // для просмотра записи этого типа.
+			'search_items'       => 'Искать выступление', // для поиска по этим типам записи
+			'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
+			'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
+			'menu_name'          => 'Программа', // название меню
+		],
+		'public'              => true,
+		'menu_position'       => 5,
+		'menu_icon'           => 'dashicons-format-status',
+		'hierarchical'        => false,
+		'supports'            => array('title','editor','thumbnail','excerpt'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'has_archive'         => false,
+	] );
+}
+
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+function crb_attach_theme_options() {
+    Container::make( 'theme_options', __( 'Theme Options' ) )
+        ->add_fields( array(
+            Field::make( 'text', 'crb_text', 'Text Field' ),
+        ) );
+}
 
 //Обработка регистрации и входа в аккаунт
 // Добавляем событие в процесс инициализации JS скриптов
@@ -322,6 +352,7 @@ function wplb_ajax_request() {
 						'user_patronymic' => $_REQUEST[ 'patronymic' ], // Отчество пользователя
 						'user_email' => $_REQUEST[ 'email' ], // Почта пользователя
 						'user_phone' => $_REQUEST[ 'phone' ], // Телефон пользователя
+						'user_region' => $_REQUEST[ 'region' ], // Регион пользователя
 						'user_organization' => $_REQUEST[ 'organization' ], // Организация пользователя
 						'user_topic' => $_REQUEST[ 'speechTopic' ], // Название темы выступления пользователя
 						'user_theme_description' => $_REQUEST[ 'speechDescription' ], // Описание выступления пользователя
@@ -343,16 +374,17 @@ function wplb_ajax_request() {
 						'user_patronymic' => $_REQUEST[ 'patronymic' ], // Отчество пользователя
 						'user_email' => $_REQUEST[ 'email' ], // Почта пользователя
 						'user_phone' => $_REQUEST[ 'phone' ], // Телефон пользователя
+						'user_region' => $_REQUEST[ 'region' ], // Регион пользователя
 						'user_organization' => $_REQUEST[ 'organization' ], // Организация пользователя
 					);
 				}
 				//Перезапись фамилии пользователя
 				if($creds['user_surname'] != 'false') {
-					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_lastname', $creds[user_surname]);
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'last_name', $creds[user_surname]);
 				}
 				//Перезапись имени пользователя
 				if($creds['user_name'] != 'false') {
-					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_firstname', $creds[user_name]);
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'first_name', $creds[user_name]);
 				}
 				////Перезапись отчества пользователя
 				if($creds['user_patronymic'] != 'false') {
@@ -372,6 +404,10 @@ function wplb_ajax_request() {
 				//Перезапись телефона пользователя
 				if($creds['user_phone'] != 'false') {
 					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_phone', $creds[user_phone]);
+				}
+				//Перезапись Региона пользователя
+				if($creds['user_region'] != 'false') {
+					$result[ 'status' ] = update_user_meta($creds[user_id], 'user_region', $creds[user_region]);
 				}
 				//Перезапись организации пользователя
 				if($creds['user_organization'] != 'false') {

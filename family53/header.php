@@ -31,7 +31,11 @@
                         margin-top: 0px !important;
                     }
                 </style>
-            <?php } ?>
+            <?php } 
+            if($roles == 'subscriber' || $roles == 'contributor' ) {
+                show_admin_bar( false );
+            }
+            ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -44,7 +48,6 @@ if($post_id == 11) {
 }?>
     <header class="header <?= $headerClass; ?>">
         <div class="wrapper top-header desctop">
-            <div class="logo"></div>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="item"><a href="/#programm-block">Программа</a></li>
@@ -117,6 +120,9 @@ if($post_id == 11) {
             </nav>
 
         </div>
+        <div class="wrapper header-logo">
+            <img src="<?php print_r(get_template_directory_uri());?>/img/logo.svg" alt="Лого " class="logo">
+        </div>
         <div class="wrapper header-info">
             <div class="page-title">Конференция</div>
             <div class="page-description">Эффективные практики оказания социальных услуг для выхода семей с детьми с низким уровнем дохода на уровень самообеспечения</div>
@@ -132,11 +138,18 @@ if($post_id == 11) {
             </div>
             <?php 
                     if($cur_user_id == 0) {  ?>
-            <div class="registration-btn open-registr-popup">Зарегистрироваться</div>
+            <div class="btns-wrapper">
+                <div class="registration-btn open-registr-popup purple">Зарегистрироваться</div>
+                <a class="registration-btn">Ссылка на транляцию</a>
+            </div>
+            
             <?php
                     } else {
                 ?>
-                <a href="/kabinet" class="registration-btn">Личный кабинет</a>
+                 <div class="btns-wrapper">
+                    <a href="/kabinet" class="registration-btn purple">Личный кабинет</a>
+                    <a class="registration-btn">Ссылка на транляцию</a>
+                </div>
                 <?php
                     }
             ?>

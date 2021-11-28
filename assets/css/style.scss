@@ -103,6 +103,12 @@
                                 &:active {
                                     background: rgba(110, 170, 29, .8);
                                 }
+                                &.purple {
+                                    background: #7E5DA7;
+                                    &:hover {
+                                        background: #9B80B9;
+                                    }
+                                }
                             }
                             
                             //Обертка для контента
@@ -117,6 +123,10 @@
                             .header {
                                 background-color: #F5F5F5;
                                 background-image: url(../img/header-img.svg);
+                                @media screen and (min-width: 1921px) {
+                                    background-image: url(../img/big-header-img.svg);
+                                    background-size: cover;
+                                }
                                 background-position: center center;
                                 background-repeat: no-repeat;
                                 height: 797px;
@@ -126,6 +136,9 @@
                                     background-image: none;
                                     background-color: #FFFFFF;
                                     .header-info {
+                                        display: none !important;
+                                    }
+                                    .header-logo {
                                         display: none !important;
                                     }
                                 }
@@ -179,7 +192,7 @@
                                         min-height: 80px;
                                     }
                                     &.header-info {
-                                        padding-top: 85px;
+                                        padding-top: 15px;
                                         display: flex;
                                         flex-direction: column;
                                         align-items: center;
@@ -200,7 +213,7 @@
                                             font-size: 24px;
                                             line-height: 140%;
                                             text-align: center;
-                                            color: #9B80B9;
+                                            color: #7E5DA7;
                                             margin-bottom: 30px;
                                         }
                                         .page-icons {
@@ -243,6 +256,14 @@
                                                     text-align: center;
                                                     color: #5F5D61;
                                                 }
+                                            }
+                                        }
+                                        .btns-wrapper {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            .purple {
+                                                margin-right: 20px;
                                             }
                                         }
                                     }
@@ -432,6 +453,11 @@
                                     &.open {
                                         display: flex;
                                     }
+                                }
+                                .header-logo {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
                                 }
                             }
                             
@@ -658,6 +684,7 @@
                                                     align-items: center;
                                                     .speaker {
                                                         display: flex;
+                                                        flex-wrap: wrap;
                                                         margin-right: 20px;
                                                         &:last-of-type {
                                                             margin-right: 0;
@@ -672,6 +699,7 @@
                                                         }
                                                         .speaker__description {
                                                             display: flex;
+                                                            flex: 1;
                                                             flex-direction: column;
                                                             justify-content: space-between;
                                                             .post {
@@ -1440,6 +1468,7 @@
                                             }
                                             &.sign-out {
                                                 background-color: #373539;
+                                                margin-top: 20px;
                                                 .text {
                                                     font-style: normal;
                                                     font-weight: 600;
@@ -1692,7 +1721,102 @@
                                                     }
                                                 }
                                             }
-                                            .speaker-add-file-block {}
+                                            .speaker-add-file-block {
+                                                padding-bottom: 10px;
+                                                border-bottom: 2px solid #F5F5F5;
+                                                margin-bottom: 70px;
+                                                .input__wrapper {
+                                                    position: relative;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    padding-top: 20px;
+                                                    .input__file {
+                                                        position: absolute;
+                                                        width: 0;
+                                                    }
+                                                    .add-file_btn {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        min-width: 149px;
+                                                        width: fit-content;
+                                                        padding: 0 10px;
+                                                        box-sizing: border-box;
+                                                        height: 29px;
+                                                        background: #8CC63E;
+                                                        border-radius: 6px;
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 14px;
+                                                        line-height: 17px;
+                                                        color: #FFFFFF;
+                                                        cursor: pointer;
+                                                        margin-right: 20px;
+                                                        img {
+                                                            margin-left: 13px;
+                                                        }
+                                                        &:hover {
+                                                            background: #6EAA1D;
+                                                        }
+                                                    }
+                                                    .upload-file {
+                                                        width: fit-content;
+                                                        padding: 0 10px;
+                                                        box-sizing: border-box;
+                                                        height: 29px;
+                                                        border-radius: 6px;
+                                                        background: #8CC63E;
+                                                        display: none;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 14px;
+                                                        line-height: 17px;
+                                                        color: #FFFFFF;
+                                                        cursor: pointer;
+                                                        &:hover {
+                                                            background: #6EAA1D;
+                                                        }
+                                                        &.visible {
+                                                            display: flex;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .speaker-list-block {
+                                                .speaker-files {
+                                                    margin-bottom: 30px;
+                                                    .speaker-name {
+                                                        font-style: normal;
+                                                        font-weight: 600;
+                                                        font-size: 24px;
+                                                        line-height: 29px;
+                                                        color: #5F5D61;
+                                                        margin-bottom: 8px;
+                                                    }
+                                                    .speaker-topic {
+                                                        font-style: normal;
+                                                        font-weight: normal;
+                                                        font-size: 14px;
+                                                        line-height: 17px;
+                                                        color: #5F5D61;
+                                                        margin-bottom: 20px;
+                                                    }
+                                                    .file {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        height: 39px;
+                                                        .file__name {
+                                                            font-style: normal;
+                                                            font-weight: normal;
+                                                            font-size: 16px;
+                                                            line-height: 19px;
+                                                            color: #5F5D61;
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -1876,6 +2000,7 @@
                                                     align-items: center;
                                                     display: flex;
                                                     flex-direction: column;
+                                                    padding: 0 10px;
                                                     a {
                                                         font-size: 14px !important;
                                                     }
@@ -1906,6 +2031,13 @@
                                             .page-icons {
                                                 .online-icon {
                                                     margin-right: 23px;
+                                                }
+                                            }
+                                            .btns-wrapper {
+                                                flex-direction: column;
+                                                .purple {
+                                                    margin-right: 0px;
+                                                    margin-bottom: 20px;
                                                 }
                                             }
                                         }

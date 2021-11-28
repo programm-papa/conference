@@ -233,6 +233,11 @@ jQuery(document).ready(function($) {
             if ($('.input-line.phone').hasClass('changed')) {
                 phone = $('.input-line.phone').val();
             }
+            //Регион
+            let region = false;
+            if ($('.input-line.region').hasClass('changed')) {
+                region = $('.input-line.region').val();
+            }
             //Организация
             let organization = false;
             if ($('.input-line.organization').hasClass('changed')) {
@@ -276,6 +281,7 @@ jQuery(document).ready(function($) {
                         'patronymic': patronymic,
                         'email': email,
                         'phone': phone,
+                        'region': region,
                         'organization': organization,
                         'speechTopic': speechTopic,
                         'speechDescription': speechDescription,
@@ -286,9 +292,9 @@ jQuery(document).ready(function($) {
                     // Переменная $reslut будет хранить результат обработки.
                     let result = JSON.parse(data);
                     if (!result.status) {
-                        alert(result.status);
+                        location.reload();
                     } else {
-                        alert(result.status);
+                        location.reload();
                     }
                 })
                 .fail(function(errorThrown) {
