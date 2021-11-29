@@ -27,6 +27,10 @@
                                 font-style: normal;
                             }
                             
+                            html {
+                                scroll-behavior: smooth;
+                            }
+                            
                             * {
                                 margin: 0;
                                 padding: 0;
@@ -429,7 +433,7 @@
                                                 font-weight: 600;
                                                 font-size: 14px;
                                                 line-height: 17px;
-                                                text-decoration-line: underline;
+                                                text-decoration-line: underline !important;
                                                 color: #5F5D61;
                                                 cursor: pointer;
                                                 &:hover {
@@ -476,10 +480,7 @@
                                     width: fit-content;
                                     display: flex;
                                     align-items: flex-end;
-                                    margin-bottom: 60px;
-                                    &:last-of-type {
-                                        margin-bottom: 0px;
-                                    }
+                                    margin-bottom: 40px;
                                     &>div:first-child {
                                         margin-right: 80px;
                                     }
@@ -490,6 +491,8 @@
                                         align-items: flex-end;
                                         .avatar__img {
                                             margin-bottom: 20px;
+                                            width: 300px;
+                                            height: 260px;
                                         }
                                         .avatar__name {
                                             font-style: normal;
@@ -498,8 +501,10 @@
                                             line-height: 140%;
                                             color: #373539;
                                             margin-bottom: 10px;
+                                            max-width: 300px;
                                         }
                                         .avatar__post {
+                                            max-width: 300px;
                                             font-style: normal;
                                             font-weight: normal;
                                             font-size: 14px;
@@ -515,10 +520,9 @@
                                         margin-bottom: 9px;
                                         box-sizing: border-box;
                                         width: 540px;
-                                        height: 326px;
-                                        background: #F5F5F5;
+                                        height: fit-content !important;
                                         border-radius: 8px;
-                                        padding: 0 30px;
+                                        padding: 10px 30px;
                                         .content {
                                             .comment__title {
                                                 font-style: normal;
@@ -537,6 +541,21 @@
                                                 letter-spacing: .03em;
                                             }
                                         }
+                                    }
+                                }
+                                .comment-ps {
+                                    max-width: 920px;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    line-height: 140%;
+                                    /* or 22px */
+                                    text-align: justify;
+                                    /* #5F5D61 */
+                                    color: #5F5D61;
+                                    margin-bottom: 80px;
+                                    &:last-of-type {
+                                        margin-bottom: 0px;
                                     }
                                 }
                             }
@@ -640,9 +659,10 @@
                                             .event {
                                                 cursor: pointer;
                                                 width: 100%;
-                                                padding: 30px;
+                                                padding: 15px;
                                                 box-sizing: border-box;
                                                 border-bottom: 1px solid #F5F5F5;
+                                                position: relative;
                                                 .event__time {
                                                     display: flex;
                                                     align-items: center;
@@ -660,65 +680,106 @@
                                                     }
                                                 }
                                                 .event__group {
-                                                    background: #EEF6E2;
-                                                    border-radius: 6px;
+                                                    position: relative;
+                                                    left: -15px;
+                                                    border-radius: 0px 6px 6px 0px;
                                                     width: fit-content;
                                                     padding: 4px 8px;
-                                                    margin-bottom: 20px;
+                                                    padding-left: 30px;
+                                                    // margin-bottom: 20px;
                                                     font-style: normal;
                                                     font-weight: 600;
                                                     font-size: 16px;
                                                     line-height: 19px;
-                                                    color: #6EAA1D;
-                                                }
-                                                .event__name {
-                                                    font-style: normal;
-                                                    font-weight: 600;
-                                                    font-size: 16px;
-                                                    line-height: 19px;
-                                                    color: #373539;
-                                                    margin-bottom: 20px;
-                                                }
-                                                .event__speaker {
-                                                    display: flex;
-                                                    flex-wrap: wrap;
-                                                    align-items: center;
-                                                    .speaker {
+                                                    .color-marker {
+                                                        position: absolute;
                                                         display: flex;
-                                                        margin-right: 20px;
-                                                        margin-bottom: 20px;
-                                                        &:last-of-type {
-                                                            margin-right: 0;
+                                                        align-items: center;
+                                                        top: 0;
+                                                        left: 0;
+                                                        height: 100%;
+                                                        .color {
+                                                            height: calc(100% - 4px);
+                                                            width: 5px;
+                                                            border-radius: 0px 6px 6px 0px;
                                                         }
-                                                        .avatar {
-                                                            width: 36px;
-                                                            height: 36px;
-                                                            overflow: hidden;
-                                                            background: #C4C4C4;
-                                                            border-radius: 6px;
-                                                            margin-right: 10px;
+                                                    }
+                                                }
+                                                .event-part {
+                                                    display: flex;
+                                                    padding-bottom: 20px;
+                                                    padding-top: 20px;
+                                                    border-bottom: 1px solid #F5F5F5;
+                                                    &:first-of-type {
+                                                        padding-top: 0px !important;
+                                                    }
+                                                    &:last-of-type {
+                                                        border-bottom: none;
+                                                    }
+                                                    .color-marker {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        top: 0;
+                                                        left: 0;
+                                                        align-self: stretch;
+                                                        width: 5px;
+                                                        margin-right: 10px;
+                                                        .color {
+                                                            height: calc(100% - 4px);
+                                                            width: 5px;
+                                                            border-radius: 0px 6px 6px 0px;
                                                         }
-                                                        .speaker__description {
+                                                    }
+                                                    .event-part__info {
+                                                        .event__name {
+                                                            font-style: normal;
+                                                            font-weight: 600;
+                                                            font-size: 16px;
+                                                            line-height: 19px;
+                                                            color: #373539;
+                                                        }
+                                                        .event__speaker {
                                                             display: flex;
-                                                            flex: 1;
-                                                            flex-direction: column;
-                                                            justify-content: space-between;
-                                                            .post {
-                                                                font-style: normal;
-                                                                font-weight: normal;
-                                                                font-size: 12px;
-                                                                line-height: 15px;
-                                                                color: #5F5D61;
-                                                                &.moderator {
-                                                                    color: #6EAA1D;
+                                                            flex-wrap: wrap;
+                                                            align-items: center;
+                                                            .speaker {
+                                                                display: flex;
+                                                                margin-right: 20px;
+                                                                margin-top: 20px;
+                                                                &:last-of-type {
+                                                                    margin-right: 0;
                                                                 }
-                                                            }
-                                                            .name {
-                                                                font-style: normal;
-                                                                font-weight: 600;
-                                                                font-size: 14px;
-                                                                line-height: 17px;
-                                                                color: #373539;
+                                                                .avatar {
+                                                                    width: 36px;
+                                                                    height: 36px;
+                                                                    overflow: hidden;
+                                                                    background: #C4C4C4;
+                                                                    border-radius: 6px;
+                                                                    margin-right: 10px;
+                                                                }
+                                                                .speaker__description {
+                                                                    display: flex;
+                                                                    flex: 1;
+                                                                    flex-direction: column;
+                                                                    justify-content: space-between;
+                                                                    .post {
+                                                                        font-style: normal;
+                                                                        font-weight: normal;
+                                                                        font-size: 12px;
+                                                                        line-height: 15px;
+                                                                        color: #5F5D61;
+                                                                        &.moderator {
+                                                                            color: #6EAA1D;
+                                                                        }
+                                                                    }
+                                                                    .name {
+                                                                        font-style: normal;
+                                                                        font-weight: 600;
+                                                                        font-size: 14px;
+                                                                        line-height: 17px;
+                                                                        color: #373539;
+                                                                    }
+                                                                }
                                                             }
                                                         }
                                                     }
@@ -767,6 +828,42 @@
                                                     .event__name {
                                                         margin-bottom: 0;
                                                         font-weight: 400;
+                                                    }
+                                                }
+                                                &.green {
+                                                    .event__group {
+                                                        background: #EEF6E2;
+                                                        color: #6EAA1D;
+                                                        .color-marker {
+                                                            .color {
+                                                                background: #6EAA1D;
+                                                            }
+                                                        }
+                                                    }
+                                                    .event-part {
+                                                        .color-marker {
+                                                            .color {
+                                                                background: #6EAA1D;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                                &.purple {
+                                                    .event__group {
+                                                        background: #F3EFF7;
+                                                        color: #9B80B9;
+                                                        .color-marker {
+                                                            .color {
+                                                                background: #7E5DA7;
+                                                            }
+                                                        }
+                                                    }
+                                                    .event-part {
+                                                        .color-marker {
+                                                            .color {
+                                                                background: #7E5DA7;
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
@@ -1501,7 +1598,7 @@
                                     }
                                     .account-tabs-wrapper__content {
                                         width: 825px;
-                                        height: 679px;
+                                        height: 700px;
                                         overflow-y: auto;
                                         overflow-x: hidden;
                                         .tab {
@@ -1830,6 +1927,28 @@
                                 }
                             }
                             
+                            //Страница ссылок на трансляцию
+                            .links-page {
+                                border-top: 1px solid #F5F5F5;
+                                padding-top: 30px;
+                                .page-title {
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 36px;
+                                    line-height: 44px;
+                                    color: #373539;
+                                    margin-bottom: 50px;
+                                }
+                                .translation-links {
+                                    .day {
+                                        img {
+                                            width: 100%;
+                                            max-width: 1110px;
+                                        }
+                                    }
+                                }
+                            }
+                            
                             @media screen and (max-width: 1139px) and (min-width: 768px) {
                                 //Отключение неадаптивных блоков
                                 .desctop {
@@ -1884,15 +2003,22 @@
                                     padding-bottom: 120px;
                                     .comment-row {
                                         align-items: flex-start;
+                                        justify-content: space-between;
+                                        &>div:first-child {
+                                            margin-right: 30px;
+                                        }
                                         .avatar {
                                             width: 206px;
                                             .avatar__img {
                                                 width: 100%;
                                                 height: auto;
                                             }
+                                            * {
+                                                text-align: right;
+                                            }
                                         }
                                         .comment {
-                                            margin-top: 43px;
+                                            // margin-top: 43px;
                                             width: 442px;
                                             padding: 40px 30px 30px 30px;
                                             height: fit-content;
@@ -1974,6 +2100,12 @@
                                         .account-tabs-wrapper__content {
                                             flex: 1;
                                         }
+                                    }
+                                }
+                                .links-page {
+                                    padding-top: 30px;
+                                    .page-title {
+                                        margin-bottom: 30px;
                                     }
                                 }
                             }
@@ -2078,8 +2210,11 @@
                                     .comment-row {
                                         flex-direction: column;
                                         align-items: center;
-                                        &:last-of-type {
-                                            flex-direction: column-reverse;
+                                        &>div:first-child {
+                                            margin-right: 0px;
+                                        }
+                                        &.revers {
+                                            flex-direction: column-reverse !important;
                                         }
                                         .avatar {
                                             align-items: center;
@@ -2330,6 +2465,12 @@
                                         .account-tabs-wrapper__content {
                                             width: 100%;
                                         }
+                                    }
+                                }
+                                .links-page {
+                                    padding-top: 20px;
+                                    .page-title {
+                                        margin-bottom: 20px;
                                     }
                                 }
                             }

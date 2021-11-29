@@ -28,7 +28,7 @@ get_header();
             <div class="account-tabs-wrapper">
                 <div class="account-tabs-wrapper__buttons">
                     <div class="tab__btn tab__btn_use active" id="btn-personal-data">
-                        <div class="text">Личные данны</div>
+                        <div class="text">Личные данные</div>
                     </div>
                     <div class="tab__btn tab__btn_use" id="btn-materials">
                         <div class="text">Материалы конференции</div>

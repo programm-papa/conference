@@ -10,45 +10,63 @@ get_header();
 
 <main>
         <div class="top-block"></div>
-        <div class="description-block">
+        <div class="description-block" style="">
             <div class="wrapper">
                 <div class="comment-row">
                     <div class="avatar">
-                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/TestImg.png" alt="commentator1">
-                        <div class="avatar__name">Алексей <span class="regular-text">Агутин</span></div>
-                        <div class="avatar__post">Председатель правления чего-то там</div>
+                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/nas.png" alt="commentator1">
+                        <div class="avatar__name">Никитин <span class="regular-text">Андрей Сергеевич</span></div>
+                        <div class="avatar__post">Губернатор Новгородской области</div>
                     </div>
                     <div class="comment">
                         <div class="content">
                             <div class="comment__title">
-                                Здравствуйте, меня зовут Алексей
+                            Уважаемые участники конференции!
                             </div>
                             <div class="comment__text">
-                                Задача организации, в особенности же сложившаяся структура организации позволяет выполнять важные задания по разработке форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности в значительной степени обуславливает
-                                создание систем массового участия.
-                                <br><br>Товарищи! укрепление и развитие структуры позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+                                Президент Российской Федерации Владимир Путин одной из национальных целей определил снижение уровня бедности в два раза к 2030 году.<br><br>
+                                Комиссия Государственного совета Российской Федерации по направлению «Социальная политика», которую я возглавляю, проводит анализ лучших региональных практик и формирует предложения по введению дополнительных государственных мер поддержки. Ключевым в этой работе является мнение жителей регионов и, прежде всего, семей с детьми, а также мнение экспертного сообщества – специалистов, непосредственно оказывающих им помощь.
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="comment-row">
+                <div class="comment-ps">
+                Уже сегодня на федеральном и региональном уровнях приняты беспрецедентные решения о введении дополнительных мер поддержки семей с детьми с низкими доходами. При финансовой поддержке Правительства Российской Федерации, Минтруда России в регионах активно используется новый механизм оказания социальной помощи – социальный контракт. Это эффективный инструмент сотрудничества двух сторон – семей с детьми и государства. Новгородская область стала одной из первых в его применении.<br><br>
+                В то же время необходимо уделять особое внимание профилактике «вторичной бедности», то есть, работе с детьми из малообеспеченных семей.<br><br>
+                Участие в программах и проектах Фонда поддержки детей, находящихся в трудной жизненной ситуации, позволяет развивать региональную систему оказания помощи семьям с детьми с низкими доходами, дополняя ее комплексом социальных сервисов, служб и технологий.<br><br>
+                При поддержке фонда в Новгородской области с 2015 года используется механизм социального сопровождения, который  за последние 5 лет на практике доказал свою эффективность и лег в основу приоритетного регионального проекта, направленного на повышение реальных доходов семей с детьми.<br><br>
+                Внедрение в работу социальных практик фонда способствует созданию условий для самореализации личности ребенка и недопущению воспроизводства бедности.
+                Благодарю Фонд поддержки детей, находящихся в трудной жизненной ситуации, за предоставленную Новгородской области возможность выступить площадкой для обмена опытом и лучшими региональными практиками по оказанию социальной помощи семьям с детьми.<br><br>
+                Желаю всем участникам конференции активной, плодотворной работы, реализации намеченных планов и новых успехов!<br><br>
+                </div>
+
+                <div class="comment-row revers">
                     <div class="comment">
                         <div class="content">
                             <div class="comment__title">
-                                Здравствуйте, меня зовут Алексей
+                            Уважаемые коллеги, уважаемые участники конференции!
                             </div>
                             <div class="comment__text">
-                                Задача организации, в особенности же сложившаяся структура организации позволяет выполнять важные задания по разработке форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности в значительной степени обуславливает
-                                создание систем массового участия.
-                                <br><br>Товарищи! укрепление и развитие структуры позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+                                В течение двух лет Фонд в партнерстве с органами исполнительной власти субъектов Российской Федерации проводит работу по внедрению эффективных механизмов оказания социальной помощи малоимущим семьям с детьми.<br><br>
+                                Наши совместные усилия направлены на создание условий для выхода семей на уровень самообеспечения, повышение мотивации детей к достижению профессионального успеха и финансовой независимости.<br><br>
+                                
+                                На конференции мы обсуждаем достигнутые результаты и ставим задачи на будущее.
                             </div>
                         </div>
                     </div>
                     <div class="avatar">
-                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/TestImg.png" alt="commentator1">
-                        <div class="avatar__name">Алексей <span class="regular-text">Агутин</span></div>
-                        <div class="avatar__post">Председатель правления чего-то там</div>
+                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/gmv.png" alt="commentator1">
+                        <div class="avatar__name">Гордеева <span class="regular-text">Марина Владимировна</span></div>
+                        <div class="avatar__post">Председатель правления Фонда поддержки детей, находящихся в трудной жизненной ситуации</div>
                     </div>
+                </div>
+                <div class="comment-ps">
+                Новгородская область является давним партнером Фонда, имеет существенные достижения в социальной сфере, на системной основе продвигает инновационные технологии социальной поддержки семей с детьми. В рамках конференции  предоставляется уникальная возможность познакомиться с эффективными практиками, внедряемыми в регионе.<br><br>
+Уважаемые коллеги!<br><br>
+Уверена, наши с вами скоординированные действия востребованы, они помогают решению общегосударственной задачи обеспечить современного качество жизни детей и семей. Все мы работаем на развитие доступности социальных услуг и расширение их спектра.<br><br>
+Успехов во всех ваших начинаниях!
+
                 </div>
             </div>
         </div>
@@ -81,288 +99,362 @@ get_header();
                 </div>
                 <div class="programm-tabs-container">
                     <div class="programm-tab" id="tab_1">
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">11:00 - 10:50</div>
-                                <div class="event__time-online"></div>
+                        <div class="event green standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Открытие конференции
                             </div>
-                            <div class="event__group">Открытие конференции</div>
-                            <!-- <div class="event__name">Приветствие участников</div> -->
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post moderator">Губернатор Новгородской области</div>
-                                        <div class="name">Никитин Андрей Сергеевич</div>
-                                    </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
                                 </div>
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">11:50 - 12:00</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post moderator"></div>
-                                        <div class="name">Гордеева Марина Владимировна</div>
+                                    <div class="event__name">
+                                        Приветствие участников
                                     </div>
-                                </div>
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post moderator"></div>
-                                        <div class="name">Львова-Белова Мария Алексеевна</div>
-                                    </div>
-                                </div>
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post moderator"></div>
-                                        <div class="name">Галкин Андрей Игоревич</div>
-                                    </div>
-                                </div>
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post moderator"></div>
-                                        <div class="name">Овчарова Лилия Николаевна</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">11:50 - 12:00</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Семьесбережение: объединение ресурсов разных ведомств, 
-                            способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения</div>
-                            <div class="event__name">Развитие системы  помощи семьям с детьми с низким уровнем дохода в Новгородской области</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post">министр труда и социальной защиты населения Новгородской области</div>
-                                        <div class="name">Семёнова Светлана Викторовна</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post moderator">Губернатор Новгородской области</div>
+                                                <div class="name">Никитин Андрей Сергеевич</div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post moderator"></div>
+                                                <div class="name">Гордеева Марина Владимировна</div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post moderator"></div>
+                                                <div class="name">Львова-Белова Мария Алексеевна</div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post moderator"></div>
+                                                <div class="name">Галкин Андрей Игоревич</div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post moderator"></div>
+                                                <div class="name">Овчарова Лилия Николаевна</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:00 - 12:10</div>
-                                <div class="event__time-online"></div>
+                        <div class="event purple standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Семьесбережение: объединение ресурсов разных ведомств, способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения
                             </div>
-                            <div class="event__group">Семьесбережение: объединение ресурсов разных ведомств, 
-                            способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения</div>
-                            <div class="event__name">Особенности межведомственного взаимодействия, содействующего формированию стабильного источника дохода у малоимущих семей с детьми</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">11:50 - 12:00</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post">заместитель Министра социальной защиты, труда и занятости населения Республики Мордовия</div>
-                                        <div class="name">Биушкина Татьяна Михайловна</div>
+                                    <div class="event__name">Развитие системы  помощи семьям с детьми с низким уровнем дохода в Новгородской области</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">министр труда и социальной защиты населения Новгородской области</div>
+                                                <div class="name">Семёнова Светлана Викторовна</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:00 - 12:10</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Особенности межведомственного взаимодействия, содействующего формированию стабильного источника дохода у малоимущих семей с детьми</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">заместитель Министра социальной защиты, труда и занятости населения Республики Мордовия</div>
+                                                <div class="name">Биушкина Татьяна Михайловна</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:10 - 12:20</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Реализация механизма социального контракта как одна из форм содействия семье в преодолении трудной жизненной ситуации</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">заместитель министра социальной политики Нижегородской области</div>
+                                                <div class="name">Тараканов Денис Андреевич</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:20 - 12:30</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Эффективные межведомственные практики оказания помощи семьям с детьми, направленные на повышение уровня семейного дохода</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">начальник Главного управления социальной защиты населения Курганской области</div>
+                                                <div class="name">Золотухина Анастасия Евгеньевна</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:30 - 12:40</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Технологии социального сопровождения граждан, заключивших социальный контракт и реализующих программы социальной адаптации.</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">заместитель директора бюджетного учреждения Ханты-Мансийского автономного округа – Югры «Югорский комплексный центр социального обслуживания населения»</div>
+                                                <div class="name">Юлия Александровна Строкина</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:40 - 12:50</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Социальное сопровождение малоимущих семей с детьми в оформлении и реализации социального контракта в Калужской области</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">директор государственного бюджетного учреждения Калужской области «Калужский областной центр социальной помощи семье и детям «Доверие»</div>
+                                                <div class="name">Урусова Ольга Анатольевна</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:10 - 12:20</div>
-                                <div class="event__time-online"></div>
+                        <div class="event green standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Способы помощи семьям, включаемые в программы социальной адаптации получателей государственной социальной помощи на основании социального контракта
                             </div>
-                            <div class="event__group">Семьесбережение: объединение ресурсов разных ведомств, 
-                            способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения</div>
-                            <div class="event__name">Реализация механизма социального контракта как одна из форм содействия семье в преодолении трудной жизненной ситуации</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:50 - 13:00</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post">заместитель министра социальной политики Нижегородской области</div>
-                                        <div class="name">Тараканов Денис Андреевич</div>
+                                    <div class="event__name">Особенности организации эффективной помощи многодетным семьям в рамках реализации программ социальной адаптации получателей государственной социальной помощи на основании социального контракта.</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">заместитель министра развития, опеки и попечительства Иркутской области</div>
+                                                <div class="name">Плетан Татьяна Ивановна</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:20 - 12:30</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Семьесбережение: объединение ресурсов разных ведомств, 
-                            способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения</div>
-                            <div class="event__name">Эффективные межведомственные практики оказания помощи семьям с детьми, направленные на повышение уровня семейного дохода</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">13:00 - 13:10</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post">начальник Главного управления социальной защиты населения Курганской области</div>
-                                        <div class="name">Золотухина Анастасия Евгеньевна</div>
+                                    <div class="event__name">Об опыте Алтайского края по социальному сопровождению семей с детьми, заключивших социальный контракт</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">заместитель министра, начальник управления по социальной политике Министерства социальной защиты Алтайского края</div>
+                                                <div class="name">Ковалева Юлия Анатольевна</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:30 - 12:40</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Семьесбережение: объединение ресурсов разных ведомств, 
-                            способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения</div>
-                            <div class="event__name">Технологии социального сопровождения граждан, заключивших социальный контракт и реализующих программы социальной адаптации.</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">13:10 - 13:20</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post">заместитель директора бюджетного учреждения Ханты-Мансийского автономного округа – Югры «Югорский комплексный центр социального обслуживания населения»</div>
-                                        <div class="name">Юлия Александровна Строкина</div>
+                                    <div class="event__name">Эффективные способы решения проблем семей с низким уровнем доходов</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">директор автономного учреждения социального обслуживания населения Тюменской области и дополнительного профессионального образования «Региональный социально-реабилитационный центр для несовершеннолетних «Семья»</div>
+                                                <div class="name">Перминова Елена Владимировна</div>
+                                            </div>
+                                        </div>
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">заведующая отделением «служба инспекторов по охране детства»</div>
+                                                <div class="name">Анфилофьева Елена Анатольевна</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:40 - 12:50</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Семьесбережение: объединение ресурсов разных ведомств, 
-                            способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения</div>
-                            <div class="event__name">Социальное сопровождение малоимущих семей с детьми в оформлении и реализации социального контракта в Калужской области</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post">директор государственного бюджетного учреждения Калужской области «Калужский областной центр социальной помощи семье и детям «Доверие»</div>
-                                        <div class="name">Урусова Ольга Анатольевна</div>
-                                    </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:50 - 13:00</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Способы помощи семьям, включаемые в программы социальной адаптации получателей государственной социальной помощи на основании социального контракта</div>
-                            <div class="event__name">Особенности организации эффективной помощи многодетным семьям в рамках реализации программ социальной адаптации получателей государственной социальной помощи на основании социального контракта.</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">13:10 - 13:20</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post">заместитель министра развития, опеки и попечительства Иркутской области</div>
-                                        <div class="name">Плетан Татьяна Ивановна</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">13:00 - 13:10</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Способы помощи семьям, включаемые в программы социальной адаптации получателей государственной социальной помощи на основании социального контракта</div>
-                            <div class="event__name">Об опыте Алтайского края по социальному сопровождению семей с детьми, заключивших социальный контракт</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post">заместитель министра, начальник управления по социальной политике Министерства социальной защиты Алтайского края</div>
-                                        <div class="name">Ковалева Юлия Анатольевна</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">13:10 - 13:20</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Способы помощи семьям, включаемые в программы социальной адаптации получателей государственной социальной помощи на основании социального контракта</div>
-                            <div class="event__name">Эффективные способы решения проблем семей с низким уровнем доходов</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post">директор автономного учреждения социального обслуживания населения Тюменской области и дополнительного профессионального образования «Региональный социально-реабилитационный центр для несовершеннолетних «Семья»</div>
-                                        <div class="name">Перминова Елена Владимировна</div>
-                                    </div>
-                                </div>
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post">заведующая отделением «служба инспекторов по охране детства»</div>
-                                        <div class="name">Анфилофьева Елена Анатольевна</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">13:20 - 13:30</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Способы помощи семьям, включаемые в программы социальной адаптации получателей государственной социальной помощи на основании социального контракта</div>
-                            <div class="event__name">Обучение и наставничество малоимущих граждан, желающих создать собственное дело</div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
-                                    </div>
-                                    <div class="speaker__description">
-                                        <div class="post">директор государственного областного автономного учреждения «Агентство развития Новгородской области»</div>
-                                        <div class="name">Дементьев Александр Алексеевич</div>
+                                    <div class="event__name">Обучение и наставничество малоимущих граждан, желающих создать собственное дело</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">директор государственного областного автономного учреждения «Агентство развития Новгородской области»</div>
+                                                <div class="name">Дементьев Александр Алексеевич</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!--Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем-->
-                                                <div class="event standart">
-                                                    <div class="event__time">
-                                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                                        <div class="event__time-value">13:30 - 13:40</div>
-                                                        <div class="event__time-online"></div>
-                                                    </div>
-                                                    <div class="event__group">Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем</div>
-                                                    <div class="event__name">Роль организаций социального помощи семье и детям в формировании финансовой грамотности подростков из семей с низким уровнем<br><br>Реализация образовательного модуля «Домашняя экономика» программы «Академия личностного роста» на базе Центра для несовершеннолетних</div>
-                                                    <div class="event__speaker">
-                                                        <div class="speaker">
+                        <div class="event purple standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">13:30 - 13:40</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Роль организаций социального помощи семье и детям в формировании финансовой грамотности подростков из семей с низким уровнем<br><br>Реализация образовательного модуля «Домашняя экономика» программы «Академия личностного роста» на базе Центра для несовершеннолетних</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
                                                             <div class="avatar">
                                                                 <img src="" alt="">
                                                             </div>
@@ -374,43 +466,51 @@ get_header();
                                                         <div class="speaker">
                                                             <div class="avatar">
                                                                 <img src="" alt="">
-                                                            </div>
-                                                            <div class="speaker__description">
-                                                                <div class="post">директор областного казенного учреждения «Центр для несовершеннолетних»</div>
-                                                                <div class="name">Нарыкова Ирина Николаевна</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>                       
-                                                <div class="event standart">
-                                                    <div class="event__time">
-                                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                                        <div class="event__time-value">13:40 - 13:50</div>
-                                                        <div class="event__time-online"></div>
-                                                    </div>
-                                                    <div class="event__group">Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем</div>
-                                                    <div class="event__name">Создание условий для предотвращения повторения детьми бедности как образа жизни</div>
-                                                    <div class="event__speaker">
-                                                        <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
-                                                            <div class="speaker__description">
-                                                                <div class="post">министр социальной защиты населения Амурской области</div>
-                                                                <div class="name">Киселёва Наталья Викторовна</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="event standart">
-                                                    <div class="event__time">
-                                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                                        <div class="event__time-value">13:50 - 14:00</div>
-                                                        <div class="event__time-online"></div>
-                                                    </div>
-                                                    <div class="event__group">Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем</div>
-                                                    <div class="event__name">Технологии профориентационной работы в системе поддержки детей, воспитывающихся в малообеспеченных семьях</div>
-                                                    <div class="event__speaker">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">директор областного казенного учреждения «Центр для несовершеннолетних»</div>
+                                                <div class="name">Нарыкова Ирина Николаевна</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">13:40 - 13:50</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Создание условий для предотвращения повторения детьми бедности как образа жизни</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="speaker__description">
+                                                <div class="post">министр социальной защиты населения Амурской области</div>
+                                                <div class="name">Киселёва Наталья Викторовна</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">13:50 - 14:00</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Технологии профориентационной работы в системе поддержки детей, воспитывающихся в малообеспеченных семьях</div>
+                                    <div class="event__speaker">
                                                         <div class="speaker">
                                                             <div class="avatar">
                                                                 <img src="" alt="">
@@ -421,16 +521,25 @@ get_header();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="event standart">
-                                                    <div class="event__time">
-                                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                                        <div class="event__time-value">14:00 - 14:20</div>
-                                                        <div class="event__time-online"></div>
-                                                    </div>
-                                                    <div class="event__group">Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем</div>
-                                                    <div class="event__name">Создание условий для профессионального успеха детей, воспитывающихся в малообеспеченных семьях</div>
-                                                    <div class="event__speaker">
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">14:00 - 14:20</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Создание условий для профессионального успеха детей, воспитывающихся в малообеспеченных семьях</div>
+                                    <div class="event__speaker">
+                                        <div class="speaker">
+                                            <div class="avatar">
+                                                <img src="" alt="">
+                                            </div>
+                                            <div class="event__speaker">
                                                         <div class="speaker">
                                                             <div class="avatar">
                                                                 <img src="" alt="">
@@ -441,16 +550,22 @@ get_header();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="event standart">
-                                                    <div class="event__time">
-                                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                                        <div class="event__time-value">14:20 - 14:30</div>
-                                                        <div class="event__time-online"></div>
-                                                    </div>
-                                                    <div class="event__group">Повышение мотивации детей, воспитывающихся в малообеспеченных семьях, к достижению личного профессионального успеха и финансовой независимости в будущем</div>
-                                                    <div class="event__name">Школа подготовки детей к семейной жизни: Новгородский опыт.</div>
-                                                    <div class="event__speaker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">14:20 - 14:30</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Школа подготовки детей к семейной жизни: Новгородский опыт.</div>
+                                    <div class="event__speaker">
                                                         <div class="speaker">
                                                             <div class="avatar">
                                                                 <img src="" alt="">
@@ -461,91 +576,152 @@ get_header();
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">14:30 - 14:40</div>
-                                <div class="event__time-online"></div>
+                                </div>
                             </div>
-                            <div class="event__group">Итоги дня<br><br>
-                            Анонсы программы 2-го декабря</div>
-                            <div class="event__name"></div>
-                            <div class="event__speaker">
-                                <div class="speaker">
-                                    <div class="avatar">
-                                        <img src="" alt="">
+                        </div>
+                        <div class="event green standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Итоги дня<br><br>
+                                Анонсы программы 2-го декабря
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">14:30 - 14:40</div>
+                                        <div class="event__time-online"></div>
                                     </div>
-                                    <div class="speaker__description">
-                                        <div class="post moderator">заместитель Председателя Правительства Новгородской области</div>
-                                        <div class="name">Тимофеева Анна Владиславовна</div>
-                                    </div>
+                                    <div class="event__speaker">
+                                    <div class="speaker">
+                                        <div class="avatar">
+                                            <img src="" alt="">
+                                        </div>
+                                        <div class="speaker__description">
+                                            <div class="post moderator">заместитель Председателя Правительства Новгородской области</div>
+                                            <div class="name">Тимофеева Анна Владиславовна</div>
+                                        </div>
+                                </div>
+                            </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="programm-tab hidden" id="tab_2">
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">10:00 - 11:00</div>
-                                <div class="event__time-online"></div>
+                        <div class="event green standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Час Новгородской области.
                             </div>
-                            <div class="event__group">Час Новгородской области.</div>
-                            <div class="event__name">Инновационные социальные практики учреждений Новгородской области. Пресс-тур</div>
-                            <div class="event__speaker">
-                            </div>
-                        </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">11:00 - 11:30</div>
-                                <div class="event__time-online"></div>
-                            </div>
-                            <div class="event__group">Консультационные площадки.<br><br> 
-                            Ответы на вопросы участников конференции.</div>
-                            <div class="event__name">Стажировочные площадки Фонда поддержки детей:<br><br>
-                            Государственное областное автономное учреждение «Новгородский областной центр «Семья»;<br><br>
-                            Государственное бюджетное учреждение «Тверской областной Центр помощи семье и детям»;<br><br>
-                            Государственное бюджетное учреждение Калужской области «Социально-реабилитационный центр для несовершеннолетних «Радуга»
-                            </div>
-                            <div class="event__speaker">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">10:00 - 11:00</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Инновационные социальные практики учреждений Новгородской области. Пресс-тур</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">11:30 - 12:30</div>
-                                <div class="event__time-online"></div>
+                        <div class="event purple standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Консультационные площадки.<br><br> 
+                                Ответы на вопросы участников конференции.
                             </div>
-                            <div class="event__group">ВЕБИНАР</div>
-                            <div class="event__name">«Участие органов исполнительной власти субъектов Российской Федерации в формировании Реестра лучших социальных практик Фонда поддержки детей, находящихся в трудной жизненной ситуации»
-                            </div>
-                            <div class="event__speaker">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">11:00 - 11:30</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">Стажировочные площадки Фонда поддержки детей:<br><br>
+                                        Государственное областное автономное учреждение «Новгородский областной центр «Семья»;<br><br>
+                                        Государственное бюджетное учреждение «Тверской областной Центр помощи семье и детям»;<br><br>
+                                        Государственное бюджетное учреждение Калужской области «Социально-реабилитационный центр для несовершеннолетних «Радуга»
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:30 - 13:00</div>
-                                <div class="event__time-online"></div>
+                        <div class="event green standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                ВЕБИНАР
                             </div>
-                            <div class="event__group">СЕМИНАР</div>
-                            <div class="event__name">для специалистов органов исполнительной власти и организаций, участвующих в программе Фонда поддержки детей «Моя семья»  в 2022-2023 гг.
-                            </div>
-                            <div class="event__speaker">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">11:30 - 12:30</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">«Участие органов исполнительной власти субъектов Российской Федерации в формировании Реестра лучших социальных практик Фонда поддержки детей, находящихся в трудной жизненной ситуации»
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="event standart">
-                            <div class="event__time">
-                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                <div class="event__time-value">12:30 - 13:00</div>
-                                <div class="event__time-online"></div>
+                        <div class="event purple standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                СЕМИНАР
                             </div>
-                            <div class="event__group">Подведение итогов. Закрытие конференции</div>
-                            <div class="event__name">
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:30 - 13:00</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__name">для специалистов органов исполнительной власти и организаций, участвующих в программе Фонда поддержки детей «Моя семья»  в 2022-2023 гг.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="event__speaker">
+                        </div>
+                        <div class="event green standart">
+                            <div class="event__group">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                Подведение итогов. Закрытие конференции
+                            </div>
+                            <div class="event-part">
+                                <div class="color-marker">
+                                    <div class="color"></div>
+                                </div>
+                                <div class="event-part__info">
+                                    <div class="event__time">
+                                        <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
+                                        <div class="event__time-value">12:30 - 13:00</div>
+                                        <div class="event__time-online"></div>
+                                    </div>
+                                    <div class="event__speaker">
                                                         <div class="speaker">
                                                             <div class="avatar">
                                                                 <img src="" alt="">
@@ -564,6 +740,8 @@ get_header();
                                                                 <div class="name">Семёнова Светлана Викторовна</div>
                                                             </div>
                                                         </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -697,7 +875,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="question-block" id="question-block">
+        <div class="question-block" id="question-block" style="display:none">
             <div class="wrapper">
                 <div class="title">Вопросы - ответы</div>
                 <div class="content">
@@ -771,19 +949,19 @@ get_header();
             <div class="wrapper">
                 <div class="title">Организаторы конференции</div>
                 <div class="organizers-wrapper">
-                    <a class="organizers-item" href="">
+                    <a class="organizers-item" href="https://www.novreg.ru/" target="_blank">
                         <div class="organizers-item__img">
                             <img src="<?php print_r(get_template_directory_uri());?>/img/government.png" alt="Правительство">
                         </div>
                         <div class="name">Правительство Новгородской области</div>
                     </a>
-                    <a class="organizers-item" href="">
+                    <a class="organizers-item" href="https://fond-detyam.ru/" target="_blank">
                         <div class="organizers-item__img">
                             <img src="<?php print_r(get_template_directory_uri());?>/img/fund.png" alt="Правительство">
                         </div>
                         <div class="name">Фонд поддержки детей, находящихся в трудной жизненной ситуации</div>
                     </a>
-                    <a class="organizers-item" href="">
+                    <a class="organizers-item" href="https://mintrud.gov.ru/" target="_blank">
                         <div class="organizers-item__img">
                             <img src="<?php print_r(get_template_directory_uri());?>/img/ministry.png" alt="Правительство">
                         </div>
@@ -875,12 +1053,23 @@ get_header();
 
                 <div class="broadcast-wrapper">
                     <div class="broadcast-description">
-                        Прямая трансляция будет проходить на YouTube канале “назвнаие”
+                        Прямая трансляция будет проходить на YouTube
                     </div>
-                    <a class="broadcast-btn" href="https://zoom.us/j/98286899158?pwd=a0JTRFJzbFBRbzJINlRNZ2hJYmk3UT09">
+                    <?php  $cur_user_id = get_current_user_id();
+                            $user_info = get_userdata($cur_user_id);
+                            $roles = array_shift($user_info->roles);
+                            if($roles == 'contributor' ) {?>
+                    <a class="broadcast-btn" href="https://zoom.us/meeting/84304268388 " target="_blank">
                         <div class="text">Ссылка на трансляцию</div>
                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/online-icon.svg" alt="" class="online-icon">
                     </a>
+                            <?php } else {?>
+                                <a class="broadcast-btn" href="/translation/" target="_blank">
+                                    <div class="text">Ссылка на трансляцию</div>
+                                    <img src="<?php print_r(get_template_directory_uri());?>/img/icons/online-icon.svg" alt="" class="online-icon">
+                                </a>
+                                <?php } ?>
+                   
                     <div class="date-time">
                         <div class="broadcast-time">
                             <div class="time">

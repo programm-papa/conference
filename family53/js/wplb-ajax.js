@@ -88,10 +88,10 @@ jQuery(document).ready(function($) {
                     // Переменная $reslut будет хранить результат обработки.
                     let result = JSON.parse(data);
                     if (!result.status) {
-                        if (result.content == 'Пользователь уже существует') {
-                            $(".popup.login .autorization__input[name~='registrattion__login']").addClass('error');
-                            $('.popup.login .error-description').addClass('visible');
-                            $('.popup.login .error-description').html('Пользователь с таким Логином или Email уже сущестует');
+                        if (result.content == "Пользователь уже существует") {
+                            $(".popup.registrattion .autorization__input[name~='registrattion__login']").addClass('error');
+                            $('.popup.registrattion .error-description').addClass('visible');
+                            $('.popup.registrattion .error-description').html('Пользователь с таким Логином или Email уже сущестует');
                         }
                     } else {
                         location.reload();

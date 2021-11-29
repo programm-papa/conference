@@ -43,7 +43,7 @@
 <?php wp_body_open(); 
 $post_id = get_the_ID();
 $headerClass = "";
-if($post_id == 11) {
+if($post_id == 11 || $post_id == 22) {
     $headerClass = 'user-account';
 }?>
     <header class="header <?= $headerClass; ?>">
@@ -52,7 +52,7 @@ if($post_id == 11) {
                 <ul class="menu__list">
                     <li class="item"><a href="/#programm-block">Программа</a></li>
                     <li class="item"><a href="/#speakers-block">Спикеры</a></li>
-                    <li class="item"><a href="/#question-block">Вопросы</a></li>
+                    <!--<li class="item"><a href="/#question-block">Вопросы</a></li>-->
                     <li class="item"><a href="/#organizers-block">Организаторы</a></li>
                     <li class="item"><a href="/#broadcast-link-block">Ссылка на конференцию</a></li>
                 </ul>
@@ -110,7 +110,7 @@ if($post_id == 11) {
                     <div class="first">
                         <li class="item"><a href="/#programm-block">Программа</a></li>
                         <li class="item"><a href="/#speakers-block">Спикеры</a></li>
-                        <li class="item"><a href="/#question-block">Вопросы</a></li>
+                        <!--<li class="item"><a href="/#question-block">Вопросы</a></li>-->
                     </div>
                     <div class="second">
                         <li class="item"><a href="/#organizers-block">Организаторы</a></li>
@@ -140,7 +140,7 @@ if($post_id == 11) {
                     if($cur_user_id == 0) {  ?>
             <div class="btns-wrapper">
                 <div class="registration-btn open-registr-popup purple">Зарегистрироваться</div>
-                <a class="registration-btn">Ссылка на транляцию</a>
+                <a  href="/#broadcast-link-block"  class="registration-btn">Ссылка на трансляцию</a>
             </div>
             
             <?php
@@ -148,7 +148,7 @@ if($post_id == 11) {
                 ?>
                  <div class="btns-wrapper">
                     <a href="/kabinet" class="registration-btn purple">Личный кабинет</a>
-                    <a class="registration-btn">Ссылка на транляцию</a>
+                    <a href="/#broadcast-link-block" class="registration-btn">Ссылка на трансляцию</a>
                 </div>
                 <?php
                     }
@@ -175,9 +175,9 @@ if($post_id == 11) {
                     <div class="link open-registr-popup" id="link_registration">
                         Зарегистрироваться
                     </div>
-                    <div class="link" id="link_recovery">
+                    <a href="/wp-login.php?action=lostpassword" target="_blank" class="link" id="link_recovery">
                         Забыли пароль?
-                    </div>
+                </a>
                 </div>
             </div>
             <div class="popup registrattion" id="registrattion">
