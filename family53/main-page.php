@@ -41,7 +41,12 @@ get_header();
                 Желаю всем участникам конференции активной, плодотворной работы, реализации намеченных планов и новых успехов!<br><br>
                 </div>
 
-                <div class="comment-row revers">
+                <div class="comment-row">
+                    <div class="avatar">
+                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/gmv.png" alt="commentator1">
+                        <div class="avatar__name">Гордеева <span class="regular-text">Марина Владимировна</span></div>
+                        <div class="avatar__post">Председатель правления Фонда поддержки детей, находящихся в трудной жизненной ситуации</div>
+                    </div>
                     <div class="comment">
                         <div class="content">
                             <div class="comment__title">
@@ -54,11 +59,6 @@ get_header();
                                 На конференции мы обсуждаем достигнутые результаты и ставим задачи на будущее.
                             </div>
                         </div>
-                    </div>
-                    <div class="avatar">
-                        <img class="avatar__img" src="<?php print_r(get_template_directory_uri());?>/img/gmv.png" alt="commentator1">
-                        <div class="avatar__name">Гордеева <span class="regular-text">Марина Владимировна</span></div>
-                        <div class="avatar__post">Председатель правления Фонда поддержки детей, находящихся в трудной жизненной ситуации</div>
                     </div>
                 </div>
                 <div class="comment-ps">
@@ -266,8 +266,8 @@ get_header();
                                                 <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                <div class="post">начальник Главного управления социальной защиты населения Курганской области</div>
-                                                <div class="name">Золотухина Анастасия Евгеньевна</div>
+                                                <div class="post">начальник отдела по делам семьи и детей Главного управления социальной защиты населения Курганской области</div>
+                                                <div class="name">Синёва Елена Андреевна</div>
                                             </div>
                                         </div>
                                     </div>
@@ -541,10 +541,8 @@ get_header();
                                                 <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                                <div class="post">исполняющий обязанности Министра семейной, 
-демографической политики и социального благополучия Ульяновской 
-области</div>
-                                                                <div class="name">Исаева Наталья Сергеевна</div>
+                                                                <div class="post">первый заместитель министра семейной, демографической политики и социального благополучия Ульяновской области</div>
+                                                                <div class="name">Тверскова Анна Александровна</div>
                                                             </div>
                                         </div>
                                     </div>
