@@ -56,7 +56,9 @@ if($post_id == 11 || $post_id == 22) {
 }?>
     <header class="header <?= $headerClass; ?>">
         <div class="wrapper top-header desctop">
-            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/logo-top-header.svg" alt="" class="logo">
+            <a href="/">
+                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/logo-top-header.svg" alt="" class="logo">
+            </a>
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="item"><a href="/#programm-block">Программа</a></li>
@@ -91,7 +93,9 @@ if($post_id == 11 || $post_id == 22) {
         </div>
         <div class="wrapper top-header adaptive">
             <div class="top">
-            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/logo-top-header.svg" alt="" class="logo">
+            <a href="/">
+                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/logo-top-header.svg" alt="" class="logo">
+            </a>
                 <?php 
                     $cur_user_id = get_current_user_id();
                     if($cur_user_id !=0) {  ?>

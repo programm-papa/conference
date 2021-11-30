@@ -145,6 +145,49 @@ jQuery(document).ready(function($) {
                         $(fileBlock).removeClass('selected');
                     }
                 })
+
+                //Обработка клика по кнопке сохранения изменений
+                $(fileBlock).find('.btn-done-edit').click(function() {
+                    let newFileName = $(fileBlock).find('.file__name').val();
+                    if (newFileName !== oldFileName) {
+                        let data = new FormData();
+                        data.append('user_id', $('.upload-file').attr('id'));
+                        data.append('old_file_name', oldFileName);
+                        data.append('new_file_name', newFileName);
+                        data.append('my_file_rename', 1);
+                        $.ajax({
+                            url: 'https://familyconf53.ru/file-api/file-rename.php',
+                            type: 'POST',
+                            data: data,
+                            cache: false,
+                            dataType: 'json',
+                            // отключаем обработку передаваемых данных, пусть передаются как есть
+                            processData: false,
+                            // отключаем установку заголовка типа запроса. Так jQuery скажет серверу что это строковой запрос
+                            contentType: false,
+                            // функция успешного ответа сервера
+                            success: function(respond, status, jqXHR) {
+                                // ОК
+                                if (respond.error === false) {
+                                    console.log('Переименование файла прошло успешно');
+                                }
+                                // error
+                                else {
+                                    alert(respond.error);
+                                }
+                            },
+                            // функция ошибки ответа сервера
+                            error: function(jqXHR, status, errorThrown) {
+                                console.log('ОШИБКА AJAX запроса: ' + status, jqXHR);
+                            }
+
+                        });
+
+                    } else {
+                        alert('Имя файла осталось прежним');
+                    }
+                });
+
                 $('.speaker-add-file-block .file .btn-delete').on('click', function() {
                     $('.speaker-add-file-block .mask').removeClass('active');
                     $(fileBlock).remove();
@@ -176,7 +219,7 @@ jQuery(document).ready(function($) {
 
                             // AJAX запрос
                             $.ajax({
-                                url: 'https://familyconf53.ru/file-load.php',
+                                url: 'https://familyconf53.ru/file-api/file-load.php',
                                 type: 'POST',
                                 data: data,
                                 cache: false,
