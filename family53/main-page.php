@@ -34,10 +34,10 @@ get_header();
                 <div class="comment-ps">
                 Уже сегодня на федеральном и региональном уровнях приняты беспрецедентные решения о введении дополнительных мер поддержки семей с детьми с низкими доходами. При финансовой поддержке Правительства Российской Федерации, Минтруда России в регионах активно используется новый механизм оказания социальной помощи – социальный контракт. Это эффективный инструмент сотрудничества двух сторон – семей с детьми и государства. Новгородская область стала одной из первых в его применении.<br><br>
                 В то же время необходимо уделять особое внимание профилактике «вторичной бедности», то есть, работе с детьми из малообеспеченных семей.<br><br>
-                Участие в программах и проектах Фонда поддержки детей, находящихся в трудной жизненной ситуации, позволяет развивать региональную систему оказания помощи семьям с детьми с низкими доходами, дополняя ее комплексом социальных сервисов, служб и технологий.<br><br>
+                Участие в программах и проектах фонда поддержки детей, находящихся в трудной жизненной ситуации, позволяет развивать региональную систему оказания помощи семьям с детьми с низкими доходами, дополняя ее комплексом социальных сервисов, служб и технологий.<br><br>
                 При поддержке фонда в Новгородской области с 2015 года используется механизм социального сопровождения, который  за последние 5 лет на практике доказал свою эффективность и лег в основу приоритетного регионального проекта, направленного на повышение реальных доходов семей с детьми.<br><br>
                 Внедрение в работу социальных практик фонда способствует созданию условий для самореализации личности ребенка и недопущению воспроизводства бедности.
-                Благодарю Фонд поддержки детей, находящихся в трудной жизненной ситуации, за предоставленную Новгородской области возможность выступить площадкой для обмена опытом и лучшими региональными практиками по оказанию социальной помощи семьям с детьми.<br><br>
+                Благодарю фонд поддержки детей, находящихся в трудной жизненной ситуации, за предоставленную Новгородской области возможность выступить площадкой для обмена опытом и лучшими региональными практиками по оказанию социальной помощи семьям с детьми.<br><br>
                 Желаю всем участникам конференции активной, плодотворной работы, реализации намеченных планов и новых успехов!<br><br>
                 </div>
 
@@ -48,7 +48,7 @@ get_header();
                             Уважаемые коллеги, уважаемые участники конференции!
                             </div>
                             <div class="comment__text">
-                                В течение двух лет Фонд в партнерстве с органами исполнительной власти субъектов Российской Федерации проводит работу по внедрению эффективных механизмов оказания социальной помощи малоимущим семьям с детьми.<br><br>
+                                В течение двух лет фонд в партнерстве с органами исполнительной власти субъектов Российской Федерации проводит работу по внедрению эффективных механизмов оказания социальной помощи малоимущим семьям с детьми.<br><br>
                                 Наши совместные усилия направлены на создание условий для выхода семей на уровень самообеспечения, повышение мотивации детей к достижению профессионального успеха и финансовой независимости.<br><br>
                                 
                                 На конференции мы обсуждаем достигнутые результаты и ставим задачи на будущее.
@@ -113,16 +113,16 @@ get_header();
                                 <div class="event-part__info">
                                     <div class="event__time">
                                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                        <div class="event__time-value">11:50 - 12:00</div>
+                                        <div class="event__time-value">11:00 - 11:50</div>
                                         <div class="event__time-online"></div>
                                     </div>
-                                    <div class="event__name">
+                                    <!-- <div class="event__name">
                                         Приветствие участников
-                                    </div>
+                                    </div> -->
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post moderator">Губернатор Новгородской области</div>
@@ -131,40 +131,40 @@ get_header();
                                         </div>
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                <div class="post moderator"></div>
+                                                <div class="post moderator">Председатель правления Фонда поддержки детей, находящихся в трудной жизненной ситуации</div>
                                                 <div class="name">Гордеева Марина Владимировна</div>
                                             </div>
                                         </div>
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                <div class="post moderator"></div>
+                                                <div class="post moderator">Уполномоченный при Президенте Российской Федерации по правам ребёнка</div>
                                                 <div class="name">Львова-Белова Мария Алексеевна</div>
                                             </div>
                                         </div>
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                <div class="post moderator"></div>
+                                                <div class="post moderator">директор департамента демографической и семейной политики Министерства труда и социальной защиты Российской Федерации</div>
                                                 <div class="name">Галкин Андрей Игоревич</div>
                                             </div>
                                         </div>
-                                        <div class="speaker">
+                                        <!-- <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post moderator"></div>
                                                 <div class="name">Овчарова Лилия Николаевна</div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +174,8 @@ get_header();
                                 <div class="color-marker">
                                     <div class="color"></div>
                                 </div>
-                                Семьесбережение: объединение ресурсов разных ведомств, способствующих выходу семей, заключившим социальный контракт, на уровень самообеспечения
+                                Семьесбережение: объединение ресурсов разных ведомств, 
+способствующих выходу семей, заключивших социальный контракт, на уровень самообеспечения
                             </div>
                             <div class="event-part">
                                 <div class="color-marker">
@@ -190,7 +191,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">министр труда и социальной защиты населения Новгородской области</div>
@@ -214,7 +215,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">заместитель Министра социальной защиты, труда и занятости населения Республики Мордовия</div>
@@ -238,7 +239,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">заместитель министра социальной политики Нижегородской области</div>
@@ -262,7 +263,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">начальник Главного управления социальной защиты населения Курганской области</div>
@@ -286,7 +287,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">заместитель директора бюджетного учреждения Ханты-Мансийского автономного округа – Югры «Югорский комплексный центр социального обслуживания населения»</div>
@@ -310,7 +311,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">директор государственного бюджетного учреждения Калужской области «Калужский областной центр социальной помощи семье и детям «Доверие»</div>
@@ -342,7 +343,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">заместитель министра развития, опеки и попечительства Иркутской области</div>
@@ -362,15 +363,15 @@ get_header();
                                         <div class="event__time-value">13:00 - 13:10</div>
                                         <div class="event__time-online"></div>
                                     </div>
-                                    <div class="event__name">Об опыте Алтайского края по социальному сопровождению семей с детьми, заключивших социальный контракт</div>
+                                    <div class="event__name">Обучение и наставничество малоимущих граждан, желающих создать собственное дело</div>
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                <div class="post">заместитель министра, начальник управления по социальной политике Министерства социальной защиты Алтайского края</div>
-                                                <div class="name">Ковалева Юлия Анатольевна</div>
+                                                <div class="post">министр инвестиционной политики Новгородской области</div>
+                                                <div class="name">Носачев Денис Леонидович</div>
                                             </div>
                                         </div>
                                     </div>
@@ -390,7 +391,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">директор автономного учреждения социального обслуживания населения Тюменской области и дополнительного профессионального образования «Региональный социально-реабилитационный центр для несовершеннолетних «Семья»</div>
@@ -399,7 +400,7 @@ get_header();
                                         </div>
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">заведующая отделением «служба инспекторов по охране детства»</div>
@@ -416,18 +417,18 @@ get_header();
                                 <div class="event-part__info">
                                     <div class="event__time">
                                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                        <div class="event__time-value">13:10 - 13:20</div>
+                                        <div class="event__time-value">13:20 - 13:30</div>
                                         <div class="event__time-online"></div>
                                     </div>
-                                    <div class="event__name">Обучение и наставничество малоимущих граждан, желающих создать собственное дело</div>
+                                    <div class="event__name">Организация социально-психологической помощи малоимущим семьям с детьми в рамках программы «Семейный навигатор» в сочетании с заключением социального контракта</div>
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
-                                                <div class="post">директор государственного областного автономного учреждения «Агентство развития Новгородской области»</div>
-                                                <div class="name">Дементьев Александр Алексеевич</div>
+                                                <div class="post">директор краевого государственного бюджетного учреждения социального обслуживания «Краевой кризисный центр для мужчин» (Алтайский край)</div>
+                                                <div class="name">Эдокова Лариса Александровна</div>
                                             </div>
                                         </div>
                                     </div>
@@ -455,17 +456,17 @@ get_header();
                                     <div class="event__name">Роль организаций социального помощи семье и детям в формировании финансовой грамотности подростков из семей с низким уровнем<br><br>Реализация образовательного модуля «Домашняя экономика» программы «Академия личностного роста» на базе Центра для несовершеннолетних</div>
                                     <div class="event__speaker">
                                         <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
+                                        <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
+                                            </div>
                                                             <div class="speaker__description">
                                                                 <div class="post">заместитель председателя комитета социального обеспечения, материнства и детства Курской области</div>
                                                                 <div class="name">Полякова Наталья Анатольевна</div>
                                                             </div>
                                                         </div>
                                                         <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
+                                                        <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">директор областного казенного учреждения «Центр для несовершеннолетних»</div>
@@ -489,7 +490,7 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
                                             <div class="speaker__description">
                                                 <div class="post">министр социальной защиты населения Амурской области</div>
@@ -512,9 +513,9 @@ get_header();
                                     <div class="event__name">Технологии профориентационной работы в системе поддержки детей, воспитывающихся в малообеспеченных семьях</div>
                                     <div class="event__speaker">
                                                         <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
+                                                        <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
+                                            </div>
                                                             <div class="speaker__description">
                                                                 <div class="post">министр труда, социального развития и занятости населения Республики Алтай</div>
                                                                 <div class="name">Сумин Адар Геннадьевич</div>
@@ -537,19 +538,12 @@ get_header();
                                     <div class="event__speaker">
                                         <div class="speaker">
                                             <div class="avatar">
-                                                <img src="" alt="">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
                                             </div>
-                                            <div class="event__speaker">
-                                                        <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
-                                                            <div class="speaker__description">
+                                            <div class="speaker__description">
                                                                 <div class="post">первый заместитель министра семейной, демографической политики и социального благополучия Ульяновской области</div>
                                                                 <div class="name">Тверскова Анна Александровна</div>
                                                             </div>
-                                                        </div>
-                                                    </div>
                                         </div>
                                     </div>
                                 </div>
@@ -567,9 +561,9 @@ get_header();
                                     <div class="event__name">Школа подготовки детей к семейной жизни: Новгородский опыт.</div>
                                     <div class="event__speaker">
                                                         <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
+                                                        <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
+                                            </div>
                                                             <div class="speaker__description">
                                                                 <div class="post">директор департамента социальной защиты семьи и материнства министерства труда и социальной защиты населения Новгородской области</div>
                                                                 <div class="name">Макарова Татьяна Павловна</div>
@@ -599,9 +593,9 @@ get_header();
                                     </div>
                                     <div class="event__speaker">
                                     <div class="speaker">
-                                        <div class="avatar">
-                                            <img src="" alt="">
-                                        </div>
+                                    <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
+                                            </div>
                                         <div class="speaker__description">
                                             <div class="post moderator">заместитель Председателя Правительства Новгородской области</div>
                                             <div class="name">Тимофеева Анна Владиславовна</div>
@@ -630,7 +624,7 @@ get_header();
                                         <div class="event__time-value">10:00 - 11:00</div>
                                         <div class="event__time-online"></div>
                                     </div>
-                                    <div class="event__name">Инновационные социальные практики учреждений Новгородской области. Пресс-тур</div>
+                                    <div class="event__name">Инновационные социальные практики учреждений Новгородской области. Видеотур</div>
                                 </div>
                             </div>
                         </div>
@@ -718,23 +712,23 @@ get_header();
                                 <div class="event-part__info">
                                     <div class="event__time">
                                         <img src="<?php print_r(get_template_directory_uri());?>/img/icons/time-icon.svg" alt="Часы" class="event__time-icon">
-                                        <div class="event__time-value">12:30 - 13:00</div>
+                                        <div class="event__time-value">13:00 - 13:30</div>
                                         <div class="event__time-online"></div>
                                     </div>
                                     <div class="event__speaker">
                                                         <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
+                                                        <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
+                                            </div>
                                                             <div class="speaker__description">
                                                                 <div class="post">председатель правления Фонда поддержки детей, находящихся в трудной жизненной ситуации</div>
                                                                 <div class="name">Гордеева Марина Владимировна</div>
                                                             </div>
                                                         </div>
                                                         <div class="speaker">
-                                                            <div class="avatar">
-                                                                <img src="" alt="">
-                                                            </div>
+                                                        <div class="avatar">
+                                                <img src="<?php print_r(get_template_directory_uri());?>/img/icons/speaker.svg" alt="">
+                                            </div>
                                                             <div class="speaker__description">
                                                                 <div class="post">министр труда и социальной защиты населения Новгородской области</div>
                                                                 <div class="name">Семёнова Светлана Викторовна</div>

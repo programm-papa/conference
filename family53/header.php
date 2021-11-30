@@ -19,6 +19,14 @@
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php print_r(get_template_directory_uri());?>/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php print_r(get_template_directory_uri());?>/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php print_r(get_template_directory_uri());?>/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php print_r(get_template_directory_uri());?>/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="<?php print_r(get_template_directory_uri());?>/img/favicon/safari-pinned-tab.svg" color="#7e5da7">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
      <?php  $cur_user_id = get_current_user_id();
             $user_info = get_userdata($cur_user_id);
             $roles = array_shift($user_info->roles);
@@ -48,6 +56,7 @@ if($post_id == 11 || $post_id == 22) {
 }?>
     <header class="header <?= $headerClass; ?>">
         <div class="wrapper top-header desctop">
+            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/logo-top-header.svg" alt="" class="logo">
             <nav class="menu">
                 <ul class="menu__list">
                     <li class="item"><a href="/#programm-block">Программа</a></li>
@@ -82,7 +91,7 @@ if($post_id == 11 || $post_id == 22) {
         </div>
         <div class="wrapper top-header adaptive">
             <div class="top">
-                <div class="logo"></div>
+            <img src="<?php print_r(get_template_directory_uri());?>/img/icons/logo-top-header.svg" alt="" class="logo">
                 <?php 
                     $cur_user_id = get_current_user_id();
                     if($cur_user_id !=0) {  ?>

@@ -139,6 +139,11 @@
                                     height: fit-content;
                                     background-image: none;
                                     background-color: #FFFFFF;
+                                    .top-header {
+                                        .logo {
+                                            display: block !important;
+                                        }
+                                    }
                                     .header-info {
                                         display: none !important;
                                     }
@@ -150,6 +155,12 @@
                                     &.top-header {
                                         display: flex;
                                         align-items: center;
+                                        position: relative;
+                                        .logo {
+                                            display: none;
+                                            width: 80px;
+                                            height: 80px;
+                                        }
                                         .menu {
                                             margin-left: auto;
                                             width: fit-content;
@@ -193,7 +204,7 @@
                                         padding-bottom: 20px;
                                         box-sizing: border-box;
                                         height: fit-content;
-                                        min-height: 80px;
+                                        min-height: 100px;
                                     }
                                     &.header-info {
                                         padding-top: 15px;
@@ -504,7 +515,7 @@
                                             max-width: 300px;
                                         }
                                         .avatar__post {
-                                            max-width: 300px;
+                                            max-width: 250px;
                                             font-style: normal;
                                             font-weight: normal;
                                             font-size: 14px;
@@ -753,9 +764,16 @@
                                                                     width: 36px;
                                                                     height: 36px;
                                                                     overflow: hidden;
-                                                                    background: #C4C4C4;
+                                                                    background: #F5F5F5;
                                                                     border-radius: 6px;
                                                                     margin-right: 10px;
+                                                                    display: flex;
+                                                                    align-items: center;
+                                                                    justify-content: center;
+                                                                    img {
+                                                                        width: 24px;
+                                                                        height: 24px;
+                                                                    }
                                                                 }
                                                                 .speaker__description {
                                                                     display: flex;
@@ -1976,7 +1994,9 @@
                                             align-items: center;
                                             .top {
                                                 display: flex;
+                                                align-items: center;
                                                 margin-bottom: 30px;
+                                                .logo {}
                                                 .account {
                                                     margin-left: auto;
                                                 }
@@ -2136,8 +2156,13 @@
                                         &.top-header {
                                             .top {
                                                 display: flex;
+                                                align-items: center;
                                                 margin-bottom: 30px;
                                                 justify-content: space-between;
+                                                .logo {
+                                                    width: 48px;
+                                                    height: 48px;
+                                                }
                                                 .account {
                                                     margin-left: auto;
                                                 }
