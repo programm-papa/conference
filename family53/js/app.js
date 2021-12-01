@@ -170,6 +170,10 @@ jQuery(document).ready(function($) {
                                 // ОК
                                 if (respond.error === false) {
                                     console.log('Переименование файла прошло успешно');
+                                    $(fileBlock).find('.file__name').val(newFileName);
+                                    $(this).removeClass('active');
+                                    $(fileBlock).removeClass('editable');
+                                    $(fileBlock).removeClass('selected');
                                 }
                                 // error
                                 else {
@@ -187,10 +191,42 @@ jQuery(document).ready(function($) {
                         alert('Имя файла осталось прежним');
                     }
                 });
-
+                //Обработка клика по кнопке удаления файла
                 $('.speaker-add-file-block .file .btn-delete').on('click', function() {
-                    $('.speaker-add-file-block .mask').removeClass('active');
-                    $(fileBlock).remove();
+                    let fileName = $(fileBlock).find('.file__name').val();
+                    let data = new FormData();
+                    data.append('user_id', $('.upload-file').attr('id'));
+                    data.append('file_name', fileName);
+                    data.append('my_file_delete', 1);
+                    $.ajax({
+                        url: 'https://familyconf53.ru/file-api/file-delete.php',
+                        type: 'POST',
+                        data: data,
+                        cache: false,
+                        dataType: 'json',
+                        // отключаем обработку передаваемых данных, пусть передаются как есть
+                        processData: false,
+                        // отключаем установку заголовка типа запроса. Так jQuery скажет серверу что это строковой запрос
+                        contentType: false,
+                        // функция успешного ответа сервера
+                        success: function(respond, status, jqXHR) {
+                            // ОК
+                            if (respond.error === false) {
+                                $('.speaker-add-file-block .mask').removeClass('active');
+                                $(fileBlock).remove();
+                            }
+                            // error
+                            else {
+                                alert(respond.error);
+                            }
+                        },
+                        // функция ошибки ответа сервера
+                        error: function(jqXHR, status, errorThrown) {
+                            console.log('ОШИБКА AJAX запроса: ' + status, jqXHR);
+                        }
+
+                    });
+
                 });
             })
         }
